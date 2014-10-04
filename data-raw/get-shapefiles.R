@@ -15,14 +15,14 @@ if(!file.exists("data-raw/states.zip")) {
 
 unzip("data-raw/states.zip", exdir = "data-raw/", unzip = getOption("unzip"))
 
-state_sp <- readOGR(
+hist_us_states_sp <- readOGR(
   "data-raw/US_AtlasHCB_StateTerr_Gen01/US_HistStateTerr_Gen01_Shapefile",
   "US_HistStateTerr_Gen01")
 
-state_df <- fortify(state_sp, region = "ID")
+hist_us_states_df <- fortify(hist_us_states_sp, region = "ID")
 
-use_data(state_sp, overwrite = TRUE, compress = "xz")
-use_data(state_df, overwrite = TRUE, compress = "xz")
+use_data(hist_us_states_sp, overwrite = TRUE, compress = "xz")
+use_data(hist_us_states_df, overwrite = TRUE, compress = "xz")
 
 # Counties
 counties_url <- "http://publications.newberry.org/ahcbp/downloads/gis/US_AtlasHCB_Counties_Gen01.zip"
@@ -33,11 +33,11 @@ if(!file.exists("data-raw/counties.zip")) {
 
 unzip("data-raw/counties.zip", exdir = "data-raw/", unzip = getOption("unzip"))
 
-counties_sp <- readOGR(
+hist_us_counties_sp <- readOGR(
   "data-raw/US_AtlasHCB_StateTerr_Gen01/US_HistStateTerr_Gen01_Shapefile",
   "US_HistStateTerr_Gen01")
 
-counties_df <- fortify(counties_sp, region = "ID")
+hist_us_counties_df <- fortify(hist_us_counties_sp, region = "ID")
 
-use_data(counties_sp, overwrite = TRUE, compress = "xz")
-use_data(counties_df, overwrite = TRUE, compress = "xz")
+use_data(hist_us_counties_sp, overwrite = TRUE, compress = "xz")
+use_data(hist_us_counties_df, overwrite = TRUE, compress = "xz")
