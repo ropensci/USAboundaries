@@ -12,5 +12,8 @@
 #'
 #' @name usboundaries
 #' @docType package
+#' @seealso us_boundaries
+#' @import assertthat
+#' @import lubridate
 #' @import sp
 NULL

@@ -15,4 +15,6 @@ BugReports: https://github.com/lmullen/usboundaries/issues
 Depends:
     R (>= 3.1.1)
 Imports:
+    assertthat (>= 0.1),
+    lubridate (>= 1.3.3),
     sp (>= 1.0.15)

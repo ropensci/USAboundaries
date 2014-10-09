@@ -16,4 +16,7 @@ Library, and it is included in this package under the terms of the Creative
 Commons Attribution-NonCommercial-ShareAlike 2.5 Generic (CC BY-NC-SA 2.5)
 license.
 }
+\seealso{
+us_boundaries
+}
 
