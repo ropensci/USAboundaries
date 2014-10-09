@@ -1,6 +1,5 @@
 # Download the state and county shapefiles from Atlas of Historical County
-# Boundaries. Use the generalized files to .01 degree of tolerance, i.e., about
-# .69 miles in the latitude of Boston.
+# Boundaries. Use the generalized files.
 
 library(stringi)
 library(devtools)
@@ -10,7 +9,7 @@ library(lubridate)
 library(dplyr)
 
 # States
-states_url <- "http://publications.newberry.org/ahcbp/downloads/gis/US_AtlasHCB_StateTerr_Gen01.zip"
+states_url <- "http://publications.newberry.org/ahcbp/downloads/gis/US_AtlasHCB_StateTerr_Gen05.zip"
 
 if(!file.exists("data-raw/states.zip")) {
   download.file(states_url, "data-raw/states.zip")
@@ -19,8 +18,8 @@ if(!file.exists("data-raw/states.zip")) {
 unzip("data-raw/states.zip", exdir = "data-raw/", unzip = getOption("unzip"))
 
 hist_us_states <- readOGR(
-  "data-raw/US_AtlasHCB_StateTerr_Gen01/US_HistStateTerr_Gen01_Shapefile",
-  "US_HistStateTerr_Gen01")
+  "data-raw/US_AtlasHCB_StateTerr_Gen05/US_HistStateTerr_Gen05_Shapefile",
+  "US_HistStateTerr_Gen05")
 
 hist_us_states@data <-  hist_us_states@data %>%
   mutate(START_POSIX = ymd(START_N),
@@ -31,7 +30,7 @@ colnames(hist_us_states@data) <- colnames(hist_us_states@data) %>% tolower()
 use_data(hist_us_states, overwrite = TRUE, compress = "xz")
 
 # Counties
-counties_url <- "http://publications.newberry.org/ahcbp/downloads/gis/US_AtlasHCB_Counties_Gen01.zip"
+counties_url <- "http://publications.newberry.org/ahcbp/downloads/gis/US_AtlasHCB_Counties_Gen05.zip"
 
 if(!file.exists("data-raw/counties.zip")) {
   download.file(counties_url, "data-raw/counties.zip")
@@ -40,8 +39,8 @@ if(!file.exists("data-raw/counties.zip")) {
 unzip("data-raw/counties.zip", exdir = "data-raw/", unzip = getOption("unzip"))
 
 hist_us_counties <- readOGR(
-  "data-raw/US_AtlasHCB_Counties_Gen01/US_HistCounties_Gen01_Shapefile",
-  "US_HistCounties_Gen01")
+  "data-raw/US_AtlasHCB_Counties_Gen05/US_HistCounties_Gen05_Shapefile",
+  "US_HistCounties_Gen05")
 
 hist_us_counties@data <-  hist_us_counties@data %>%
   mutate(CHANGE = stri_trans_general(CHANGE, "latin-ascii"),
