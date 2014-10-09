@@ -2,9 +2,12 @@
 # Boundaries. Use the generalized files to .01 degree of tolerance, i.e., about
 # .69 miles in the latitude of Boston.
 
+library(stringi)
 library(devtools)
 library(rgdal)
 library(ggplot2)
+library(lubridate)
+library(dplyr)
 
 # States
 states_url <- "http://publications.newberry.org/ahcbp/downloads/gis/US_AtlasHCB_StateTerr_Gen01.zip"
@@ -15,14 +18,17 @@ if(!file.exists("data-raw/states.zip")) {
 
 unzip("data-raw/states.zip", exdir = "data-raw/", unzip = getOption("unzip"))
 
-hist_us_states_sp <- readOGR(
+hist_us_states <- readOGR(
   "data-raw/US_AtlasHCB_StateTerr_Gen01/US_HistStateTerr_Gen01_Shapefile",
   "US_HistStateTerr_Gen01")
 
-hist_us_states_df <- fortify(hist_us_states_sp, region = "ID")
+hist_us_states@data <-  hist_us_states@data %>%
+  mutate(START_POSIX = ymd(START_N),
+         END_POSIX = ymd(END_N))
 
-use_data(hist_us_states_sp, overwrite = TRUE, compress = "xz")
-use_data(hist_us_states_df, overwrite = TRUE, compress = "xz")
+colnames(hist_us_states@data) <- colnames(hist_us_states@data) %>% tolower()
+
+use_data(hist_us_states, overwrite = TRUE, compress = "xz")
 
 # Counties
 counties_url <- "http://publications.newberry.org/ahcbp/downloads/gis/US_AtlasHCB_Counties_Gen01.zip"
@@ -33,11 +39,18 @@ if(!file.exists("data-raw/counties.zip")) {
 
 unzip("data-raw/counties.zip", exdir = "data-raw/", unzip = getOption("unzip"))
 
-hist_us_counties_sp <- readOGR(
-  "data-raw/US_AtlasHCB_StateTerr_Gen01/US_HistStateTerr_Gen01_Shapefile",
-  "US_HistStateTerr_Gen01")
+hist_us_counties <- readOGR(
+  "data-raw/US_AtlasHCB_Counties_Gen01/US_HistCounties_Gen01_Shapefile",
+  "US_HistCounties_Gen01")
 
-hist_us_counties_df <- fortify(hist_us_counties_sp, region = "ID")
+hist_us_counties@data <-  hist_us_counties@data %>%
+  mutate(CHANGE = stri_trans_general(CHANGE, "latin-ascii"),
+         NAME_START = stri_trans_general(NAME_START, "latin-ascii"),
+         FULL_NAME = stri_trans_general(FULL_NAME, "latin-ascii"),
+         NAME = stri_trans_general(NAME, "latin-ascii"),
+         START_POSIX = ymd(START_N),
+         END_POSIX = ymd(END_N))
 
-use_data(hist_us_counties_sp, overwrite = TRUE, compress = "xz")
-use_data(hist_us_counties_df, overwrite = TRUE, compress = "xz")
+colnames(hist_us_counties@data) <- colnames(hist_us_counties@data) %>% tolower()
+
+use_data(hist_us_counties, overwrite = TRUE, compress = "xz")
