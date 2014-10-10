@@ -1,7 +1,8 @@
 ## usboundaries: Historical boundaries of the United States, 1629--2000
 
 This R package lets you map the United States (or the colonies that
-became the United States) on any date from 1629 to 2000.
+became the United States) on any date from 1629 to 2000. It contains 
+both county and state/territory level polygons.
 
 ### Installation
 
