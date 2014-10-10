@@ -13,7 +13,6 @@
 #' map_ne <- us_boundaries(as.Date("1943-02-12"), states = new_england)
 #' if(require(sp)) {
 #'   plot(map_states)
-#'   plot(map_counties)
 #'   plot(map_ne)
 #' }
 #' @export
