@@ -1,6 +1,8 @@
 ## usboundaries: Historical boundaries of the United States, 1629--2000
 
 [![Build Status](https://travis-ci.org/ropensci/usboundaries.png?branch=master)](https://travis-ci.org/ropensci/usboundaries)
+[![Build status](https://ci.appveyor.com/api/projects/status/p50pym9vtnky597e?svg=true)](https://ci.appveyor.com/project/lmullen/usboundaries)
+
 
 This R package lets you map the United States (or the colonies that
 became the United States) on any date from 1629 to 2000. It contains 
