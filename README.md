@@ -39,3 +39,7 @@ appreciate a citation to the R package itself.
   [devtools]: https://github.com/hadley/devtools
   [sp]: http://cran.r-project.org/web/packages/sp/index.html
   [Atlas of Historical County Boundaries]: http://publications.newberry.org/ahcbp/
+
+---
+[![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+
