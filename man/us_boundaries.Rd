@@ -3,7 +3,7 @@
 \alias{us_boundaries}
 \title{Get the boundaries of the United States for a particular date}
 \usage{
-us_boundaries(map_date, type = c("state", "county"))
+us_boundaries(map_date, type = c("state", "county"), states)
 }
 \arguments{
 \item{map_date}{The date of the map as an object of class \code{POSIXct},
@@ -12,6 +12,8 @@ September 1783 and 31 December 2000; for county maps the date must be
 between 30 December 1636 and 31 December 2000.}
 
 \item{type}{The type of the map, either \code{"state"} or \code{"county"}.}
+
+\item{states}{A character vector of state or territory names.}
 }
 \description{
 Get the boundaries of the United States for a particular date
@@ -19,9 +21,13 @@ Get the boundaries of the United States for a particular date
 \examples{
 map_states   <- us_boundaries(as.Date("1850-07-04"))
 map_counties <- us_boundaries(as.Date("1850-07-04"), type = "county")
+new_england <- c("Massachusetts", "Vermont", "New Hampshire", "Connecticut",
+                 "Rhode Island", "Maine")
+map_ne <- us_boundaries(as.Date("1943-02-12"), states = new_england)
 if(require(sp)) {
   plot(map_states)
   plot(map_counties)
+  plot(map_ne)
 }
 }
 
