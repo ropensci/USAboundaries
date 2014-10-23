@@ -12,6 +12,7 @@ Description: Map the United States on any date. This package provides spatial
     County Boundaries.
 License: CC BY-NC-SA 4.0
 LazyData: true
+LazyDataCompression: xz
 URL: https://github.com/lmullen/usboundaries
 BugReports: https://github.com/lmullen/usboundaries/issues
 Depends:
