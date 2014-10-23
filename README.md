@@ -12,7 +12,7 @@ both county and state/territory level polygons.
 
 First, install [devtools][]. Then install this package from GitHub.
 
-    devtools::install_github("lmullen/usboundaries")
+    devtools::install_github("ropensci/usboundaries")
 
 ### Use
 
