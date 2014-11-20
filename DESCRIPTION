@@ -1,6 +1,6 @@
 Package: usboundaries
 Type: Package
-Title: Historical boundaries of the United States, 1629--2000
+Title: Historical boundaries of the United States, 1629-2000
 Date: 2014
 Version: 0.1.9000
 Authors@R: c(person("Dr. William M. Scholl Center for American History and
