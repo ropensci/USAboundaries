@@ -13,8 +13,8 @@ Description: Map the United States on any date. This package provides spatial
 License: CC BY-NC-SA 4.0
 LazyData: true
 LazyDataCompression: xz
-URL: https://github.com/lmullen/usboundaries
-BugReports: https://github.com/lmullen/usboundaries/issues
+URL: https://github.com/ropensci/usboundaries
+BugReports: https://github.com/ropensci/usboundaries/issues
 Depends:
     R (>= 3.1.1)
 Imports:
