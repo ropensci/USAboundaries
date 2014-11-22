@@ -4,6 +4,8 @@
 #'   September 1783 and 31 December 2000; for county maps the date must be
 #'   between 30 December 1636 and 31 December 2000.
 #' @param type The type of the map, either \code{"state"} or \code{"county"}.
+#' @param format The class of the object returned, either \code{"sp"} or
+#'   \code{"df"}, a fortified data frame.
 #' @param states A character vector of state or territory names.
 #' @examples
 #' map_states   <- us_boundaries(as.Date("1850-07-04"))
@@ -16,10 +18,12 @@
 #'   plot(map_ne)
 #' }
 #' @export
-us_boundaries <- function(map_date, type = c("state", "county"), states) {
+us_boundaries <- function(map_date, type = c("state", "county"),
+                          format = c("sp", "df"), states) {
   assert_that(any(class(map_date) %in% c("POSIXct","POSIXt", "Date")))
   map_date <- as.POSIXct(map_date)
   type <- match.arg(type)
+  format <- match.arg(format)
 
   if(type == "state") {
     assert_that(ymd("1783-09-03") <= map_date & map_date <= ymd("2000-12-31"))
@@ -41,6 +45,9 @@ us_boundaries <- function(map_date, type = c("state", "county"), states) {
     filter <- filter & filter_states
   }
 
-  shp[filter, ]
+  shp <- shp[filter, ]
 
+  switch(format,
+         df = fortify_boundaries(shp),
+         sp = shp)
 }
