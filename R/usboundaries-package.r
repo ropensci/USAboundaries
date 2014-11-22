@@ -14,9 +14,12 @@
 #' @docType package
 #' @seealso us_boundaries
 #' @import assertthat
-#' @import dplyr
+#' @importFrom dplyr mutate left_join
 #' @importFrom ggplot2 fortify
 #' @importFrom lubridate ymd
+#' @import magrittr
+#' @importFrom maptools checkPolygonsHoles
+#' @import rgeos
 #' @import sp
 NULL
 
