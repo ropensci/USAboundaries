@@ -14,16 +14,14 @@
 #' @docType package
 #' @seealso us_boundaries
 #' @import assertthat
-#' @importFrom dplyr mutate left_join
+#' @import dplyr
 #' @importFrom ggplot2 fortify
 #' @importFrom lubridate ymd
-#' @import magrittr
 #' @importFrom maptools checkPolygonsHoles
-#' @import rgeos
 #' @import sp
 NULL
 
 # Hide variables from R CMD check
 if(getRversion() >= "2.15.1") {
-  utils::globalVariables(c("hist_us_states", "hist_us_counties"))
+  utils::globalVariables(c("hist_us_states", "hist_us_counties", "id"))
 }

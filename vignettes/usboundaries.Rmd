@@ -13,6 +13,7 @@ The usboundaries package provides an R wrapper around the boundary data for the 
 
 ```{r}
 library(usboundaries)
+library(maptools)
 library(sp)
 library(ggplot2)
 ```
@@ -40,7 +41,6 @@ ggplot(data = us_1790) +
   geom_map(map = us_1790,
            aes(x = long, y = lat, group = group, map_id = id),
            fill = "white", color = "black", size = 0.2) +
-  coord_map() +
   theme_minimal()
 ```
 

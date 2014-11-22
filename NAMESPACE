@@ -2,11 +2,8 @@
 
 export(us_boundaries)
 import(assertthat)
-import(magrittr)
-import(rgeos)
+import(dplyr)
 import(sp)
-importFrom(dplyr,left_join)
-importFrom(dplyr,mutate)
 importFrom(ggplot2,fortify)
 importFrom(lubridate,ymd)
 importFrom(maptools,checkPolygonsHoles)
