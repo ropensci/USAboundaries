@@ -17,7 +17,6 @@
 #' @import dplyr
 #' @importFrom ggplot2 fortify
 #' @importFrom lubridate ymd
-#' @import maptools
 #' @import sp
 NULL
 
