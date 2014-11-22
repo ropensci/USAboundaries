@@ -22,6 +22,7 @@ Imports:
     dplyr(>= 0.3.0.2),
     ggplot2 (>= 1.0.0),
     lubridate (>= 1.3.3),
+    maptools (>= 0.8-30),
     sp (>= 1.0.15)
 Suggests:
     testthat (>= 0.9.1),

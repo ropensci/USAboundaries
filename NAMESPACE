@@ -3,6 +3,7 @@
 export(us_boundaries)
 import(assertthat)
 import(dplyr)
+import(maptools)
 import(sp)
 importFrom(ggplot2,fortify)
 importFrom(lubridate,ymd)
