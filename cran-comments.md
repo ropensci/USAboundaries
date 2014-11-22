@@ -15,4 +15,4 @@ There was 1 NOTE:
 
   This package is released under that non-FOSS license because the data it uses is released under that license.
 
-In addition, the package install time seems to be a little high (13 seconds on my machine) but that is because the data very compressed.
+In addition, the package install time seems to be a little high (13 seconds on my machine) but that is because the data is very compressed.
