@@ -34,3 +34,17 @@ test_that("Can return a data frame", {
   expect_that(class(state_df), is_equivalent_to("data.frame"))
   expect_that(class(county_df), is_equivalent_to("data.frame"))
 })
+
+test_that("Data frames have plotting information", {
+  plotcols <- c("id", "long", "lat", "order", "hole", "piece", "group")
+  expect_that(all(plotcols %in% colnames(state_df)), is_true())
+  expect_that(all(plotcols %in% colnames(county_df)), is_true())
+})
+
+test_that("Data frames have descriptive data", {
+  datacols <- c("start_date", "end_date", "change", "citation", "start_n",
+                "end_n", "area_sqmi", "terr_type", "full_name", "abbr_name",
+                "name_start", "start_posix", "end_posix")
+  expect_that(all(datacols %in% colnames(state_df)), is_true())
+  expect_that(all(datacols %in% colnames(county_df)), is_true())
+})
