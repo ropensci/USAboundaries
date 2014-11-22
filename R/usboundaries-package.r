@@ -15,7 +15,7 @@
 #' @seealso us_boundaries
 #' @import assertthat
 #' @import dplyr
-#' @import ggplot2
-#' @import lubridate
+#' @importFrom ggplot2 fortify
+#' @importFrom lubridate ymd
 #' @import sp
 NULL
