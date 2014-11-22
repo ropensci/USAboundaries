@@ -24,4 +24,6 @@ Imports:
     lubridate (>= 1.3.3),
     sp (>= 1.0.15)
 Suggests:
-    testthat (>= 0.9.1)
+    testthat (>= 0.9.1),
+    knitr
+VignetteBuilder: knitr

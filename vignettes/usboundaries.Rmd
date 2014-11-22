@@ -1,0 +1,49 @@
+---
+title: "Historical U.S. Boundaries"
+author: "Lincoln Mullen"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+The usboundaries package provides an R wrapper around the boundary data for the United States of America in the [Atlas of Historical County Boundaries](http://publications.newberry.org/ahcbp/) from the Dr. William M. Scholl Center for American History and Culture at the Newberry Library. This package provides lower resolution shapefiles; for higher resolutions, see the original project page.
+
+```{r}
+library(usboundaries)
+library(sp)
+library(ggplot2)
+```
+
+You can return either states (the default) or counties. This plot shows the states in 1844.
+
+```{r fig.cap="The United States in 1844"}
+us_1844 <- us_boundaries(as.Date("1844-07-04"))
+plot(us_1844)
+```
+
+This plot shows the counties in Virginia in 1844.
+
+```{r fig.cap="Counties in Virginia in 1844"}
+va_1844 <- us_boundaries(as.Date("1844-07-04"), states = "Virginia", 
+                         type = "county")
+plot(va_1844)
+```
+
+By default object returned is of class `sp` from the [sp](http://cran.rstudio.org/web/packages/sp/) package. You can also return a data frame suitable for plotting in [ggplot2](http://cran.rstudio.org/web/packages/ggplot2/).
+
+```{r fig.cap="United States in 1790"}
+us_1790 <- us_boundaries(as.Date("1790-07-04"), format = "df")
+ggplot(data = us_1790) +
+  geom_map(map = us_1790,
+           aes(x = long, y = lat, group = group, map_id = id),
+           fill = "white", color = "black", size = 0.2) +
+  coord_map() +
+  theme_minimal()
+```
+
+See the documentation for the `us_boundaries()` for more information.
+
+
