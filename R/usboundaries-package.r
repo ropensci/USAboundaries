@@ -5,10 +5,10 @@
 #' from the \href{http://publications.newberry.org/ahcbp/}{Atlas of Historical
 #' County Boundaries}.
 #'
-#' The copyright in the data used in this package is owned by the Newberry
-#' Library, and it is included in this package under the terms of the Creative
-#' Commons Attribution-NonCommercial-ShareAlike 2.5 Generic (CC BY-NC-SA 2.5)
-#' license.
+#' The copyright to the data used in this package is owned by the Newberry
+#' Library, and it is included in this package under the terms of the
+#' \href{http://creativecommons.org/licenses/by-nc-sa/2.5/}{Creative Commons
+#' Attribution-NonCommercial-ShareAlike 2.5 Generic} (CC BY-NC-SA 2.5) license.
 #'
 #' @name usboundaries
 #' @docType package

@@ -1,4 +1,6 @@
 #' Get the boundaries of the United States for a particular date
+#'
+#' This function returns
 #' @param map_date The date of the map as an object of class \code{POSIXct},
 #'   \code{POSIXt}, or \code{Date}. For state maps the date must be between 3
 #'   September 1783 and 31 December 2000; for county maps the date must be
@@ -17,6 +19,7 @@
 #'   plot(map_states)
 #'   plot(map_ne)
 #' }
+#' @return A \code{sp} object or a data frame suitable for plotting.
 #' @export
 us_boundaries <- function(map_date, type = c("state", "county"),
                           format = c("sp", "df"), states) {

@@ -19,8 +19,11 @@ between 30 December 1636 and 31 December 2000.}
 
 \item{states}{A character vector of state or territory names.}
 }
+\value{
+A \code{sp} object or a data frame suitable for plotting.
+}
 \description{
-Get the boundaries of the United States for a particular date
+This function returns
 }
 \examples{
 map_states   <- us_boundaries(as.Date("1850-07-04"))
