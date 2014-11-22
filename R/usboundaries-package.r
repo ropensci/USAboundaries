@@ -1,4 +1,4 @@
-#' usboundaries: Historical boundaries of the United States, 1629--2000
+#' usboundaries: Historical boundaries of the United States, 1629-2000
 #'
 #' This package provides spatial objects with the boundaries of states or
 #' counties in the United States of America from 1629 to 2000. It provides data
@@ -19,3 +19,8 @@
 #' @importFrom lubridate ymd
 #' @import sp
 NULL
+
+# Hide variables from R CMD check
+if(getRversion() >= "2.15.1") {
+  utils::globalVariables(c("hist_us_states", "hist_us_counties"))
+}
