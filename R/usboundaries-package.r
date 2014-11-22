@@ -14,6 +14,7 @@
 #' @docType package
 #' @seealso us_boundaries
 #' @import assertthat
+#' @import ggplot2
 #' @import lubridate
 #' @import sp
 NULL

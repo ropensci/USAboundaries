@@ -2,5 +2,6 @@
 
 export(us_boundaries)
 import(assertthat)
+import(ggplot2)
 import(lubridate)
 import(sp)
