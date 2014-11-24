@@ -12,8 +12,8 @@ Description: This package provides spatial objects with the boundaries of
 License: CC BY-NC-SA 4.0
 LazyData: true
 LazyDataCompression: xz
-URL: https://github.com/ropensci/usboundaries
-BugReports: https://github.com/ropensci/usboundaries/issues
+URL: https://github.com/ropensci/USAboundaries
+BugReports: https://github.com/ropensci/USAboundaries/issues
 Depends:
     R (>= 3.1.1),
 Imports:
