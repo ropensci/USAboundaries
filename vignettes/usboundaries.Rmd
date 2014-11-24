@@ -1,5 +1,5 @@
 ---
-title: "Historical U.S. Boundaries"
+title: "Historical U.S.A. Boundaries"
 author: "Lincoln Mullen"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
@@ -9,10 +9,10 @@ vignette: >
   \usepackage[utf8]{inputenc}
 ---
 
-The usboundaries package provides an R wrapper around the boundary data for the United States of America in the [Atlas of Historical County Boundaries](http://publications.newberry.org/ahcbp/) from the Dr. William M. Scholl Center for American History and Culture at the Newberry Library. This package provides lower resolution shapefiles; for higher resolutions, see the original project page.
+The [USAboundaries](https://github.com/ropensci/USAboundaries/) package provides an R wrapper around the boundary data for the United States of America in the [Atlas of Historical County Boundaries](http://publications.newberry.org/ahcbp/) from the Dr. William M. Scholl Center for American History and Culture at the Newberry Library. This package provides lower resolution shapefiles; for higher resolutions, see the original project page.
 
 ```{r}
-library(usboundaries)
+library(USAboundaries)
 library(maptools)
 library(sp)
 library(ggplot2)
@@ -44,6 +44,6 @@ ggplot(data = us_1790) +
   theme_minimal()
 ```
 
-See the documentation for the `us_boundaries()` for more information.
+See the documentation for the `us_boundaries()` function for more information.
 
 
