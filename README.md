@@ -1,10 +1,10 @@
-## usboundaries: Historical boundaries of the United States, 1629-2000
+## USAboundaries: Historical boundaries of the United States, 1629-2000
 
-[![Build Status](https://travis-ci.org/ropensci/usboundaries.png?branch=master)](https://travis-ci.org/ropensci/usboundaries)
-[![Build status](https://ci.appveyor.com/api/projects/status/p50pym9vtnky597e?svg=true)](https://ci.appveyor.com/project/lmullen/usboundaries)
+[![Build Status](https://travis-ci.org/ropensci/USAboundaries.png?branch=master)](https://travis-ci.org/ropensci/USAboundaries)
+[![Build status](https://ci.appveyor.com/api/projects/status/p50pym9vtnky597e?svg=true)](https://ci.appveyor.com/project/lmullen/USAboundaries)
 
 
-This R package lets you map the United States (or the colonies that
+This R package lets you map the United States of America (or the colonies that
 became the United States) on any date from 1629 to 2000. It contains 
 both county and state/territory level polygons.
 
@@ -12,7 +12,7 @@ both county and state/territory level polygons.
 
 First, install [devtools][]. Then install this package from GitHub.
 
-    devtools::install_github("ropensci/usboundaries")
+    devtools::install_github("ropensci/USAboundaries")
 
 ### Use
 
@@ -20,7 +20,7 @@ The `us_boundaries()` function takes a date object and returns a spatial
 object. That spatial object can then be plotted using the [sp][]
 package.
 
-    library(usboundaries)
+    library(USAboundaries)
     map <- us_boundaries(as.Date("1840-03-12"))
 
     if(require(sp)) {
