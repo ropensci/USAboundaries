@@ -1,3 +1,11 @@
+## Resubmission
+
+This is a resubmission of the package that makes the following changes requested by CRAN maintainers:
+
+* Capitalized "USA" part of the package title
+* Revised the package description to use "United States of America" every time
+* Remove "aut" role from the Newberry Library, retaining only their role as copyright holder
+
 ## Test environments
 
 * local OS X install (R 3.1.2)

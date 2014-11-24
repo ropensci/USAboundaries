@@ -1,15 +1,14 @@
-Package: usboundaries
+Package: USAboundaries
 Type: Package
 Title: Historical boundaries of the United States of America, 1629-2000
 Date: 2014
 Version: 0.1
-Authors@R: c(person("Dr. William M. Scholl Center for American History and
-    Culture, The Newberry Library", role = c("aut", "cph")), person("Lincoln",
-    "Mullen", email = "lincoln@lincolnmullen.com", role = c("aut", "cre")) )
-Description: Map the United States on any date. This package provides spatial
-    objects with the boundaries of states or counties in the United States of
-    America from 1629 to 2000. It provides data from the Atlas of Historical
-    County Boundaries.
+Authors@R: c(person("Lincoln", "Mullen", email = "lincoln@lincolnmullen.com",
+    role = c("aut", "cre")), person("Dr. William M. Scholl Center for American
+    History and Culture, The Newberry Library", role = c("cph")))
+Description: This package provides spatial objects with the boundaries of
+    states or counties in the United States of America from 1629 to 2000.
+    It provides data from the Atlas of Historical County Boundaries.
 License: CC BY-NC-SA 4.0
 LazyData: true
 LazyDataCompression: xz
