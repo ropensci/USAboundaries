@@ -45,5 +45,3 @@ ggplot(data = us_1790) +
 ```
 
 See the documentation for the `us_boundaries()` function for more information.
-
-

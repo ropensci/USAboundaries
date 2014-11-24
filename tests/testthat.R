@@ -1,4 +1,4 @@
 library(testthat)
-library(usboundaries)
+library(USAboundaries)
 
-test_check("usboundaries")
+test_check("USAboundaries")

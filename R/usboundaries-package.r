@@ -1,4 +1,5 @@
-#' usboundaries: Historical boundaries of the United States, 1629-2000
+#' USAboundaries: Historical boundaries of the United States of America,
+#' 1629-2000
 #'
 #' This package provides spatial objects with the boundaries of states or
 #' counties in the United States of America from 1629 to 2000. It provides data
@@ -10,7 +11,7 @@
 #' \href{http://creativecommons.org/licenses/by-nc-sa/2.5/}{Creative Commons
 #' Attribution-NonCommercial-ShareAlike 2.5 Generic} (CC BY-NC-SA 2.5) license.
 #'
-#' @name usboundaries
+#' @name USAboundaries
 #' @docType package
 #' @seealso us_boundaries
 #' @import assertthat
@@ -18,7 +19,8 @@
 #' @importFrom ggplot2 fortify
 #' @importFrom lubridate ymd
 #' @importFrom maptools checkPolygonsHoles
-#' @importFrom rgeos createPolygonsComment gUnarySTRtreeQuery gEquals gContainsProperly gContains
+#' @importFrom rgeos createPolygonsComment gUnarySTRtreeQuery gEquals
+#'   gContainsProperly gContains
 #' @import sp
 NULL
 
