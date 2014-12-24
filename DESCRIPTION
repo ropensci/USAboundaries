@@ -1,8 +1,8 @@
 Package: USAboundaries
 Type: Package
-Title: Historical boundaries of the United States of America, 1629-2000
+Title: Historical Boundaries of the United States of America, 1629-2000
 Date: 2014
-Version: 0.1
+Version: 0.1.1
 Authors@R: c(person("Lincoln", "Mullen", email = "lincoln@lincolnmullen.com",
     role = c("aut", "cre")), person("Dr. William M. Scholl Center for American
     History and Culture, The Newberry Library", role = c("cph")))

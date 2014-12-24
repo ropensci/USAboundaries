@@ -41,5 +41,5 @@ appreciate a citation to the R package itself.
   [Atlas of Historical County Boundaries]: http://publications.newberry.org/ahcbp/
 
 ---
-[![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+[![rOpenSci footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
 
