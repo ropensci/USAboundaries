@@ -1,7 +1,6 @@
 ## USAboundaries: Historical boundaries of the United States, 1629-2000
 
 [![Build Status](https://travis-ci.org/ropensci/USAboundaries.png?branch=master)](https://travis-ci.org/ropensci/USAboundaries)
-[![Build status](https://ci.appveyor.com/api/projects/status/p50pym9vtnky597e?svg=true)](https://ci.appveyor.com/project/lmullen/USAboundaries)
 
 
 This R package lets you map the United States of America (or the colonies that
