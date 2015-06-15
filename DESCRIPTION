@@ -16,8 +16,6 @@ BugReports: https://github.com/ropensci/USAboundaries/issues
 Depends:
     R (>= 3.1.1)
 Imports:
-    maptools (>= 0.8-30),
-    rgeos (>= 0.3-8),
     sp (>= 1.0.15)
 Suggests:
     knitr,

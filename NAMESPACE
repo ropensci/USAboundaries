@@ -2,9 +2,3 @@
 
 export(us_boundaries)
 import(sp)
-importFrom(maptools,checkPolygonsHoles)
-importFrom(rgeos,createPolygonsComment)
-importFrom(rgeos,gContains)
-importFrom(rgeos,gContainsProperly)
-importFrom(rgeos,gEquals)
-importFrom(rgeos,gUnarySTRtreeQuery)
