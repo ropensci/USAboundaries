@@ -1,9 +1,5 @@
 language: r
 
-r_binary_packages:
-- dplyr
-- ggplot2
-
 notifications:
   slack:
     secure: F3ywEGAskqvJ6BlCXZgGPjUZkeSN+KRFbHpgKvVaMcf1nSMDfMSDS7X4rgGLLzHMu5lPbu/G69Hw7ousXFiO+b0cWShQcAK6xDYBGXs2MqmQLws3iFFnUKMjHQVwBpTcMPitsqU8gR27xWnC+Du5jzJ7amAO54LxfK3BPHm7cDg=

@@ -14,17 +14,10 @@
 #' @name USAboundaries
 #' @docType package
 #' @seealso us_boundaries
-#' @import assertthat
-#' @import dplyr
-#' @importFrom ggplot2 fortify
-#' @importFrom lubridate ymd
-#' @importFrom maptools checkPolygonsHoles
-#' @importFrom rgeos createPolygonsComment gUnarySTRtreeQuery gEquals
-#'   gContainsProperly gContains
 #' @import sp
 NULL
 
 # Hide variables from R CMD check
-if(getRversion() >= "2.15.1") {
-  utils::globalVariables(c("hist_us_states", "hist_us_counties", "id"))
+if (getRversion() >= "2.15.1") {
+  utils::globalVariables(c("hist_us_states", "hist_us_counties"))
 }
