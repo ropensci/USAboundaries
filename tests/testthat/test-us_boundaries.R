@@ -11,15 +11,15 @@ newengland <- us_boundaries(as.Date("1895-04-02"), type = "state",
                                        "new Hampshire"))
 
 test_that("The correct type of object is returned", {
-  expect_that(class(state), is_equivalent_to("SpatialPolygonsDataFrame"))
-  expect_that(class(county), is_equivalent_to("SpatialPolygonsDataFrame"))
+  expect_is(state, "SpatialPolygonsDataFrame")
+  expect_is(county, "SpatialPolygonsDataFrame")
 })
 
 test_that("The objects have the correct number of rows/polygons", {
-  expect_that(length(state), equals(48))
-  expect_that(length(county), equals(2286))
+  expect_equal(length(state), 48)
+  expect_equal(length(county), 2286)
 })
 
 test_that("Output can be filtered by state", {
-  expect_that(length(newengland), equals(6))
+  expect_equal(length(newengland), 6)
 })
