@@ -28,22 +28,24 @@ us_boundaries <- function(map_date, type = c("state", "county"),
   format <- match.arg(format)
 
   if(type == "state") {
-    assert_that(as.Date("1783-09-03") <= map_date & map_date <= as.Date("2000-12-31"))
+    stopifnot(as.Date("1783-09-03") <= map_date,
+              map_date <= as.Date("2000-12-31"))
     shp <- hist_us_states
     states_category <- "name"
   } else {
-    assert_that(as.Date("1636-12-30") <= map_date & map_date <= as.Date("2000-12-31"))
+    stopifnot(as.Date("1636-12-30") <= map_date,
+              map_date <= as.Date("2000-12-31"))
     shp <- hist_us_counties
     states_category <- "state_terr"
   }
 
-  message(class(shp$start_posix))
   # Get the right dates
-  filter <- as.Date(shp$start_posix) <= map_date & as.Date(shp$end_posix) >= map_date
+  filter <- as.Date(shp$start_posix) <= map_date &
+    as.Date(shp$end_posix) >= map_date
 
   # Get the right states
   if(hasArg(states)) {
-    assert_that(is.character(states))
+    stopifnot(is.character(states))
     filter_states <- tolower(shp[[states_category]]) %in% tolower(states)
     filter <- filter & filter_states
   }

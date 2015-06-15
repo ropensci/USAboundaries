@@ -14,7 +14,6 @@
 #' @name USAboundaries
 #' @docType package
 #' @seealso us_boundaries
-#' @import assertthat
 #' @import dplyr
 #' @importFrom ggplot2 fortify
 #' @importFrom maptools checkPolygonsHoles
