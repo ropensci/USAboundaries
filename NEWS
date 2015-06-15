@@ -1,0 +1,14 @@
+## USAboundaries 0.2.0
+
+-  Import many fewer packages.
+-  The `us_boundaries()` function no longer has an option to return a fortified data frame. It is assumed that users will convert the `SpatialPolygonsDataFrame` objects to whatever format they need.
+
+## USAboundaries 0.1.1
+
+-  Fix to README.md as requested by CRAN.
+
+## USAboundaries 0.1
+
+-   Initial release.
+-   `us_boundaries()` returns an sp object or a data frame which can be
+    plotted.

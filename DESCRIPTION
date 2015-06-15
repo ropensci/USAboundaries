@@ -5,9 +5,9 @@ Version: 0.2.0.9000
 Authors@R: c(person("Lincoln", "Mullen", email = "lincoln@lincolnmullen.com",
     role = c("aut", "cre")), person("Dr. William M. Scholl Center for American
     History and Culture, The Newberry Library", role = c("cph")))
-Description: This package provides spatial objects with the boundaries of
-    states or counties in the United States of America from 1629 to 2000.
-    It provides data from the Atlas of Historical County Boundaries.
+Description: Boundaries of states or counties in the United States of America
+    from 1629 to 2000, from the Newberry Library's 'Atlas of Historical County
+    Boundaries'.
 License: CC BY-NC-SA 4.0
 LazyData: true
 LazyDataCompression: xz

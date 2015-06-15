@@ -7,10 +7,10 @@
 us_boundaries(map_date, type = c("state", "county"), states = NULL)
 }
 \arguments{
-\item{map_date}{The date of the map as an object of class \code{POSIXct},
-\code{POSIXt}, or \code{Date}. For state maps the date must be between 3
-September 1783 and 31 December 2000; for county maps the date must be
-between 30 December 1636 and 31 December 2000.}
+\item{map_date}{The date of the map as some object coercable to a date with
+\code{as.Date()}. For state maps the date must be between 3 September 1783
+and 31 December 2000; for county maps the date must be between 30 December
+1636 and 31 December 2000.}
 
 \item{type}{The type of the map, either \code{"state"} or \code{"county"}.}
 
@@ -20,14 +20,15 @@ between 30 December 1636 and 31 December 2000.}
 A \code{SpatialPolygonsDataFrame} object.
 }
 \description{
-This function returns
+This function takes a date and returns the county or state boundaries of the
+United States for that date.
 }
 \examples{
-map_states   <- us_boundaries(as.Date("1850-07-04"))
+map_states   <- us_boundaries("1850-07-04")
 map_counties <- us_boundaries(as.Date("1850-07-04"), type = "county")
 new_england <- c("Massachusetts", "Vermont", "New Hampshire", "Connecticut",
                  "Rhode Island", "Maine")
-map_ne <- us_boundaries(as.Date("1943-02-12"), states = new_england)
+map_ne <- us_boundaries("1943-02-12", states = new_england)
 if(require(sp)) {
   plot(map_states)
   plot(map_ne)
