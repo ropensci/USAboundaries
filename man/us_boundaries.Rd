@@ -4,8 +4,7 @@
 \alias{us_boundaries}
 \title{Get the boundaries of the United States for a particular date}
 \usage{
-us_boundaries(map_date, type = c("state", "county"), format = c("sp", "df"),
-  states = NULL)
+us_boundaries(map_date, type = c("state", "county"), states = NULL)
 }
 \arguments{
 \item{map_date}{The date of the map as an object of class \code{POSIXct},
@@ -15,13 +14,10 @@ between 30 December 1636 and 31 December 2000.}
 
 \item{type}{The type of the map, either \code{"state"} or \code{"county"}.}
 
-\item{format}{The class of the object returned, either \code{"sp"} or
-\code{"df"}, a fortified data frame.}
-
 \item{states}{A character vector of state or territory names.}
 }
 \value{
-A \code{sp} object or a data frame suitable for plotting.
+A \code{SpatialPolygonsDataFrame} object.
 }
 \description{
 This function returns

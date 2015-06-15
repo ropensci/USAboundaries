@@ -6,8 +6,6 @@
 #'   September 1783 and 31 December 2000; for county maps the date must be
 #'   between 30 December 1636 and 31 December 2000.
 #' @param type The type of the map, either \code{"state"} or \code{"county"}.
-#' @param format The class of the object returned, either \code{"sp"} or
-#'   \code{"df"}, a fortified data frame.
 #' @param states A character vector of state or territory names.
 #' @examples
 #' map_states   <- us_boundaries(as.Date("1850-07-04"))
@@ -19,15 +17,15 @@
 #'   plot(map_states)
 #'   plot(map_ne)
 #' }
-#' @return A \code{sp} object or a data frame suitable for plotting.
+#' @return A \code{SpatialPolygonsDataFrame} object.
 #' @export
 us_boundaries <- function(map_date, type = c("state", "county"),
-                          format = c("sp", "df"), states = NULL) {
+                          states = NULL) {
+
   map_date <- as.Date(map_date)
   type <- match.arg(type)
-  format <- match.arg(format)
 
-  if(type == "state") {
+  if (type == "state") {
     stopifnot(as.Date("1783-09-03") <= map_date,
               map_date <= as.Date("2000-12-31"))
     shp <- hist_us_states
@@ -50,9 +48,6 @@ us_boundaries <- function(map_date, type = c("state", "county"),
     filter <- filter & filter_states
   }
 
-  shp <- shp[filter, ]
+  shp[filter, ]
 
-  switch(format,
-         df = fortify_boundaries(shp),
-         sp = shp)
 }

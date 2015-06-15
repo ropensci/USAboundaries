@@ -14,8 +14,6 @@
 #' @name USAboundaries
 #' @docType package
 #' @seealso us_boundaries
-#' @import dplyr
-#' @importFrom ggplot2 fortify
 #' @importFrom maptools checkPolygonsHoles
 #' @importFrom rgeos createPolygonsComment gUnarySTRtreeQuery gEquals
 #'   gContainsProperly gContains
@@ -24,5 +22,5 @@ NULL
 
 # Hide variables from R CMD check
 if(getRversion() >= "2.15.1") {
-  utils::globalVariables(c("hist_us_states", "hist_us_counties", "id"))
+  utils::globalVariables(c("hist_us_states", "hist_us_counties"))
 }
