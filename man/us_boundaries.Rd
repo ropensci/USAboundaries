@@ -5,7 +5,7 @@
 \title{Get the boundaries of the United States for a particular date}
 \usage{
 us_boundaries(map_date, type = c("state", "county"), format = c("sp", "df"),
-  states)
+  states = NULL)
 }
 \arguments{
 \item{map_date}{The date of the map as an object of class \code{POSIXct},

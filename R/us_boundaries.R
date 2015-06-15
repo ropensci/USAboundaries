@@ -22,7 +22,7 @@
 #' @return A \code{sp} object or a data frame suitable for plotting.
 #' @export
 us_boundaries <- function(map_date, type = c("state", "county"),
-                          format = c("sp", "df"), states) {
+                          format = c("sp", "df"), states = NULL) {
   map_date <- as.Date(map_date)
   type <- match.arg(type)
   format <- match.arg(format)
@@ -44,7 +44,7 @@ us_boundaries <- function(map_date, type = c("state", "county"),
     as.Date(shp$end_posix) >= map_date
 
   # Get the right states
-  if(hasArg(states)) {
+  if (!is.null(states)) {
     stopifnot(is.character(states))
     filter_states <- tolower(shp[[states_category]]) %in% tolower(states)
     filter <- filter & filter_states
