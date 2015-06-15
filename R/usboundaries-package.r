@@ -17,7 +17,6 @@
 #' @import assertthat
 #' @import dplyr
 #' @importFrom ggplot2 fortify
-#' @importFrom lubridate ymd
 #' @importFrom maptools checkPolygonsHoles
 #' @importFrom rgeos createPolygonsComment gUnarySTRtreeQuery gEquals
 #'   gContainsProperly gContains
