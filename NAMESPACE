@@ -2,4 +2,5 @@
 
 export(us_boundaries)
 export(us_counties)
+export(us_states)
 import(sp)
