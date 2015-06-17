@@ -4,8 +4,8 @@
 \alias{us_boundaries}
 \title{Get state/county boundaries of the United States on a specified date.}
 \usage{
-us_boundaries(map_date, type = c("state", "county"), resolution = c("20m"),
-  states = NULL)
+us_boundaries(map_date = NULL, type = c("state", "county"),
+  resolution = c("20m"), states = NULL)
 }
 \arguments{
 \item{map_date}{The date of the map as some object coercable to a date with

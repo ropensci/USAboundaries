@@ -25,7 +25,7 @@
 #' }
 #' @return A \code{SpatialPolygonsDataFrame} object.
 #' @export
-us_boundaries <- function(map_date, type = c("state", "county"),
+us_boundaries <- function(map_date = NULL, type = c("state", "county"),
                           resolution = c("20m"), states = NULL) {
   type <- match.arg(type)
   switch(type,
