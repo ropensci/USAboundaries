@@ -27,14 +27,20 @@
 #' @export
 us_boundaries <- function(map_date = NULL,
                           type = c("state", "county", "congressional"),
-                          resolution = c("20m"), states = NULL) {
+                          resolution = c("20m", "5m", "500k"),
+                          states = NULL) {
+
+  # Deal with mismatches between arguments and available data
+  if (!missing(map_date) && type == "congressional")
+    stop(paste("Only current congressional districts are available. Do\n  ",
+               "not specify the map_date argument."))
+
+#   if (!missing(map_date) & !missing(resolution))
+#     warning(paste("Only 12.5m resolution boundaries are available",
+#                   "for historical state or county boundaries."))
 
   type <- match.arg(type)
   resolution <- match.arg(resolution)
-
-  if (!missing(map_date) & type == "congressional")
-    stop(paste("Only current congressional districts are available. Do\n  ",
-               "not specify the map_date argument."))
 
   switch(type,
     state = us_states(map_date, resolution, states),

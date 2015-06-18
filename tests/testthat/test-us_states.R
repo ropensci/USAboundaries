@@ -1,4 +1,5 @@
 context("US States")
+library(USAboundariesData)
 
 test_that("No date returns current states", {
   expect_identical(us_states(), cb_2014_us_state_20m)
@@ -17,4 +18,13 @@ test_that("Historical states can be filtered", {
   expect_equal(length(us_states("1875-01-02",
                                 states = c("Virginia", "Maryland"))),
                2)
+})
+
+test_that("Correct resolution shapefiles are returned", {
+  expect_identical(us_states(resolution = "20m"),
+                   USAboundaries::cb_2014_us_state_20m)
+  expect_identical(us_states(resolution = "5m"),
+                   USAboundariesData::cb_2014_us_state_5m)
+  expect_identical(us_states(resolution = "500k"),
+                   USAboundariesData::cb_2014_us_state_500k)
 })

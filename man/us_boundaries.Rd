@@ -5,7 +5,7 @@
 \title{Get state/county boundaries of the United States on a specified date.}
 \usage{
 us_boundaries(map_date = NULL, type = c("state", "county", "congressional"),
-  resolution = c("20m"), states = NULL)
+  resolution = c("20m", "5m", "500k"), states = NULL)
 }
 \arguments{
 \item{map_date}{The date of the map as some object coercable to a date with

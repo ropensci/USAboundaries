@@ -15,6 +15,7 @@
 #' @docType package
 #' @seealso us_boundaries
 #' @import sp
+#' @import USAboundariesData
 NULL
 
 # Hide variables from R CMD check
