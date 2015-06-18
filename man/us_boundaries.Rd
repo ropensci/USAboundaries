@@ -4,7 +4,7 @@
 \alias{us_boundaries}
 \title{Get state/county boundaries of the United States on a specified date.}
 \usage{
-us_boundaries(map_date = NULL, type = c("state", "county"),
+us_boundaries(map_date = NULL, type = c("state", "county", "congressional"),
   resolution = c("20m"), states = NULL)
 }
 \arguments{

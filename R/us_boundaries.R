@@ -25,11 +25,21 @@
 #' }
 #' @return A \code{SpatialPolygonsDataFrame} object.
 #' @export
-us_boundaries <- function(map_date = NULL, type = c("state", "county"),
+us_boundaries <- function(map_date = NULL,
+                          type = c("state", "county", "congressional"),
                           resolution = c("20m"), states = NULL) {
+
   type <- match.arg(type)
+  resolution <- match.arg(resolution)
+
+  if (!missing(map_date) & type == "congressional")
+    stop(paste("Only current congressional districts are available. Do\n  ",
+               "not specify the map_date argument."))
+
   switch(type,
     state = us_states(map_date, resolution, states),
-    county = us_counties(map_date, resolution, states)
+    county = us_counties(map_date, resolution, states),
+    congressional = us_congressional(resolution, states)
   )
+
 }

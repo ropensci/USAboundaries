@@ -6,7 +6,8 @@ library(dplyr)
 
 baseurl <- "http://www2.census.gov/geo/tiger/GENZ2014/shp/"
 zipfiles <- c("cb_2014_us_state_20m.zip",
-              "cb_2014_us_county_20m.zip")
+              "cb_2014_us_county_20m.zip",
+              "cb_2014_us_cd114_20m.zip")
 
 l_ply(zipfiles, function(x) {
   url <- paste0(baseurl, x)
@@ -42,9 +43,11 @@ state_geoid <- cb_2014_us_state_20m@data %>%
   rename(state_name = name) %>%
   distinct()
 
-# cb_2014_us_county_20m@data <- cb_2014_us_county_20m@data %>%
 cb_2014_us_county_20m@data <- cb_2014_us_county_20m@data %>%
   left_join(state_geoid, by = c("statefp" = "statefp"))
 
-use_data(cb_2014_us_county_20m, cb_2014_us_state_20m,
+cb_2014_us_cd114_20m@data <- cb_2014_us_cd114_20m@data %>%
+  left_join(state_geoid, by = c("statefp" = "statefp"))
+
+use_data(cb_2014_us_county_20m, cb_2014_us_state_20m, cb_2014_us_cd114_20m,
          compress = "xz", overwrite = TRUE)

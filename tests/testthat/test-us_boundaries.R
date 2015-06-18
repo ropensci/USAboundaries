@@ -36,3 +36,7 @@ test_that("Output can be filtered by state", {
   expect_equal(length(current_west_coast), 3)
   expect_equal(length(newengland), 6)
 })
+
+test_that("Error message if Congressional boundaries are requested by date", {
+  expect_error(us_boundaries("1890-02-12", type = "congressional"))
+})
