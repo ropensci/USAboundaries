@@ -14,16 +14,26 @@ provide a selection of boundaries from the 2014 Census files. They are
 objects of class \code{\link[sp]{SpatialPolygonsDataFrame}}. The attributes
 data associated with these boundaries is unchanged from what is available in
 the Census boundaries, with the exception that a \code{state_name} column has
-been added where necessary for convience in filtering the boundaries. See the
-U.S. Census Bureau's
-"\href{https://www.census.gov/geo/reference/geoidentifiers.html}{Understanding
-Geographic Identifiers (GEOIDs)}" and their
-"\href{https://www.census.gov/geo/reference/geocodes.html}{Geographic Codes}"
-pages for the details of this attribute data.
+been added where necessary for convience in filtering the boundaries.
+}
+\details{
+The following objects are included; see also the \code{\link[USAboundariesData]{census-boundaries}} documentation in the USAboundariesData package.
+
+\describe{
+\item{cb_2014_us_cd114_20m}{Congressional district boundaries for the 114th Congress, 1:20m resolution.}
+\item{cb_2014_us_county_20m}{County boundaries, 1:20m resolution.}
+\item{cb_2014_us_state_20m}{State boundaries, 1:20m resolution.}
+}
 }
 \references{
 U.S. Census Bureau,
   \href{https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html}{Cartographic
    Boundary Shapefiles} (2014).
+
+  See the U.S. Census Bureau's
+  "\href{https://www.census.gov/geo/reference/geoidentifiers.html}{Understanding
+   Geographic Identifiers (GEOIDs)}" and their
+  "\href{https://www.census.gov/geo/reference/geocodes.html}{Geographic
+  Codes}" pages for the details of this attribute data.
 }
 
