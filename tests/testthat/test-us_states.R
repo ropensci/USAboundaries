@@ -1,8 +1,7 @@
 context("US States")
-library(USAboundariesData)
 
 test_that("No date returns current states", {
-  expect_identical(us_states(), cb_2014_us_state_20m)
+  expect_identical(us_states(), USAboundariesData::cb_2014_us_state_20m)
 })
 
 test_that("Dates outside the valid range have an error message", {
@@ -22,7 +21,7 @@ test_that("Historical states can be filtered", {
 
 test_that("Correct resolution shapefiles are returned", {
   expect_identical(us_states(resolution = "20m"),
-                   USAboundaries::cb_2014_us_state_20m)
+                   USAboundariesData::cb_2014_us_state_20m)
   expect_identical(us_states(resolution = "5m"),
                    USAboundariesData::cb_2014_us_state_5m)
   expect_identical(us_states(resolution = "500k"),
