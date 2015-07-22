@@ -8,9 +8,9 @@ Authors@R: c(person("Lincoln", "Mullen",
 Description: Boundaries of states or counties in the United States of America
     from 1629 to 2000, from the Newberry Library's 'Atlas of Historical County
     Boundaries'.
-License: CC BY-NC-SA 4.0
 LazyData: true
 LazyDataCompression: xz
+License: MIT + file LICENSE
 URL: https://github.com/ropensci/USAboundaries
 BugReports: https://github.com/ropensci/USAboundaries/issues
 Depends:
