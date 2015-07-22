@@ -2,9 +2,9 @@ Package: USAboundaries
 Type: Package
 Title: Historical Boundaries of the United States of America, 1629-2000
 Version: 0.2.0.9000
-Authors@R: c(person("Lincoln", "Mullen", email = "lincoln@lincolnmullen.com",
-    role = c("aut", "cre")), person("Dr. William M. Scholl Center for American
-    History and Culture, The Newberry Library", role = c("cph")))
+Authors@R: c(person("Lincoln", "Mullen",
+    email = "lincoln@lincolnmullen.com",
+    role = c("aut", "cre")))
 Description: Boundaries of states or counties in the United States of America
     from 1629 to 2000, from the Newberry Library's 'Atlas of Historical County
     Boundaries'.
