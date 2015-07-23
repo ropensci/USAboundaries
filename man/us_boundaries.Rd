@@ -2,30 +2,36 @@
 % Please edit documentation in R/us_boundaries.R
 \name{us_boundaries}
 \alias{us_boundaries}
-\title{Get state/county boundaries of the United States on a specified date.}
+\title{Get historical or contemporary boundaries of the United States}
 \usage{
-us_boundaries(map_date = NULL, type = c("state", "county", "congressional"),
-  resolution = c("20m", "5m", "500k"), states = NULL)
+us_boundaries(map_date = NULL, type = c("state", "county", "congressional",
+  "zipcode"), resolution = c("20m", "5m", "500k"), states = NULL)
 }
 \arguments{
-\item{map_date}{The date of the map as some object coercable to a date with
-\code{as.Date()}. For state maps the date must be between 3 September 1783
-and 31 December 2000; for county maps the date must be between 30 December
-1636 and 31 December 2000.}
+\item{map_date}{The date of the boundaries as some object coercible to a date
+with \code{as.Date()}. For state maps the date must be between 3 September
+1783 and 31 December 2000; for county maps the date must be between 30
+December 1636 and 31 December 2000. A \code{NULL} value will return
+contemporary boundaries. This value is ignored for types of boundaries
+other than states and counties.}
 
-\item{type}{The type of the map, either \code{"state"} or \code{"county"}.}
+\item{type}{The type of the map, either \code{state}, \code{county},
+\code{congressional}, or \code{zipcode}.}
 
-\item{resolution}{The resolution of the map.}
+\item{resolution}{The resolution of the map. \code{500k} is the most
+detailed.}
 
 \item{states}{A character vector of state or territory names. Only boundaries
-inside these states/territories will be return.}
+inside these states/territories will be returned.}
 }
 \value{
-A \code{SpatialPolygonsDataFrame} object.
+A \code{SpatialPolygonsDataFrame}.
 }
 \description{
-This function takes a date and returns the county or state boundaries of the
-United States for that date.
+This function is a general-purpose wrapper around the more specific functions
+in this package. It is provided for convenience and backward-compatibility
+with earlier versions of the package. In most cases you should use the more
+specific functions for the type of boundary that you need.
 }
 \examples{
 map_states   <- us_boundaries("1850-07-04")
@@ -33,11 +39,18 @@ map_counties <- us_boundaries(as.Date("1850-07-04"), type = "county")
 new_england <- c("Massachusetts", "Vermont", "New Hampshire", "Connecticut",
                  "Rhode Island", "Maine")
 map_ne <- us_boundaries("1943-02-12", states = new_england)
+map_congressional <- us_boundaries(type = "congressional",
+                                   states = new_england)
 
 if (require(sp)) {
   plot(map_states)
   plot(map_counties)
   plot(map_ne)
+  plot(map_congressional)
 }
+}
+\seealso{
+\code{\link{us_states}}, \code{\link{us_counties}},
+  \code{\link{us_congressional}}, \code{\link{us_zipcodes}}
 }
 

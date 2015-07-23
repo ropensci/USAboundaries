@@ -42,3 +42,7 @@ test_that("Output can be filtered by state", {
 test_that("Error message if Congressional boundaries are requested by date", {
   expect_error(us_boundaries("1890-02-12", type = "congressional"))
 })
+
+test_that("Error message if zipcodes boundaries are requested by date", {
+  expect_error(us_boundaries("1890-02-12", type = "zipcode"))
+})
