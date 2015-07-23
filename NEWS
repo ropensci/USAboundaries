@@ -1,7 +1,9 @@
 ## USAboundaries 0.2.0
 
+-  Added contemporary boundaries for states, counties, congressional districts, and zipcodes from the U.S. Census Bureau.
 -  Import many fewer packages.
 -  The `us_boundaries()` function no longer has an option to return a fortified data frame. It is assumed that users will convert the `SpatialPolygonsDataFrame` objects to whatever format they need.
+-  All data is now contained in the USAboundariesData package.
 
 ## USAboundaries 0.1.1
 
