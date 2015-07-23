@@ -3,11 +3,12 @@
 #' Get the current (2014) boundaries for U.S states, or get historical state
 #' boundaries for dates between 3 September 1783 and 31 December 2000.
 #'
-#' @param map_date The date of the boundaries as some object coercable to a date
+#' @param map_date The date of the boundaries as some object coercible to a date
 #'   with \code{as.Date()}; the easiest option is a character vector following
-#'   the \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601} data format. A
-#'   \code{NULL} value will return contemporary boundaries.
+#'   the \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601} data format.
 #' @param resolution The resolution of the map.\code{500k} is the most detailed.
+#'   The resolution only affects contemporary boundaries; historical boundaries
+#'   are returned at a 1:12.5m resolution.
 #' @param states A character vector of state or territory names. Only boundaries
 #'   inside these states/territories will be returned. If \code{NULL}, all
 #'   boundaries will be returned.
