@@ -1,4 +1,10 @@
 language: r
+sudo: required
+
+r_github_packages:
+- ropensci/USAboundariesData
+
+warnings_are_errors: true
 
 notifications:
   slack:
