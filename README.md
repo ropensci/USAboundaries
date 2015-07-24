@@ -2,7 +2,7 @@
 USAboundaries: Historical and Contemporary Boundaries of the United States of America
 -------------------------------------------------------------------------------------
 
-[![Build Status](https://travis-ci.org/ropensci/USAboundaries.png?branch=master)](https://travis-ci.org/ropensci/USAboundaries)
+[![Build Status](https://travis-ci.org/ropensci/USAboundaries.png?branch=master)](https://travis-ci.org/ropensci/USAboundaries) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/USAboundaries?branch=master)](https://ci.appveyor.com/project/ropensci/USAboundaries)
 
 This R package includes contemporary state, county, congressional district, and zip code tabulation area boundaries for the United States of America, as well as historical boundaries from 1629 to 2000 for states and counties from the Newberry Library's [Atlas of Historical County Boundaries](http://publications.newberry.org/ahcbp/).
 
