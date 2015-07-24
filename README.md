@@ -97,7 +97,7 @@ title("Congressional district boundaries in California")
 
 ### Related packages
 
-Each function returns a `SpatialPolygonsDataFrame` which is suitable for use with the [sp](http://cran.rstudio.org/web/packages/sp/) or [leaflet](http://cran.rstudio.org/web/packages/leaflet/) packages, and which can be fortified for use with [ggplot2](http://cran.rstudio.org/web/packages/%20ggplot2/). See the [geojsonio](http://cran.rstudio.org/web/packages/geojsonio/) package for functions to convert these boundaries to GeoJSON.
+Each function returns a `SpatialPolygonsDataFrame` which is suitable for use with the [sp](http://cran.rstudio.org/web/packages/sp/) or [leaflet](http://cran.rstudio.org/web/packages/leaflet/) packages, and which can be fortified for use with [ggplot2](http://cran.rstudio.org/web/packages/ggplot2/). See the [geojsonio](http://cran.rstudio.org/web/packages/geojsonio/) package for functions to convert these boundaries to GeoJSON.
 
 If you need U.S. Census Bureau boundary files which are not provided by this package, consider using the [tigris](https://github.com/walkerke/tigris) package, which downloads those shapefiles.
 
