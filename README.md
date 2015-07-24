@@ -52,7 +52,7 @@ title("Contemporary U.S. state boundaries")
 
 ``` r
 
-counties_va_1787 <- us_counties("1787-09-17")
+counties_va_1787 <- us_counties("1787-09-17", states = "Virginia")
 plot(counties_va_1787)
 title("County boundaries in Virginia in 1787")
 ```
@@ -103,26 +103,30 @@ If you need U.S. Census Bureau boundary files which are not provided by this pac
 
 ### Citation and license
 
-The historical data provided in this package is available under the CC BY-NC-SA 2.5 license from John H. Long, et al., [Atlas of Historical County Boundaries](http://publications.newberry.org/ahcbp/), Dr. William M. Scholl Center for American History and Culture, The Newberry Library, Chicago (2010). Please cite that project if you use this package in your research. The contemporary data is provided by the [U.S. Census Bureau](https://www.census.gov/geo/maps-data/).
+The historical data provided in this package is available under the CC BY-NC-SA 2.5 license from John H. Long, et al., [Atlas of Historical County Boundaries](http://publications.newberry.org/ahcbp/), Dr. William M. Scholl Center for American History and Culture, The Newberry Library, Chicago (2010). Please cite that project if you use this package in your research and abide by the terms of their license if you use the historical information.
+
+The contemporary data is provided by the [U.S. Census Bureau](https://www.census.gov/geo/maps-data/).
+
+All code in this package is copyright [Lincoln Mullen](http://lincolnmullen.com) and is released under the MIT license.
 
 If you use this package in your research, I would appreciate a citation.
 
 ``` r
 citation("USAboundaries")
-#> Warning in citation("USAboundaries"): no date field in DESCRIPTION file of
-#> package 'USAboundaries'
 #> 
 #> To cite package 'USAboundaries' in publications use:
 #> 
-#>   Lincoln Mullen (). USAboundaries: Historical and Contemporary
-#>   Boundaries of the United States of America. R package version
-#>   0.2.0.9000. https://github.com/ropensci/USAboundaries
+#>   Lincoln Mullen (2015). USAboundaries: Historical and
+#>   Contemporary Boundaries of the United States of America. R
+#>   package version 0.2.0.9000.
+#>   https://github.com/ropensci/USAboundaries
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{,
 #>     title = {USAboundaries: Historical and Contemporary Boundaries of the United States of America},
 #>     author = {Lincoln Mullen},
+#>     year = {2015},
 #>     note = {R package version 0.2.0.9000},
 #>     url = {https://github.com/ropensci/USAboundaries},
 #>   }
