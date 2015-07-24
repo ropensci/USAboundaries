@@ -1,5 +1,12 @@
-This is a minor update to the USAboundaries package. It has been checked without warnings or notes on Mac, Linux (Ubuntu 14.04), and Windows.
+## Test environments
+* local OS X install, R 3.1.2
+* ubuntu 12.04 (on travis-ci), R 3.1.2
+* Debian (via Docker), R-devel
+* win-builder (devel and release)
 
-# Changes
+## R CMD check results
+There were no ERRORs or WARNINGs or NOTES.
 
-This update fixes a missing img alt attribute in the HTML generated from README.md, as requested in an e-mail from Kurt Hornik on December 19, 2014. I have validated the HTML generated from README.md by pandoc 1.13.2.
+## Accompanying 'USAboundariesData' package
+
+This is an updated version of the 'USAboundaries' package from version 0.1.1 to version 0.2.0. It adds an improved interface and contemporary boundary data in addition to the historical data in the earlier version. In this version, all data has been moved to the 'USAboundariesData' package. Though that package is 48.8Mb and so over the limit prescribed in the documentation for writing R extensions, it will be updated infrequently.
