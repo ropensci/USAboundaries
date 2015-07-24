@@ -1,5 +1,5 @@
 ---
-title: "Historical U.S.A. Boundaries"
+title: "Historical and Contemporary Boundaries of the United States of America"
 author: "Lincoln Mullen"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
@@ -9,28 +9,62 @@ vignette: >
   \usepackage[utf8]{inputenc}
 ---
 
-The [USAboundaries](https://github.com/ropensci/USAboundaries/) package provides an R wrapper around the boundary data for the United States of America in the [Atlas of Historical County Boundaries](http://publications.newberry.org/ahcbp/) from the Dr. William M. Scholl Center for American History and Culture at the Newberry Library. This package provides lower resolution shapefiles; for higher resolutions, see the original project page.
+This R package includes contemporary state, county, congressional district, and zip code tabulation area boundaries for the United States of America, as well as historical boundaries from 1629 to 2000 for states and counties from the Newberry Library's [Atlas of Historical County Boundaries](http://publications.newberry.org/ahcbp/). This package provides a set of functions, one for each of the types of boundaries that are available. These functions have a consistent interface described below.
+
+## Types of data
+
+There are four kinds of boundaries provided by this package, each with its own function:
+
+- State: `us_states()`
+- Counties: `us_counties()`
+- Congressional districts: `us_congressional()`
+- Zip code tabulation areas: `us_zipcodes()`
+
+In addition, the `us_boundaries()` function provides a wrapper around all of those functions for backward compatibility. But in general you are better off using the more specific functions.
+
+## Historical vs contemporary boundaries
+
+The `map_date = ` argument controls whether the functions return historical or contemporary boundary information. Leaving the argument `NULL` will always return contemporary boundaries.
 
 ```{r}
 library(USAboundaries)
-library(sp)
+library(sp) # for plotting
+
+states <- us_states()
+plot(states)
+title("Contemporary state boundaries")
 ```
 
-You can return either states (the default) or counties. This plot shows the states in 1844.
+Passing a date as a character vector (or any object coercible to a date object with `as.Date()`) will return the boundaries for that day.
 
-```{r fig.cap="The United States in 1844"}
-us_1844 <- us_boundaries("1844-07-04")
-plot(us_1844)
+```{r}
+states_1790 <- us_states("1790-07-04")
+plot(states_1790)
+title("State boundaries in 1790")
 ```
 
-This plot shows the counties in Virginia in 1844.
+Historical data is only available for states and counties. The functions `us_congressional()` and `us_zipcodes()` only offer contemporary boundaries.
 
-```{r fig.cap="Counties in Virginia in 1844"}
-va_1844 <- us_boundaries(as.Date("1844-07-04"), states = "Virginia", 
-                         type = "county")
-plot(va_1844)
+## Selection certain states
+
+For any function, pass a character vector of state names to the `states =` argument to return only those states or territories.
+
+```{r}
+counties <- us_counties(states = c("South Carolina", "North Carolina"))
+plot(counties)
+title("Contemporary county boundaries in North and South Carolina")
 ```
 
-The object returned has the class `SpatialPolygonsDataFrame` from the [sp](http://cran.rstudio.org/web/packages/sp/) package. You can plot this using the `plot()` methods provided by the [sp](http://cran.rstudio.org/web/packages/sp/) package, and you can also use that object in the [leaflet](http://rstudio.github.io/leaflet/) package. See `?ggplot2::fortify` or `?broom::tidy.SpatialPolygonsDataFrame` to convert a `SpatialPolygonsDataFrame` to a data frame suitable for plotting with [ggplot2](http://cran.rstudio.com/web/packages/ggplot2/).
+## Resolution
 
-See the documentation for the `us_boundaries()` function for more information.
+For certain functions, more or less detailed boundary information is available by passing an argument to the `resolution =` argument.
+
+```{r}
+counties_va <- us_counties(states = "Virginia")
+plot(counties_va)
+title("Contemporary county boundaries in Virginia")
+
+counties_va_highres <- us_counties(states = "Virginia", resolution = "500k")
+plot(counties_va_highres)
+title("Higher resolution contemporary county boundaries in Virginia")
+```

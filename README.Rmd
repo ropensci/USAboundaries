@@ -44,7 +44,7 @@ Passing a date to `us_states()` or `us_counties()` returns the boundaries for th
 
 For any function, pass a character vector of state names to the `states =` argument to return only those states or territories.
 
-For certain function, more or less detailed boundary information is available by passing an argument to the `resolution =` argument.
+For certain functions, more or less detailed boundary information is available by passing an argument to the `resolution =` argument.
 
 See the examples below to see how the interface works, and see the documentation for each function for more details.
 
