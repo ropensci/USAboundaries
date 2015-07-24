@@ -32,7 +32,6 @@ library(sp) # for plotting
 
 states <- us_states()
 plot(states)
-title("Contemporary state boundaries")
 ```
 
 Passing a date as a character vector (or any object coercible to a date object with `as.Date()`) will return the boundaries for that day.
@@ -40,7 +39,6 @@ Passing a date as a character vector (or any object coercible to a date object w
 ```{r}
 states_1790 <- us_states("1790-07-04")
 plot(states_1790)
-title("State boundaries in 1790")
 ```
 
 Historical data is only available for states and counties. The functions `us_congressional()` and `us_zipcodes()` only offer contemporary boundaries.
@@ -52,7 +50,6 @@ For any function, pass a character vector of state names to the `states =` argum
 ```{r}
 counties <- us_counties(states = c("South Carolina", "North Carolina"))
 plot(counties)
-title("Contemporary county boundaries in North and South Carolina")
 ```
 
 ## Resolution
@@ -62,9 +59,7 @@ For certain functions, more or less detailed boundary information is available b
 ```{r}
 counties_va <- us_counties(states = "Virginia")
 plot(counties_va)
-title("Contemporary county boundaries in Virginia")
 
 counties_va_highres <- us_counties(states = "Virginia", resolution = "500k")
 plot(counties_va_highres)
-title("Higher resolution contemporary county boundaries in Virginia")
 ```
