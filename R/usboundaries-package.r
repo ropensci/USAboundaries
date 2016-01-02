@@ -22,5 +22,4 @@
 #' @name USAboundaries
 #' @docType package
 #' @import sp
-#' @import USAboundariesData
 NULL
