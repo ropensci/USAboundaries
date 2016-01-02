@@ -4,7 +4,7 @@ USAboundaries: Historical and Contemporary Boundaries of the United States of Am
 
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/USAboundaries)](http://cran.r-project.org/package=USAboundaries) [![Build Status](https://travis-ci.org/ropensci/USAboundaries.png?branch=master)](https://travis-ci.org/ropensci/USAboundaries) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/USAboundaries?branch=master)](https://ci.appveyor.com/project/ropensci/USAboundaries)
 
-This R package includes contemporary state, county, congressional district, and zip code tabulation area boundaries for the United States of America, as well as historical boundaries from 1629 to 2000 for states and counties from the Newberry Library's [Atlas of Historical County Boundaries](http://publications.newberry.org/ahcbp/).
+This R package includes contemporary state, county, and congressional district boundaries for the United States of America, as well as historical boundaries from 1629 to 2000 for states and counties from the Newberry Library's [Atlas of Historical County Boundaries](http://publications.newberry.org/ahcbp/).
 
 ### Installation
 
@@ -12,10 +12,10 @@ You can install this package from CRAN.
 
     install.packages("USAboundaries")
 
-Or you can install the development version from GitHub using [devtools](https://github.com/hadley/devtools). You will also have to install the data-only package.
+Or you can install the development version from GitHub using [devtools](https://github.com/hadley/devtools). You may also wish to install the high resolution data package.
 
-    devtools::install_github("ropensci/USAboundariesData")
     devtools::install_github("ropensci/USAboundaries")
+    devtools::install_github("ropensci/USAboundariesData")
 
 ### Use
 
@@ -31,7 +31,6 @@ See the examples below to see how the interface works, and see the documentation
 
 ``` r
 library(USAboundaries) 
-#> Loading required package: USAboundariesData
 library(sp) # for the plot.SpatialPolygonsDataFrame method
 
 states_1840 <- us_states("1840-03-12")
@@ -70,7 +69,7 @@ title("Contemporary county boundaries in Virginia")
 
 ``` r
 
-counties_va_highres <- us_counties(states = "Virginia", resolution = "500k")
+counties_va_highres <- us_counties(states = "Virginia", resolution = "high")
 plot(counties_va_highres)
 title("Higher resolution contemporary county boundaries in Virginia")
 ```
@@ -79,27 +78,18 @@ title("Higher resolution contemporary county boundaries in Virginia")
 
 ``` r
 
-zips <- us_zipcodes(states = c("North Dakota", "South Dakota"))
-plot(zips)
-title("Zip code tabulation areas in North and South Dakota")
-```
-
-![](README-unnamed-chunk-2-6.png)
-
-``` r
-
 congress <- us_congressional(states = "California")
 plot(congress)
 title("Congressional district boundaries in California")
 ```
 
-![](README-unnamed-chunk-2-7.png)
+![](README-unnamed-chunk-2-6.png)
 
 ### Related packages
 
-Each function returns a `SpatialPolygonsDataFrame` which is suitable for use with the [sp](http://cran.rstudio.org/web/packages/sp/) or [leaflet](http://cran.rstudio.org/web/packages/leaflet/) packages, and which can be fortified for use with [ggplot2](http://cran.rstudio.org/web/packages/ggplot2/). See the [geojsonio](http://cran.rstudio.org/web/packages/geojsonio/) package for functions to convert these boundaries to GeoJSON.
+Each function returns a `SpatialPolygonsDataFrame` which is suitable for use with the [sp](http://cran.r-project.org/package=sp) or [leaflet](http://cran.r-project.org/package=leaflet) packages, and which can be fortified by the [broom](http://cran.r-project.org/package=broom) package for use with [ggplot2](http://cran.r-project.org/package=ggplot2). See the [geojsonio](http://cran.r-project.org/package=geojsonio) package for functions to convert these boundaries to GeoJSON.
 
-If you need U.S. Census Bureau boundary files which are not provided by this package, consider using the [tigris](https://github.com/walkerke/tigris) package, which downloads those shapefiles.
+If you need U.S. Census Bureau boundary files which are not provided by this package, consider using the [tigris](http://cran.r-project.org/package=tigris) package, which downloads those shapefiles.
 
 ### Citation and license
 
@@ -118,7 +108,7 @@ citation("USAboundaries")
 #> 
 #>   Lincoln Mullen (2015). USAboundaries: Historical and
 #>   Contemporary Boundaries of the United States of America. R
-#>   package version 0.2.0.9000.
+#>   package version 0.1.1.9001.
 #>   https://github.com/ropensci/USAboundaries
 #> 
 #> A BibTeX entry for LaTeX users is
@@ -127,7 +117,7 @@ citation("USAboundaries")
 #>     title = {USAboundaries: Historical and Contemporary Boundaries of the United States of America},
 #>     author = {Lincoln Mullen},
 #>     year = {2015},
-#>     note = {R package version 0.2.0.9000},
+#>     note = {R package version 0.1.1.9001},
 #>     url = {https://github.com/ropensci/USAboundaries},
 #>   }
 ```
