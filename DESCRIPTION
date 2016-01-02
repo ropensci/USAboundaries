@@ -30,3 +30,4 @@ Suggests:
 VignetteBuilder: knitr
 RoxygenNote: 5.0.1
 Additional_repositories: http://packages.ropensci.org
+LazyData: true
