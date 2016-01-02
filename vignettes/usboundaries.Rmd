@@ -4,21 +4,20 @@ author: "Lincoln Mullen"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{Historical and Contemporary Boundaries of the United States of America}
   %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
 ---
 
-This R package includes contemporary state, county, congressional district, and zip code tabulation area boundaries for the United States of America, as well as historical boundaries from 1629 to 2000 for states and counties from the Newberry Library's [Atlas of Historical County Boundaries](http://publications.newberry.org/ahcbp/). This package provides a set of functions, one for each of the types of boundaries that are available. These functions have a consistent interface described below.
+This R package includes contemporary state, county,  and congressional district boundaries for the United States of America provided by the [U.S. Census Bureau], as well as historical boundaries from 1629 to 2000 for states and counties from the Newberry Library's [Atlas of Historical County Boundaries](http://publications.newberry.org/ahcbp/). This package provides a set of functions, one for each of the types of boundaries that are available. These functions have a consistent interface described below.
 
 ## Types of data
 
-There are four kinds of boundaries provided by this package, each with its own function:
+There are three kinds of boundaries provided by this package, each with its own function:
 
 - State: `us_states()`
 - Counties: `us_counties()`
 - Congressional districts: `us_congressional()`
-- Zip code tabulation areas: `us_zipcodes()`
 
 In addition, the `us_boundaries()` function provides a wrapper around all of those functions for backward compatibility. But in general you are better off using the more specific functions.
 
@@ -41,9 +40,9 @@ states_1790 <- us_states("1790-07-04")
 plot(states_1790)
 ```
 
-Historical data is only available for states and counties. The functions `us_congressional()` and `us_zipcodes()` only offer contemporary boundaries.
+Historical data is only available for states and counties. The function `us_congressional()` only offers contemporary boundaries.
 
-## Selection certain states
+## Selecting certain states
 
 For any function, pass a character vector of state names to the `states =` argument to return only those states or territories.
 
@@ -54,12 +53,4 @@ plot(counties)
 
 ## Resolution
 
-For certain functions, more or less detailed boundary information is available by passing an argument to the `resolution =` argument.
-
-```{r}
-counties_va <- us_counties(states = "Virginia")
-plot(counties_va)
-
-counties_va_highres <- us_counties(states = "Virginia", resolution = "500k")
-plot(counties_va_highres)
-```
+For certain functions, more or less detailed boundary information is available by passing an argument to the `resolution =` argument. To use the higher resolution files you will need the [USAboundariesData](https://github.com/ropensci/USAboundariesData/) package. If that package is not available, you will be prompted to install it from the [rOpenSci package repository](http://packages.ropensci.org/).
