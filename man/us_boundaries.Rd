@@ -4,8 +4,8 @@
 \alias{us_boundaries}
 \title{Get historical or contemporary boundaries of the United States}
 \usage{
-us_boundaries(map_date = NULL, type = c("state", "county", "congressional",
-  "zipcode"), resolution = c("20m", "5m", "500k"), states = NULL)
+us_boundaries(map_date = NULL, type = c("state", "county", "congressional"),
+  resolution = c("20m", "5m", "500k"), states = NULL)
 }
 \arguments{
 \item{map_date}{The date of the boundaries as some object coercible to a date
@@ -15,8 +15,8 @@ December 1636 and 31 December 2000. A \code{NULL} value will return
 contemporary boundaries. This value is ignored for types of boundaries
 other than states and counties.}
 
-\item{type}{The type of the map, either \code{state}, \code{county},
-\code{congressional}, or \code{zipcode}.}
+\item{type}{The type of the map, either \code{state}, \code{county}, or
+\code{congressional}.}
 
 \item{resolution}{The resolution of the map. \code{500k} is the most
 detailed.}
@@ -51,6 +51,6 @@ if (require(sp)) {
 }
 \seealso{
 \code{\link{us_states}}, \code{\link{us_counties}},
-  \code{\link{us_congressional}}, \code{\link{us_zipcodes}}
+  \code{\link{us_congressional}}
 }
 

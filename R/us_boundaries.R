@@ -11,8 +11,8 @@
 #'   December 1636 and 31 December 2000. A \code{NULL} value will return
 #'   contemporary boundaries. This value is ignored for types of boundaries
 #'   other than states and counties.
-#' @param type The type of the map, either \code{state}, \code{county},
-#'   \code{congressional}, or \code{zipcode}.
+#' @param type The type of the map, either \code{state}, \code{county}, or
+#'   \code{congressional}.
 #' @param resolution The resolution of the map. \code{500k} is the most
 #'   detailed.
 #' @param states A character vector of state or territory names. Only boundaries
@@ -34,16 +34,15 @@
 #' }
 #' @return A \code{SpatialPolygonsDataFrame}.
 #' @seealso \code{\link{us_states}}, \code{\link{us_counties}},
-#'   \code{\link{us_congressional}}, \code{\link{us_zipcodes}}
+#'   \code{\link{us_congressional}}
 #' @export
 us_boundaries <- function(map_date = NULL,
-                          type = c("state", "county",
-                                   "congressional", "zipcode"),
+                          type = c("state", "county", "congressional"),
                           resolution = c("20m", "5m", "500k"),
                           states = NULL) {
 
   # Deal with mismatches between arguments and available data
-  if (!missing(map_date) && type %in% c("congressional", "zipcode"))
+  if (!missing(map_date) && type == "congressional")
     stop(paste("Only current congressional districts are available. Do\n  ",
                "not specify the map_date argument."))
 
@@ -53,8 +52,7 @@ us_boundaries <- function(map_date = NULL,
   switch(type,
     state = us_states(map_date, resolution, states),
     county = us_counties(map_date, resolution, states),
-    congressional = us_congressional(resolution, states),
-    zipcode = us_zipcodes(states)
+    congressional = us_congressional(resolution, states)
   )
 
 }
