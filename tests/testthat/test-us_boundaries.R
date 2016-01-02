@@ -27,9 +27,9 @@ test_that("The correct type of object is returned", {
 
 test_that("The objects have the correct number of rows/polygons", {
   expect_equal(length(current_state),
-               length(USAboundariesData::cb_2014_us_state_20m))
+               length(USAboundaries::cb_2014_us_state_20m))
   expect_equal(length(current_county),
-               length(USAboundariesData::cb_2014_us_county_20m))
+               length(USAboundaries::cb_2014_us_county_20m))
   expect_equal(length(state), 48)
   expect_equal(length(county), 2286)
 })
@@ -43,6 +43,3 @@ test_that("Error message if Congressional boundaries are requested by date", {
   expect_error(us_boundaries("1890-02-12", type = "congressional"))
 })
 
-test_that("Error message if zipcodes boundaries are requested by date", {
-  expect_error(us_boundaries("1890-02-12", type = "zipcode"))
-})

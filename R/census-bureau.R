@@ -31,7 +31,10 @@
 #'    Geographic Identifiers (GEOIDs)}" and their
 #'   "\href{https://www.census.gov/geo/reference/geocodes.html}{Geographic
 #'   Codes}" pages for the details of this attribute data.
-#'
+#' @name census_boundaries
+#' @rdname census_boundaries
+NULL
+
 #' @name   cb_2014_us_state_500k
 #' @rdname census_boundaries
 NULL

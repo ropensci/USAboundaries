@@ -1,7 +1,7 @@
 context("US Counties")
 
 test_that("No date returns current counties", {
-  expect_identical(us_counties(), USAboundariesData::cb_2014_us_county_20m)
+  expect_identical(us_counties(), USAboundaries::cb_2014_us_county_20m)
 })
 
 test_that("Dates outside the valid range have an error message", {
@@ -18,10 +18,9 @@ test_that("Historical states can be filtered", {
 })
 
 test_that("Correct resolution shapefiles are returned", {
-  expect_identical(us_counties(resolution = "20m"),
-                   USAboundariesData::cb_2014_us_county_20m)
-  expect_identical(us_counties(resolution = "5m"),
-                   USAboundariesData::cb_2014_us_county_5m)
-  expect_identical(us_counties(resolution = "500k"),
+  skip_if_not_installed("USAboundariesData")
+  expect_identical(us_counties(resolution = "low"),
+                   USAboundaries::cb_2014_us_county_20m)
+  expect_identical(us_counties(resolution = "high"),
                    USAboundariesData::cb_2014_us_county_500k)
 })

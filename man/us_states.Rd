@@ -4,17 +4,14 @@
 \alias{us_states}
 \title{State boundaries (contemporary and historical)}
 \usage{
-us_states(map_date = NULL, resolution = c("20m", "5m", "500k"),
-  states = NULL)
+us_states(map_date = NULL, resolution = c("low", "high"), states = NULL)
 }
 \arguments{
 \item{map_date}{The date of the boundaries as some object coercible to a date
 with \code{as.Date()}; the easiest option is a character vector following
 the \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601} data format.}
 
-\item{resolution}{The resolution of the map.\code{500k} is the most detailed.
-The resolution only affects contemporary boundaries; historical boundaries
-are returned at a 1:12.5m resolution.}
+\item{resolution}{The resolution of the map.}
 
 \item{states}{A character vector of state or territory names. Only boundaries
 inside these states/territories will be returned. If \code{NULL}, all

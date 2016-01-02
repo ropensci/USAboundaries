@@ -1,7 +1,7 @@
 context("US Congressional Districts")
 
 test_that("Returns current congressional districts", {
-  expect_identical(us_congressional(), USAboundariesData::cb_2014_us_cd114_20m)
+  expect_identical(us_congressional(), USAboundaries::cb_2014_us_cd114_20m)
 })
 
 test_that("States can be filtered", {
@@ -9,10 +9,9 @@ test_that("States can be filtered", {
 })
 
 test_that("Correct resolution shapefiles are returned", {
-  expect_identical(us_congressional(resolution = "20m"),
+  skip_if_not_installed("USAbundariesData")
+  expect_identical(us_congressional(resolution = "low"),
                    USAboundariesData::cb_2014_us_cd114_20m)
-  expect_identical(us_congressional(resolution = "5m"),
-                   USAboundariesData::cb_2014_us_cd114_5m)
-  expect_identical(us_congressional(resolution = "500k"),
+  expect_identical(us_congressional(resolution = "high"),
                    USAboundariesData::cb_2014_us_cd114_500k)
 })

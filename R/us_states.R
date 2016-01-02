@@ -6,9 +6,7 @@
 #' @param map_date The date of the boundaries as some object coercible to a date
 #'   with \code{as.Date()}; the easiest option is a character vector following
 #'   the \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601} data format.
-#' @param resolution The resolution of the map.\code{500k} is the most detailed.
-#'   The resolution only affects contemporary boundaries; historical boundaries
-#'   are returned at a 1:12.5m resolution.
+#' @param resolution The resolution of the map.
 #' @param states A character vector of state or territory names. Only boundaries
 #'   inside these states/territories will be returned. If \code{NULL}, all
 #'   boundaries will be returned.
@@ -34,19 +32,27 @@
 #' }
 #'
 #' @export
-us_states <- function(map_date = NULL,
-                      resolution = c("20m", "5m", "500k"),
+us_states <- function(map_date = NULL, resolution = c("low", "high"),
                       states = NULL) {
   resolution <- match.arg(resolution)
   if (is.null(map_date)) {
-    shpname <- paste0("cb_2014_us_state_", resolution)
-    shp <- get(shpname, "package:USAboundariesData")
+    if (resolution == "low") {
+      shp <- cb_2014_us_state_20m
+    } else if (resolution == "high") {
+      check_data_package()
+      shp <- USAboundariesData::cb_2014_us_state_500k
+    }
     shp <- filter_by_states(shp, states, "name")
   } else {
     map_date <- as.Date(map_date)
     stopifnot(as.Date("1783-09-03") <= map_date,
               map_date <= as.Date("2000-12-31"))
-    shp <- USAboundariesData::hist_us_states
+    if (resolution == "low") {
+      shp <- hist_us_states
+    } else if (resolution == "high") {
+      check_data_package()
+      shp <- USAboundariesData::hist_us_states_hires
+    }
     shp <- filter_by_date(shp, map_date, "start_posix", "end_posix")
     shp <- filter_by_states(shp, states, "name")
   }

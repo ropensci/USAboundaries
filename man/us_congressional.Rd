@@ -4,11 +4,10 @@
 \alias{us_congressional}
 \title{Congressional district boundaries (contemporary)}
 \usage{
-us_congressional(resolution = c("20m", "5m", "500k"), states = NULL)
+us_congressional(resolution = c("low", "high"), states = NULL)
 }
 \arguments{
-\item{resolution}{The resolution of the boundaries. \code{500k} is the most
-detailed.}
+\item{resolution}{The resolution of the boundaries.}
 
 \item{states}{A character vector of state or territory names. Only boundaries
 inside these states/territories will be returned. If \code{NULL}, all
@@ -30,6 +29,6 @@ if (require(sp)) {
 \seealso{
 For documentation of and citation to the underlying shapefiles for
   contemporary data from the U.S. Census Bureau, see
-  \code{\link[USAboundariesData]{census_boundaries}}.
+  \code{\link{census_boundaries}}.
 }
 
