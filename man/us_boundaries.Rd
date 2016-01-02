@@ -5,7 +5,7 @@
 \title{Get historical or contemporary boundaries of the United States}
 \usage{
 us_boundaries(map_date = NULL, type = c("state", "county", "congressional"),
-  resolution = c("20m", "5m", "500k"), states = NULL)
+  resolution = c("low", "high"), states = NULL)
 }
 \arguments{
 \item{map_date}{The date of the boundaries as some object coercible to a date
@@ -18,8 +18,9 @@ other than states and counties.}
 \item{type}{The type of the map, either \code{state}, \code{county}, or
 \code{congressional}.}
 
-\item{resolution}{The resolution of the map. \code{500k} is the most
-detailed.}
+\item{resolution}{The resolution of the map. High resolution data is
+contained in the suggested package \code{USAboundariesData}. If that
+package is not available, you will be prompted to install it.}
 
 \item{states}{A character vector of state or territory names. Only boundaries
 inside these states/territories will be returned.}

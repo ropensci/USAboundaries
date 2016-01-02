@@ -13,8 +13,9 @@
 #'   other than states and counties.
 #' @param type The type of the map, either \code{state}, \code{county}, or
 #'   \code{congressional}.
-#' @param resolution The resolution of the map. \code{500k} is the most
-#'   detailed.
+#' @param resolution The resolution of the map. High resolution data is
+#'   contained in the suggested package \code{USAboundariesData}. If that
+#'   package is not available, you will be prompted to install it.
 #' @param states A character vector of state or territory names. Only boundaries
 #'   inside these states/territories will be returned.
 #' @examples
@@ -38,7 +39,7 @@
 #' @export
 us_boundaries <- function(map_date = NULL,
                           type = c("state", "county", "congressional"),
-                          resolution = c("20m", "5m", "500k"),
+                          resolution = c("low", "high"),
                           states = NULL) {
 
   # Deal with mismatches between arguments and available data
