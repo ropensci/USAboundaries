@@ -5,7 +5,10 @@ Version: 0.1.1.9001
 Date: 2015-08-22
 Authors@R: c(person("Lincoln", "Mullen",
     email = "lincoln@lincolnmullen.com",
-    role = c("aut", "cre")))
+    role = c("aut", "cre")),
+    person("Dr. William M. Scholl Center for American History and Culture,
+    The Newberry Library", role = "cph"),
+    person("United States Census Bureau", role = "cph"))
 Description: The boundaries for geographical units in the United States of
     America contained in this package include state, county, congressional
     district, and zip code tabulation area. Contemporary boundaries are provided
@@ -13,7 +16,7 @@ Description: The boundaries for geographical units in the United States of
     2000 are provided form the Newberry Library's 'Atlas of Historical County
     Boundaries'. The data itself is provided in the 'USAboundariesData' package;
     this package provides an interface to access that data.
-License: MIT + file LICENSE
+License: CC0
 URL: https://github.com/ropensci/USAboundaries
 BugReports: https://github.com/ropensci/USAboundaries/issues
 Depends:
