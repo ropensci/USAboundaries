@@ -1,6 +1,9 @@
 language: r
 sudo: required
 
+r_binary_packages:
+- rmarkdown
+
 r_github_packages:
 - ropensci/USAboundariesData
 
