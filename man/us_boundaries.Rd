@@ -54,4 +54,3 @@ if (require(sp)) {
 \code{\link{us_states}}, \code{\link{us_counties}},
   \code{\link{us_congressional}}
 }
-

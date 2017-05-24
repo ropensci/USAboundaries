@@ -31,4 +31,3 @@ For documentation of and citation to the underlying shapefiles for
   contemporary data from the U.S. Census Bureau, see
   \code{\link{census_boundaries}}.
 }
-

@@ -26,4 +26,3 @@ The code in this package is copyrighted by
 \href{http://lincolnmullen.com}{Lincoln Mullen}, and is released under the
 terms of the \href{http://opensource.org/licenses/MIT}{MIT License}.
 }
-

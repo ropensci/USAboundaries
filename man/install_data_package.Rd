@@ -9,4 +9,3 @@ install_data_package()
 \description{
 Install the \code{USAboundariesData} package after checking with the user
 }
-

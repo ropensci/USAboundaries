@@ -29,7 +29,7 @@ Suggests:
     knitr,
     testthat (>= 0.9.1)
 VignetteBuilder: knitr
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
 Additional_repositories: http://packages.ropensci.org
 LazyData: true
 LazyDataCompression: xz
