@@ -6,6 +6,9 @@ Date: 2016-01-03
 Authors@R: c(person("Lincoln", "Mullen",
     email = "lincoln@lincolnmullen.com",
     role = c("aut", "cre")),
+    person("Jordan", "Bratt",
+    email = "jfbratt@gmail.com",
+    role = c("ctb")),
     person("Dr. William M. Scholl Center for American History and Culture,
     The Newberry Library", role = "cph"),
     person("United States Census Bureau", role = "cph"))
