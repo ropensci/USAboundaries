@@ -27,5 +27,5 @@ NULL
 if (getRversion() >= "2.15.1") {
   utils::globalVariables(c("cb_2014_us_cd114_20m", "cb_2014_us_county_20m",
                            "hist_us_counties", "hist_us_states",
-                           "cb_2014_us_state_20m"))
+                           "cb_2014_us_state_20m", "state_proj"))
 }
