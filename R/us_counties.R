@@ -17,7 +17,7 @@
 #' @seealso For documentation of and citation to the underlying shapefiles for
 #'   contemporary data from the U.S. Census Bureau, see
 #'   \code{\link{census_boundaries}}. For documentation of
-#'   and citation to the underlying shapefiles for contemporary data from the
+#'   and citation to the underlying shapefiles for historical data from the
 #'   U.S. Census Bureau, see \code{\link{hist_us_counties}}.
 #'
 #' @examples
