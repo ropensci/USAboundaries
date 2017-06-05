@@ -25,13 +25,13 @@ state_plane <- function(state, plane_id = NULL, type = c("epsg", "proj4")) {
   }
   stopifnot(is.null(plane_id) || plane_id %in% unique(state_regions$zone))
   if (is.null(plane_id) && type == "epsg") {
-    item <- state_proj[state_proj$state == state & state_proj$statewide_proj == TRUE, "epsg"]
+    item <- state_proj[["epsg"]][state_proj$state == state & state_proj$statewide_proj == TRUE]
   } else if (is.null(plane_id) && type == "proj4") {
-    item <- state_proj[state_proj$state == state & state_proj$statewide_proj == TRUE, "proj4_string"]
+    item <- state_proj[["proj4_string"]][state_proj$state == state & state_proj$statewide_proj == TRUE]
   } else if (type == "epsg") {
-    item <- state_proj[state_proj$state == state & state_proj$zone == plane_id, "epsg"]
+    item <- state_proj[["epsg"]][state_proj$state == state & state_proj$zone == plane_id]
   } else if (type == "proj4") {
-    item <- state_proj[state_proj$state == state & state_proj$zone == plane_id, "proj4_string"]
+    item <- state_proj[["proj4_string"]][state_proj$state == state & state_proj$zone == plane_id]
   }
   stopifnot(is.character(item))
   item
