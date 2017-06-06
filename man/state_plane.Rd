@@ -9,13 +9,15 @@ state_plane(state, plane_id = NULL, type = c("epsg", "proj4"))
 \arguments{
 \item{state}{The state code.}
 
-\item{plane_id}{The state plane geographic zone identifier. A
-\code{NULL} value will return a projection for the entire state.}
+\item{plane_id}{The state plane geographic zone identifier. A \code{NULL}
+value will return a projection for the entire state.}
 
-\item{type}{A string identifying the output as either an EPSG code or PROJ4 string.}
+\item{type}{A string identifying the output as either an EPSG code or PROJ4
+string.}
 }
 \value{
-A string
+Either a PROJ4 string as a character vector or an EPSG code as an
+  integer.
 }
 \description{
 Get the State Plane projection for a specific state or region within a state.
@@ -26,5 +28,6 @@ state_plane (state = "MA", plane_id = "mainland", type = "proj4")
 
 }
 \seealso{
-For documentation of the underlying state plane projection data frame, see \code{\link{state_proj}}.
+For documentation of the underlying state plane projection data
+  frame, see \code{\link{state_proj}}.
 }
