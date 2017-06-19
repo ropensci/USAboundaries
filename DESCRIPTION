@@ -18,7 +18,7 @@ Description: The boundaries for geographical units in the United States of
     Historical County Boundaries' (licensed CC BY-NC-SA). Additional high
     resolution data is provided in the 'USAboundariesData' package;
     this package provides an interface to access that data.
-License: CC BY-NC-SA 4.0
+License: MIT + file LICENSE
 URL: https://github.com/ropensci/USAboundaries
 BugReports: https://github.com/ropensci/USAboundaries/issues
 Depends:
