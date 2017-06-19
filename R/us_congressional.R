@@ -11,7 +11,7 @@
 #'
 #' @seealso For documentation of and citation to the underlying shapefiles for
 #'   contemporary data from the U.S. Census Bureau, see
-#'   \code{\link{census_boundaries}}.
+#'   \code{\link[USAboundariesData]{census_boundaries}}.
 #'
 #' @examples
 #' va_congressional <- us_congressional(states = "Virginia")
@@ -24,7 +24,7 @@ us_congressional <- function(resolution = c("low", "high"),
                              states = NULL) {
   resolution <- match.arg(resolution)
   if (resolution == "low") {
-    shp <- cb_2014_us_cd114_20m
+    shp <- USAboundariesData::cb_2014_us_cd114_20m
   } else if (resolution == "high") {
     check_data_package()
     shp <- USAboundariesData::cb_2014_us_cd114_500k

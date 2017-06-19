@@ -1,7 +1,7 @@
 Package: USAboundaries
 Type: Package
 Title: Historical and Contemporary Boundaries of the United States of America
-Version: 0.2.0.9000
+Version: 0.2.0.9001
 Date: 2016-01-03
 Authors@R: c(person("Lincoln", "Mullen",
     email = "lincoln@lincolnmullen.com",
@@ -9,8 +9,6 @@ Authors@R: c(person("Lincoln", "Mullen",
     person("Jordan", "Bratt",
     email = "jfbratt@gmail.com",
     role = c("ctb")),
-    person("Dr. William M. Scholl Center for American History and Culture,
-    The Newberry Library", role = "cph"),
     person("United States Census Bureau", role = "cph"))
 Description: The boundaries for geographical units in the United States of
     America contained in this package include state, county, congressional

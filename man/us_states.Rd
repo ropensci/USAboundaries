@@ -40,7 +40,7 @@ if (require(sp)) {
 \seealso{
 For documentation of and citation to the underlying shapefiles for
   contemporary data from the U.S. Census Bureau, see
-  \code{\link{census_boundaries}}. For documentation of
+  \code{\link[USAboundariesData]{census_boundaries}}. For documentation of
   and citation to the underlying shapefiles for contemporary data from the
-  U.S. Census Bureau, see \code{\link{hist_us_states}}.
+  U.S. Census Bureau, see \code{\link[USAboundariesData]{hist_us_states}}.
 }

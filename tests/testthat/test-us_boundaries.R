@@ -27,7 +27,7 @@ test_that("The correct type of object is returned", {
 
 test_that("The objects have the correct number of rows/polygons", {
   expect_equal(length(current_state),
-               length(USAboundaries::cb_2014_us_state_20m))
+               length(USAboundariesData::cb_2014_us_state_20m))
   expect_equal(length(current_county),
                length(USAboundaries::cb_2014_us_county_20m))
   expect_equal(length(state), 48)

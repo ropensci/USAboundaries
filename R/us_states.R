@@ -15,9 +15,9 @@
 #'
 #' @seealso For documentation of and citation to the underlying shapefiles for
 #'   contemporary data from the U.S. Census Bureau, see
-#'   \code{\link{census_boundaries}}. For documentation of
+#'   \code{\link[USAboundariesData]{census_boundaries}}. For documentation of
 #'   and citation to the underlying shapefiles for contemporary data from the
-#'   U.S. Census Bureau, see \code{\link{hist_us_states}}.
+#'   U.S. Census Bureau, see \code{\link[USAboundariesData]{hist_us_states}}.
 #'
 #' @examples
 #' contemporary <- us_states()
@@ -37,7 +37,7 @@ us_states <- function(map_date = NULL, resolution = c("low", "high"),
   resolution <- match.arg(resolution)
   if (is.null(map_date)) {
     if (resolution == "low") {
-      shp <- cb_2014_us_state_20m
+      shp <- USAboundariesData::cb_2014_us_state_20m
     } else if (resolution == "high") {
       check_data_package()
       shp <- USAboundariesData::cb_2014_us_state_500k
@@ -48,7 +48,7 @@ us_states <- function(map_date = NULL, resolution = c("low", "high"),
     stopifnot(as.Date("1783-09-03") <= map_date,
               map_date <= as.Date("2000-12-31"))
     if (resolution == "low") {
-      shp <- hist_us_states
+      shp <- USAboundariesData::hist_us_states
     } else if (resolution == "high") {
       check_data_package()
       shp <- USAboundariesData::hist_us_states_hires

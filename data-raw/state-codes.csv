@@ -1,0 +1,70 @@
+state_name,state_abbr,state_code,jurisdiction_type
+Alabama,AL,01,state
+Alaska,AK,02,state
+Arizona,AZ,04,state
+Arkansas,AR,05,state
+California,CA,06,state
+Colorado,CO,08,state
+Connecticut,CT,09,state
+Delaware,DE,10,state
+District of Columbia,DC,11,district
+Florida,FL,12,state
+Georgia,GA,13,state
+Hawaii,HI,15,state
+Idaho,ID,16,state
+Illinois,IL,17,state
+Indiana,IN,18,state
+Iowa,IA,19,state
+Kansas,KS,20,state
+Kentucky,KY,21,state
+Louisiana,LA,22,state
+Maine,ME,23,state
+Maryland,MD,24,state
+Massachusetts,MA,25,state
+Michigan,MI,26,state
+Minnesota,MN,27,state
+Mississippi,MS,28,state
+Missouri,MO,29,state
+Montana,MT,30,state
+Nebraska,NE,31,state
+Nevada,NV,32,state
+New Hampshire,NH,33,state
+New Jersey,NJ,34,state
+New Mexico,NM,35,state
+New York,NY,36,state
+North Carolina,NC,37,state
+North Dakota,ND,38,state
+Ohio,OH,39,state
+Oklahoma,OK,40,state
+Oregon,OR,41,state
+Pennsylvania,PA,42,state
+Rhode Island,RI,44,state
+South Carolina,SC,45,state
+South Dakota,SD,46,state
+Tennessee,TN,47,state
+Texas,TX,48,state
+Utah,UT,49,state
+Vermont,VT,50,state
+Virginia,VA,51,state
+Washington,WA,53,state
+West Virginia,WV,54,state
+Wisconsin,WI,55,state
+Wyoming,WY,56,state
+American Samoa,AS,60,territory
+Federated States of Micronesia,FM,64,territory
+Guam,GU,66,territory
+Johnson Atoll,,67,territory
+Marshall Islands,MH,68,territory
+Northern Mariana Islands,MP,69,territory
+Palau,PW,70,territory
+Midway Islands,,71,territory
+Puerto Rico,PR,72,territory
+U.S. Minor Outlying Islands,UM,74,territory
+Navassa Island,,76,territory
+Virgin Islands,VI,78,territory
+Wake Island,,79,territory
+Baker Island,,81,territory
+Howland Island,,84,territory
+Jarvis Island,,86,territory
+Kingman Reef,,89,territory
+Palmyra Atoll,,95,territory
