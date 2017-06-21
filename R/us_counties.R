@@ -38,10 +38,10 @@ us_counties <- function(map_date = NULL, resolution = c("low", "high"),
   resolution <- match.arg(resolution)
   if (is.null(map_date)) {
     if (resolution == "low") {
-      shp <- USAboundariesData::cb_2014_us_county_20m
+      shp <- USAboundariesData::counties_contemporary_lores
     } else if (resolution == "high") {
       check_data_package()
-      shp <- USAboundariesData::cb_2014_us_county_500k
+      shp <- USAboundariesData::counties_contemporary_hires
     }
     shp <- filter_by_states(shp, states, "state_name")
   } else {

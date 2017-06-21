@@ -37,10 +37,10 @@ us_states <- function(map_date = NULL, resolution = c("low", "high"),
   resolution <- match.arg(resolution)
   if (is.null(map_date)) {
     if (resolution == "low") {
-      shp <- USAboundariesData::cb_2014_us_state_20m
+      shp <- USAboundaries::states_contemporary_lores
     } else if (resolution == "high") {
       check_data_package()
-      shp <- USAboundariesData::cb_2014_us_state_500k
+      shp <- USAboundariesData::states_contemporary_hires
     }
     shp <- filter_by_states(shp, states, "name")
   } else {

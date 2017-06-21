@@ -24,10 +24,10 @@ us_congressional <- function(resolution = c("low", "high"),
                              states = NULL) {
   resolution <- match.arg(resolution)
   if (resolution == "low") {
-    shp <- USAboundariesData::cb_2014_us_cd114_20m
+    shp <- USAboundariesData::congress_contemporary_lores
   } else if (resolution == "high") {
     check_data_package()
-    shp <- USAboundariesData::cb_2014_us_cd114_500k
+    shp <- USAboundariesData::congress_contemporary_hires
   }
   filter_by_states(shp, states, "state_name")
 }
