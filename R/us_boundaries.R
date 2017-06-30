@@ -42,6 +42,10 @@ us_boundaries <- function(map_date = NULL,
                           resolution = c("low", "high"),
                           states = NULL) {
 
+  .Deprecated(msg = paste("The `us_boundaries()` function is deprecated. Try",
+                          "one of the following: `us_states()`,",
+                          "`us_counties()`, `us_congressional()`."))
+
   # Deal with mismatches between arguments and available data
   if (!missing(map_date) && type == "congressional")
     stop(paste("Only current congressional districts are available. Do\n  ",
