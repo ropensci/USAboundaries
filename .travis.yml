@@ -13,6 +13,9 @@ after_success:
 r_github_packages:
 - ropensci/USAboundariesData
 
+r_binary_packages:
+- sf
+
 warnings_are_errors: true
 
 notifications:
