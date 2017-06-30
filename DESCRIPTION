@@ -15,9 +15,9 @@ Description: The boundaries for geographical units in the United States of
     district, and zip code tabulation area. Contemporary boundaries are provided
     by the U.S. Census Bureau (public domain). Historical boundaries for the
     years from 1629 to 2000 are provided form the Newberry Library's 'Atlas of
-    Historical County Boundaries' (licensed CC BY-NC-SA). Additional high
-    resolution data is provided in the 'USAboundariesData' package;
-    this package provides an interface to access that data.
+    Historical County Boundaries' (licensed CC BY-NC-SA). Additional  data is
+    provided in the 'USAboundariesData' package; this package provides an
+    interface to access that data.
 License: MIT + file LICENSE
 URL: https://github.com/ropensci/USAboundaries
 BugReports: https://github.com/ropensci/USAboundaries/issues
