@@ -17,23 +17,24 @@
 #'   contained in the suggested package \code{USAboundariesData}. If that
 #'   package is not available, you will be prompted to install it.
 #' @param states A character vector of state or territory names. Only boundaries
-#'   inside these states/territories will be returned.
+#'   for these states/territories will be returned.
 #' @examples
-#' map_states   <- us_boundaries("1850-07-04")
-#' map_counties <- us_boundaries(as.Date("1850-07-04"), type = "county")
-#' new_england <- c("Massachusetts", "Vermont", "New Hampshire", "Connecticut",
-#'                  "Rhode Island", "Maine")
-#' map_ne <- us_boundaries("1943-02-12", states = new_england)
-#' map_congressional <- us_boundaries(type = "congressional",
+#' if (require(USAboundariesData) && require(sf)) {
+#'   map_states   <- us_boundaries("1850-07-04")
+#'   map_counties <- us_boundaries(as.Date("1850-07-04"), type = "county")
+#'   new_england <- c("Massachusetts", "Vermont", "New Hampshire", "Connecticut",
+#'                    "Rhode Island", "Maine")
+#'   map_ne <- us_boundaries("1943-02-12", states = new_england)
+#'   map_congressional <- us_boundaries(type = "congressional",
 #'                                    states = new_england)
 #'
-#' if (require(sp)) {
-#'   plot(map_states)
-#'   plot(map_counties)
-#'   plot(map_ne)
-#'   plot(map_congressional)
+#'   plot(st_geometry(map_states))
+#'   plot(st_geometry(map_counties))
+#'   plot(st_geometry(map_ne))
+#'   plot(st_geometry(map_congressional))
 #' }
-#' @return A \code{SpatialPolygonsDataFrame}.
+#'
+#' @return An \code{sf} object.
 #' @seealso \code{\link{us_states}}, \code{\link{us_counties}},
 #'   \code{\link{us_congressional}}
 #' @export
@@ -41,10 +42,6 @@ us_boundaries <- function(map_date = NULL,
                           type = c("state", "county", "congressional"),
                           resolution = c("low", "high"),
                           states = NULL) {
-
-  .Deprecated(msg = paste("The `us_boundaries()` function is deprecated. Try",
-                          "one of the following: `us_states()`,",
-                          "`us_counties()`, `us_congressional()`."))
 
   # Deal with mismatches between arguments and available data
   if (!missing(map_date) && type == "congressional")

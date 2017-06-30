@@ -10,7 +10,7 @@ test_that("Dates outside the valid range have an error message", {
 })
 
 test_that("Current states can be filtered", {
-  expect_equal(length(us_states(states = c("Virginia", "Maryland"))), 2)
+  expect_equal(nrow(us_states(states = c("Virginia", "Maryland"))), 2)
 })
 
 test_that("Error message if no matches are found", {
@@ -18,7 +18,7 @@ test_that("Error message if no matches are found", {
 })
 
 test_that("Historical states can be filtered", {
-  expect_equal(length(us_states("1875-01-02",
+  expect_equal(nrow(us_states("1875-01-02",
                                 states = c("Virginia", "Maryland"))),
                2)
 })

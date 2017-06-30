@@ -14,15 +14,17 @@ inside these states/territories will be returned. If \code{NULL}, all
 boundaries will be returned.}
 }
 \value{
-A SpatialPolygonsDataFrame.
+An \code{sf} object.
 }
 \description{
-Get the current (2014) boundaries for U.S. Congressional districts.
+Get the current (2016) boundaries for U.S. Congressional districts.
 }
 \examples{
-va_congressional <- us_congressional(states = "Virginia")
-if (require(sp)) {
-   plot(va_congressional)
+if (require(USAboundariesData) && require(sf)) {
+  us_congressional <- us_congressional()
+  va_congressional <- us_congressional(states = "Virginia", resolution = "high")
+  plot(st_geometry(us_congressional))
+  plot(st_geometry(va_congressional))
 }
 
 }

@@ -9,32 +9,40 @@ us_counties(map_date = NULL, resolution = c("low", "high"), states = NULL)
 \arguments{
 \item{map_date}{The date of the boundaries as some object coercible to a date
 with \code{as.Date()}; the easiest option is a character vector following
-the \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601} data format. A
-\code{NULL} value will return contemporary boundaries.}
+the \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601} data format. If
+\code{NULL} (the default) the contemporary boundaries will be returned.}
 
 \item{resolution}{The resolution of the map.}
 
-\item{states}{A character vector of state or territory names. Only boundaries
-inside these states/territories will be returned. If \code{NULL}, all
-boundaries will be returned.}
+\item{states}{A character vector of state or territory names or
+abbreviations. Only boundaries for those states/territories will be
+returned. If \code{NULL}, all boundaries will be returned.}
 }
 \value{
-A SpatialPolygonsDataFrame.
+An \code{sf} object.
 }
 \description{
-Get the current (2014) boundaries for U.S states, or get historical county
-boundaries for dates between 30 December 1636 and 31 December 2000.
+Get the current (2016) boundaries for U.S counties from the U.S. Census
+Bureau, or get historical county boundaries for dates between 30 December
+1636 and 31 December 2000.
 }
 \examples{
-contemporary <- us_counties()
-historical   <- us_counties("1820-07-04")
-new_england  <- us_counties(states = c("Massachusetts", "Vermont", "Maine",
-                                       "New Hampshire", "Rhode Island",
-                                       "Connecticut"))
-if (require(sp)) {
-   plot(contemporary)
-   plot(historical)
-   plot(new_england)
+if (require(USAboundariesData) && require(sf)) {
+  contemporary_us  <- us_counties()
+  historical_us    <- us_counties("1820-07-04")
+  contemporary_ne  <- us_counties(states = c("Massachusetts", "Vermont", "Maine",
+                                             "New Hampshire", "Rhode Island",
+                                             "Connecticut"))
+  historical_ne    <- us_counties("1803-04-28",
+                                  states = c("Massachusetts", "Vermont", "Maine",
+                                             "New Hampshire", "Rhode Island",
+                                             "Connecticut"),
+                                  resolution = "high")
+
+  plot(st_geometry(contemporary_us))
+  plot(st_geometry(historical_us))
+  plot(st_geometry(contemporary_ne))
+  plot(st_geometry(historical_ne))
 }
 
 }
@@ -43,5 +51,5 @@ For documentation of and citation to the underlying shapefiles for
   contemporary data from the U.S. Census Bureau, see
   \code{\link[USAboundariesData]{census_boundaries}}. For documentation of
   and citation to the underlying shapefiles for historical data from the
-  U.S. Census Bureau, see \code{\link{hist_us_counties}}.
+  Atlas of Historical County Boundaries, see \code{\link[USAboundariesData]{ahcb_boundaries}}.
 }

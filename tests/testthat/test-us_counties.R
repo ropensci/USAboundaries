@@ -10,11 +10,11 @@ test_that("Dates outside the valid range have an error message", {
 })
 
 test_that("Current states can be filtered", {
-  expect_equal(length(us_counties(states = c("Virginia"))), 133)
+  expect_equal(nrow(us_counties(states = c("Virginia"))), 133)
 })
 
 test_that("Historical states can be filtered", {
-  expect_equal(length(us_counties("1855-01-02", states = c("Ohio"))), 88)
+  expect_equal(nrow(us_counties("1855-01-02", states = c("OH"))), 88)
 })
 
 test_that("Correct resolution shapefiles are returned", {

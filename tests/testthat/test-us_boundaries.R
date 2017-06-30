@@ -12,34 +12,33 @@ newengland <- us_boundaries(as.Date("1895-04-02"),
                             states = c("massachusetts",
                                        "verMONT",
                                        "RHODE ISLAND",
-                                       "Connecticut",
-                                       "Maine",
+                                       "CT",
+                                       "ME",
                                        "new Hampshire"))
 
 test_that("The correct type of object is returned", {
-  expect_is(current_state, "SpatialPolygonsDataFrame")
-  expect_is(current_county, "SpatialPolygonsDataFrame")
-  expect_is(current_west_coast, "SpatialPolygonsDataFrame")
-  expect_is(state, "SpatialPolygonsDataFrame")
-  expect_is(county, "SpatialPolygonsDataFrame")
-  expect_is(newengland, "SpatialPolygonsDataFrame")
+  expect_is(current_state, "sf")
+  expect_is(current_county, "sf")
+  expect_is(current_west_coast, "sf")
+  expect_is(state, "sf")
+  expect_is(county, "sf")
+  expect_is(newengland, "sf")
 })
 
 test_that("The objects have the correct number of rows/polygons", {
-  expect_equal(length(current_state),
-               length(USAboundaries::states_contemporary_lores))
-  expect_equal(length(current_county),
-               length(USAboundariesData::counties_contemporary_lores))
-  expect_equal(length(state), 48)
-  expect_equal(length(county), 2286)
+  expect_equal(nrow(current_state),
+               nrow(USAboundaries::states_contemporary_lores))
+  expect_equal(nrow(current_county),
+               nrow(USAboundariesData::counties_contemporary_lores))
+  expect_equal(nrow(state), 48)
+  expect_equal(nrow(county), 2286)
 })
 
 test_that("Output can be filtered by state", {
-  expect_equal(length(current_west_coast), 3)
-  expect_equal(length(newengland), 6)
+  expect_equal(nrow(current_west_coast), 3)
+  expect_equal(nrow(newengland), 6)
 })
 
 test_that("Error message if Congressional boundaries are requested by date", {
   expect_error(us_boundaries("1890-02-12", type = "congressional"))
 })
-

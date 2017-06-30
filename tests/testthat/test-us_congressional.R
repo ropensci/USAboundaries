@@ -5,7 +5,7 @@ test_that("Returns current congressional districts", {
 })
 
 test_that("States can be filtered", {
-  expect_equal(length(us_congressional(states = c("Florida"))), 27)
+  expect_equal(nrow(us_congressional(states = c("FL"))), 27)
 })
 
 test_that("Correct resolution shapefiles are returned", {

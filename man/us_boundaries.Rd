@@ -23,10 +23,10 @@ contained in the suggested package \code{USAboundariesData}. If that
 package is not available, you will be prompted to install it.}
 
 \item{states}{A character vector of state or territory names. Only boundaries
-inside these states/territories will be returned.}
+for these states/territories will be returned.}
 }
 \value{
-A \code{SpatialPolygonsDataFrame}.
+An \code{sf} object.
 }
 \description{
 This function is a general-purpose wrapper around the more specific functions
@@ -35,20 +35,21 @@ with earlier versions of the package. In most cases you should use the more
 specific functions for the type of boundary that you need.
 }
 \examples{
-map_states   <- us_boundaries("1850-07-04")
-map_counties <- us_boundaries(as.Date("1850-07-04"), type = "county")
-new_england <- c("Massachusetts", "Vermont", "New Hampshire", "Connecticut",
-                 "Rhode Island", "Maine")
-map_ne <- us_boundaries("1943-02-12", states = new_england)
-map_congressional <- us_boundaries(type = "congressional",
+if (require(USAboundariesData) && require(sf)) {
+  map_states   <- us_boundaries("1850-07-04")
+  map_counties <- us_boundaries(as.Date("1850-07-04"), type = "county")
+  new_england <- c("Massachusetts", "Vermont", "New Hampshire", "Connecticut",
+                   "Rhode Island", "Maine")
+  map_ne <- us_boundaries("1943-02-12", states = new_england)
+  map_congressional <- us_boundaries(type = "congressional",
                                    states = new_england)
 
-if (require(sp)) {
-  plot(map_states)
-  plot(map_counties)
-  plot(map_ne)
-  plot(map_congressional)
+  plot(st_geometry(map_states))
+  plot(st_geometry(map_counties))
+  plot(st_geometry(map_ne))
+  plot(st_geometry(map_congressional))
 }
+
 }
 \seealso{
 \code{\link{us_states}}, \code{\link{us_counties}},

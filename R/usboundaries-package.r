@@ -21,7 +21,6 @@
 #'
 #' @name USAboundaries
 #' @docType package
-#' @import sp
 NULL
 
 if (getRversion() >= "2.15.1") {
