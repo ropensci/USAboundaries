@@ -1,8 +1,4 @@
 language: r
-r:
-- oldrel
-- release
-- devel
 sudo: required
 
 # Only report coverage for the release version
