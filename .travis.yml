@@ -1,6 +1,14 @@
 language: r
-sudo: required
-dist: trusty
+r:
+- oldrel
+- release
+- devel
+sudo: true
+cache: packages
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y libudunits2-dev
 
 # Only report coverage for the release version
 after_success:
@@ -8,10 +16,6 @@ after_success:
 
 r_github_packages:
 - ropensci/USAboundariesData
-
-r_binary_packages:
-- sf
-- udunits2
 
 warnings_are_errors: true
 
