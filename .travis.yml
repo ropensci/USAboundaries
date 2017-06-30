@@ -15,6 +15,7 @@ r_github_packages:
 
 r_binary_packages:
 - sf
+- udunits2
 
 warnings_are_errors: true
 
