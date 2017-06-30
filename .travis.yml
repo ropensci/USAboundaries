@@ -3,7 +3,7 @@ r:
 - oldrel
 - release
 - devel
-sudo: true
+sudo: required
 
 # Only report coverage for the release version
 after_success:
