@@ -4,7 +4,6 @@ r:
 - release
 - devel
 sudo: true
-cache: packages
 
 # Only report coverage for the release version
 after_success:
