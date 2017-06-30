@@ -3,7 +3,7 @@
 #' This data frame includes abbreviations and codes for states and territories
 #' in the United States. It is intended as a lookup table.
 #'
-#' @format A data.frame with 68 rows and 4 variables:
+#' @format A data.frame with 69 rows and 4 variables:
 #' \describe{
 #' \item{state_name}{The state or territory name}
 #' \item{state_abbr}{The two character abbreviation for the state or territory.}

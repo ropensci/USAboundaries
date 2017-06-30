@@ -2,17 +2,17 @@
 % Please edit documentation in R/state_plane.R
 \name{state_plane}
 \alias{state_plane}
-\title{State Plane Projections}
+\title{Projections from the State Plane Coordinate System}
 \usage{
 state_plane(state, plane_id = NULL, type = c("epsg", "proj4"))
 }
 \arguments{
-\item{state}{The state code.}
+\item{state}{The postal code for the state.}
 
 \item{plane_id}{The state plane geographic zone identifier. A \code{NULL}
 value will return a projection for the entire state.}
 
-\item{type}{A string identifying the output as either an EPSG code or PROJ4
+\item{type}{The type of output to return: either an EPSG code or PROJ4
 string.}
 }
 \value{
@@ -20,14 +20,18 @@ Either a PROJ4 string as a character vector or an EPSG code as an
   integer.
 }
 \description{
-Get the State Plane projection for a specific state or region within a state.
+Get EPSG codes or PROJ.4 codes for projections from the
+\href{https://en.wikipedia.org/wiki/State_Plane_Coordinate_System}{State
+Plane Coordinate System}.
 }
 \examples{
-state_plane (state = "MA", type = "epsg")
-state_plane (state = "MA", plane_id = "mainland", type = "proj4")
+state_plane(state = "MA", type = "epsg")
+state_plane(state = "MA", type = "proj4")
+state_plane(state = "MA", plane_id = "island", type = "epsg")
+state_plane(state = "MA", plane_id = "island", type = "proj4")
 
 }
 \seealso{
-For documentation of the underlying state plane projection data
-  frame, see \code{\link{state_proj}}.
+For documentation of the underlying State Plane Coordinate System
+  projection data frame, see \code{\link{state_proj}}.
 }

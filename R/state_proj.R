@@ -1,6 +1,6 @@
-#' Data for State projections
+#' Data for projections from the State Plane Coordinate System
 #'
-#' This data frame includes state abbreviations, EPSG codes, and proj4 strings for state plane projections.
+#' This data frame includes state abbreviations, EPSG codes, and proj4 strings for projections from the State Plane Coordinate System.
 #'
 #' @format A data frame with 123 rows and 5 variables:
 #' \describe{
