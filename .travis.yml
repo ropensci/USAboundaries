@@ -4,13 +4,15 @@ r:
 - release
 - devel
 sudo: true
+dist: trusty
 cache: packages
 
 before_install:
-- sudo add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
-- sudo apt-get -qq update
-- sudo apt-get install -y libgdal-dev libgeos-dev libproj-dev libudunits2-dev liblwgeom-dev libudunits2-dev
-
+  - sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable --yes
+  - sudo apt-get --yes --force-yes update -qq
+  - sudo apt-get install --yes libudunits2-dev libproj-dev libgeos-dev libgdal-dev
+  - Rscript -e 'update.packages(ask = FALSE)'
+  
 # Only report coverage for the release version
 after_success:
   - test $TRAVIS_R_VERSION_STRING = 'release' && Rscript -e 'covr::codecov()'
