@@ -7,3 +7,4 @@
 NEWS\.md
 ^README\.Rmd$
 ^codecov\.yml$
+^docs$

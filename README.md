@@ -134,7 +134,7 @@ citation("USAboundaries")
 #> 
 #>   Lincoln Mullen and Jordan Bratt (2016). USAboundaries:
 #>   Historical and Contemporary Boundaries of the United States of
-#>   America. R package version 0.2.0.9001.
+#>   America. R package version 0.3.0.
 #>   https://github.com/ropensci/USAboundaries
 #> 
 #> A BibTeX entry for LaTeX users is
@@ -143,7 +143,7 @@ citation("USAboundaries")
 #>     title = {USAboundaries: Historical and Contemporary Boundaries of the United States of America},
 #>     author = {Lincoln Mullen and Jordan Bratt},
 #>     year = {2016},
-#>     note = {R package version 0.2.0.9001},
+#>     note = {R package version 0.3.0},
 #>     url = {https://github.com/ropensci/USAboundaries},
 #>   }
 ```
