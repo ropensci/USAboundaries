@@ -29,7 +29,6 @@ Suggests:
     sf (>= 0.5.1),
     testthat (>= 0.9.1),
     USAboundariesData (>= 0.2.0)
-VignetteBuilder: knitr
 RoxygenNote: 6.0.1
 Additional_repositories: http://packages.ropensci.org
 LazyData: true
