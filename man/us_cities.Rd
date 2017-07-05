@@ -9,7 +9,7 @@ us_cities(map_date = NULL)
 \arguments{
 \item{map_date}{If \code{NULL}, then city populations from the 2010 census
 (the most recent census) are returned. This parameter accepts a \code{Date}
-object or a character string coercable to a \code{Date} object, as well as
+object or a character string coercible to a \code{Date} object, as well as
 numeric values representing a year. If a year or date is used, then city
 populations from the decennial census from 1790 to 2010 \emph{prior} to
 that year is returned. For example, \code{1805} or \code{"1805-07-04"}
