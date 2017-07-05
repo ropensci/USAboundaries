@@ -3,6 +3,7 @@
 export(install_data_package)
 export(state_plane)
 export(us_boundaries)
+export(us_cities)
 export(us_congressional)
 export(us_counties)
 export(us_states)
