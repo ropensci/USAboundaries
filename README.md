@@ -3,7 +3,7 @@
 USAboundaries: Historical and Contemporary Boundaries of the United States of America
 -------------------------------------------------------------------------------------
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/USAboundaries)](http://cran.r-project.org/package=USAboundaries) [![Build Status](https://travis-ci.org/ropensci/USAboundaries.png?branch=master)](https://travis-ci.org/ropensci/USAboundaries) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/USAboundaries?branch=master)](https://ci.appveyor.com/project/ropensci/USAboundaries) [![Coverage Status](https://img.shields.io/codecov/c/github/ropensci/USAboundaries/master.svg)](https://codecov.io/github/ropensci/USAboundaries?branch=master)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/USAboundaries)](http://cran.r-project.org/package=USAboundaries) [![Build Status](https://travis-ci.org/ropensci/USAboundaries.png?branch=master)](https://travis-ci.org/ropensci/USAboundaries) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/USAboundaries?branch=master)](https://ci.appveyor.com/project/ropensci/USAboundaries) [![Coverage Status](https://img.shields.io/codecov/c/github/ropensci/USAboundaries/master.svg)](https://codecov.io/github/ropensci/USAboundaries)
 
 This R package includes contemporary state, county, and Congressional district boundaries, as well as zip code tabulation area centroids. It also includes historical boundaries from 1629 to 2000 for states and counties from the Newberry Library's [Atlas of Historical County Boundaries](http://publications.newberry.org/ahcbp/), as well as historical city population data from Erik Steiner's "[United States Historical City Populations, 1790-2010](https://github.com/cestastanford/historical-us-city-populations)." The package has some helper data, including a table of state names, abbreviations, and FIPS codes, and functions and data to get [State Plane Coordinate System](https://en.wikipedia.org/wiki/State_Plane_Coordinate_System) projections as EPSG codes or PROJ.4 strings.
 
@@ -13,7 +13,9 @@ You can install this package from CRAN.
 
     install.packages("USAboundaries")
 
-Or you can install the development version from GitHub using [devtools](https://github.com/hadley/devtools).
+Almost all of the data for this package is provided by the [USAboundariesData package](https://github.com/ropensci/USAboundariesData). That package will be automatically installed (with your permission) from the [rOpenSci package repository](http://packages.ropensci.org/) the first time that you need it.
+
+Or you can install the development versions from GitHub using [devtools](https://github.com/hadley/devtools).
 
     devtools::install_github("ropensci/USAboundaries")
     devtools::install_github("ropensci/USAboundariesData")
@@ -22,7 +24,7 @@ Or you can install the development version from GitHub using [devtools](https://
 
 This package provides a set of functions, one for each of the types of boundaries that are available. These functions have a consistent interface.
 
-Passing a date to `us_states()` or `us_counties()` returns the historical boundaries for that date. If no date argument is passed, then contemporary boundaries are returned. The functions `us_congressional()` and `us_zipcodes()` only offer contemporary boundaries.
+Passing a date to `us_states()`, `us_counties()`, and `us_cities()` returns the historical boundaries for that date. If no date argument is passed, then contemporary boundaries are returned. The functions `us_congressional()` and `us_zipcodes()` only offer contemporary boundaries.
 
 For any function, pass a character vector of state names or abbreviations to the `states =` argument to return only those states or territories.
 
@@ -32,15 +34,15 @@ See the examples below to see how the interface works, and see the documentation
 
 ``` r
 library(USAboundaries) 
-library(sf) # for plotting methods
-#> Linking to GEOS 3.5.1, GDAL 2.1.3, proj.4 4.9.2, lwgeom 2.3.2 r15302
+library(sf) # for plotting and projection methods
+#> Linking to GEOS 3.6.1, GDAL 2.1.3, proj.4 4.9.3
 
 states_1840 <- us_states("1840-03-12")
 plot(st_geometry(states_1840))
 title("U.S. state boundaries on March 3, 1840")
 ```
 
-![](README-unnamed-chunk-2-1.png)
+![](tools/README-unnamed-chunk-2-1.png)
 
 ``` r
 
@@ -49,7 +51,7 @@ plot(st_geometry(states_contemporary))
 title("Contemporary U.S. state boundaries")
 ```
 
-![](README-unnamed-chunk-2-2.png)
+![](tools/README-unnamed-chunk-2-2.png)
 
 ``` r
 
@@ -58,7 +60,7 @@ plot(st_geometry(counties_va_1787))
 title("County boundaries in Virginia in 1787")
 ```
 
-![](README-unnamed-chunk-2-3.png)
+![](tools/README-unnamed-chunk-2-3.png)
 
 ``` r
 
@@ -67,7 +69,7 @@ plot(st_geometry(counties_va))
 title("Contemporary county boundaries in Virginia")
 ```
 
-![](README-unnamed-chunk-2-4.png)
+![](tools/README-unnamed-chunk-2-4.png)
 
 ``` r
 
@@ -76,7 +78,7 @@ plot(st_geometry(counties_va_highres))
 title("Higher resolution contemporary county boundaries in Virginia")
 ```
 
-![](README-unnamed-chunk-2-5.png)
+![](tools/README-unnamed-chunk-2-5.png)
 
 ``` r
 
@@ -85,7 +87,27 @@ plot(st_geometry(congress))
 title("Congressional district boundaries in California")
 ```
 
-![](README-unnamed-chunk-2-6.png)
+![](tools/README-unnamed-chunk-2-6.png)
+
+### State plane projections
+
+The `state_plane()` function returns EPSG codes and PROJ.4 strings for the State Plane Coordinate System. You can use these to use suitable projections for specific states.
+
+``` r
+va <- us_states(states = "VA", resolution = "high")
+plot(st_geometry(va), graticule = TRUE)
+```
+
+![](tools/README-unnamed-chunk-3-1.png)
+
+``` r
+
+va_projection <- state_plane("VA")
+va <- st_transform(va, va_projection)
+plot(st_geometry(va), graticule = TRUE)
+```
+
+![](tools/README-unnamed-chunk-3-2.png)
 
 ### Related packages
 
@@ -110,16 +132,16 @@ citation("USAboundaries")
 #> 
 #> To cite package 'USAboundaries' in publications use:
 #> 
-#>   Lincoln Mullen (2016). USAboundaries: Historical and
-#>   Contemporary Boundaries of the United States of America. R
-#>   package version 0.2.0.9001.
+#>   Lincoln Mullen and Jordan Bratt (2016). USAboundaries:
+#>   Historical and Contemporary Boundaries of the United States of
+#>   America. R package version 0.2.0.9001.
 #>   https://github.com/ropensci/USAboundaries
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{,
 #>     title = {USAboundaries: Historical and Contemporary Boundaries of the United States of America},
-#>     author = {Lincoln Mullen},
+#>     author = {Lincoln Mullen and Jordan Bratt},
 #>     year = {2016},
 #>     note = {R package version 0.2.0.9001},
 #>     url = {https://github.com/ropensci/USAboundaries},

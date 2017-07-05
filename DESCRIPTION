@@ -8,7 +8,7 @@ Authors@R: c(person("Lincoln", "Mullen",
     role = c("aut", "cre")),
     person("Jordan", "Bratt",
     email = "jfbratt@gmail.com",
-    role = c("ctb")),
+    role = c("aut")),
     person("United States Census Bureau", role = "cph"))
 Description: The boundaries for geographical units in the United States of
     America contained in this package include state, county, congressional
