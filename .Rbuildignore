@@ -2,6 +2,7 @@
 ^\.Rproj\.user$
 ^data-raw$
 ^\.travis\.yml$
+^_pkgdown\.yml$
 ^appveyor\.yml$
 ^cran-comments.md$
 ^README\.Rmd$

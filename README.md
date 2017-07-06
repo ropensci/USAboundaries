@@ -35,7 +35,7 @@ See the examples below to see how the interface works, and see the documentation
 ``` r
 library(USAboundaries) 
 library(sf) # for plotting and projection methods
-#> Linking to GEOS 3.6.1, GDAL 2.1.3, proj.4 4.9.3
+#> Linking to GEOS 3.6.1, GDAL 2.2.0, proj.4 4.9.3
 
 states_1840 <- us_states("1840-03-12")
 plot(st_geometry(states_1840))
@@ -132,7 +132,7 @@ citation("USAboundaries")
 #> 
 #> To cite package 'USAboundaries' in publications use:
 #> 
-#>   Lincoln Mullen and Jordan Bratt (2016). USAboundaries:
+#>   Lincoln Mullen and Jordan Bratt (2017). USAboundaries:
 #>   Historical and Contemporary Boundaries of the United States of
 #>   America. R package version 0.3.0.
 #>   https://github.com/ropensci/USAboundaries
@@ -142,7 +142,7 @@ citation("USAboundaries")
 #>   @Manual{,
 #>     title = {USAboundaries: Historical and Contemporary Boundaries of the United States of America},
 #>     author = {Lincoln Mullen and Jordan Bratt},
-#>     year = {2016},
+#>     year = {2017},
 #>     note = {R package version 0.3.0},
 #>     url = {https://github.com/ropensci/USAboundaries},
 #>   }

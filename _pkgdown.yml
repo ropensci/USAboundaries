@@ -1,0 +1,11 @@
+url: http://ropensci.github.io/USAboundaries/
+authors:
+  Lincoln Mullen:
+    href: http://lincolnmullen.com
+  Jordan Bratt:
+    href: http://jfbratt.org/
+template:
+  params:
+    bootswatch: lumen
+    ganalytics: UA-25121492-1
+
