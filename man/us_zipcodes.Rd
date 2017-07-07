@@ -11,7 +11,8 @@ An \code{sf} object.
 }
 \description{
 Get the current (2016) centroids for U.S Zipcode Tabulation Areas from the
-U.S. Census Bureau. The centroids were calculated from the ZCTA boundary files available on the U.S. Census Bureau website.
+U.S. Census Bureau. The centroids were calculated from the ZCTA boundary
+files available on the U.S. Census Bureau website.
 }
 \examples{
 if (require(USAboundariesData)) {
@@ -21,6 +22,6 @@ if (require(USAboundariesData)) {
 }
 \seealso{
 For documentation of and citation to the underlying shapefiles for
-  contemporary data from the U.S. Census Bureau, see
-  \code{\link[USAboundariesData]{census_boundaries}}.
+  contemporary data from the U.S. Census Bureau, see the
+  \code{census_boundaries} documentation in the USAboundariesData package.
 }

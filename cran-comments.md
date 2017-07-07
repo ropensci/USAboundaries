@@ -1,5 +1,7 @@
 This is an updated version of the 'USAboundaries' package from version 0.2.0 to version 0.3.0. 
 
+Following a suggestion from CRAN maintainers, documentation links to the USAboundariesData package have been removed.
+
 ## Test environments
 
 * local OS X install, R 3.4.0

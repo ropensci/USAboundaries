@@ -30,6 +30,6 @@ if (require(USAboundariesData) && require(sf)) {
 }
 \seealso{
 For documentation of and citation to the underlying shapefiles for
-  contemporary data from the U.S. Census Bureau, see
-  \code{\link[USAboundariesData]{census_boundaries}}.
+  contemporary data from the U.S. Census Bureau, see the
+  \code{census_boundaries} help file in the USAboundariesData package.
 }

@@ -48,9 +48,9 @@ if (require(USAboundariesData) && require(sf)) {
 }
 \seealso{
 For documentation of and citation to the underlying shapefiles for
-  contemporary data from the U.S. Census Bureau, see
-  \code{\link[USAboundariesData]{census_boundaries}}. For documentation of
-  and citation to the underlying shapefiles for historical data from the
-  Atlas of Historical County Boundaries, see
-  \code{\link[USAboundariesData]{ahcb_boundaries}}.
+  contemporary data from the U.S. Census Bureau, see \code{census_boundaries}
+  documentation in the USAboundariesData package. For documentation of and
+  citation to the underlying shapefiles for historical data from the Atlas of
+  Historical County Boundaries, see the \code{ahcb_boundaries} documentation
+  in the USAboundariesData package.
 }

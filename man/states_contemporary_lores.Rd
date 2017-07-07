@@ -17,7 +17,7 @@ provided by and documented in the USAboundariesData package.
 }
 \seealso{
 For citations for the other Census boundary files provided by the
-  USAboundariesData package, see this help page:
-  \code{\link[USAboundariesData]{census_boundaries}}.
+  USAboundariesData package, see the \code{census_boundaries} documentation
+  in that package.
 }
 \keyword{datasets}
