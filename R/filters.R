@@ -7,7 +7,7 @@ filter_by_states <- function(shp, states) {
   if (is.null(states)) return(shp)
   stopifnot(is.character(states))
   states <- tolower(states)
-  filter <- (tolower(shp$state_name) %in% states) |
+  filter <- (tolower(shp$state_terr) %in% states) |
     (tolower(shp$state_abbr) %in% states)
   if (sum(filter, na.rm = TRUE) < 1) stop("No matches found for those states.")
   shp[filter, ]
