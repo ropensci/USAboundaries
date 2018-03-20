@@ -6,8 +6,10 @@ tags:
   - history
 authors:
   - name: Lincoln A. Mullen
+    orcid: 0000-0001-5103-6917
     affiliation: 1
   - name: Jordan Bratt
+    orcid: 0000-0001-9051-7203
     affiliation: 1
 affiliations:
   - name: Department of History and Art History, George Mason University

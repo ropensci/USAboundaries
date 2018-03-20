@@ -5,10 +5,12 @@ Version: 0.3.0.9000
 Date: 2017-07-05
 Authors@R: c(person("Lincoln", "Mullen",
     email = "lincoln@lincolnmullen.com",
-    role = c("aut", "cre")),
+    role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0001-5103-6917")),
     person("Jordan", "Bratt",
     email = "jfbratt@gmail.com",
-    role = c("aut")),
+    role = c("aut"),
+    comment = c(ORCID = "0000-0001-9051-7203")),
     person("United States Census Bureau", role = "cph"))
 Description: The boundaries for geographical units in the United States of
     America contained in this package include state, county, congressional
