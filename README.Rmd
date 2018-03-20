@@ -11,20 +11,31 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "tools/README-"
 )
+set.seed(87737)
 ```
 
-## USAboundaries: Historical and Contemporary Boundaries of the United States of America
+# USAboundaries
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/USAboundaries)](http://cran.r-project.org/package=USAboundaries)
 [![Build Status](https://travis-ci.org/ropensci/USAboundaries.png?branch=master)](https://travis-ci.org/ropensci/USAboundaries)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/USAboundaries?branch=master)](https://ci.appveyor.com/project/ropensci/USAboundaries)
 [![Coverage Status](https://img.shields.io/codecov/c/github/ropensci/USAboundaries/master.svg)](https://codecov.io/github/ropensci/USAboundaries?branch=master)
 
+## Overview
+
 This R package includes contemporary state, county, and Congressional district boundaries, as well as zip code tabulation area centroids. It also includes historical boundaries from 1629 to 2000 for states and counties from the Newberry Library's [Atlas of Historical County Boundaries](http://publications.newberry.org/ahcbp/), as well as historical city population data from Erik Steiner's "[United States Historical City Populations, 1790-2010](https://github.com/cestastanford/historical-us-city-populations)." The package has some helper data, including a table of state names, abbreviations, and FIPS codes, and functions and data to get [State Plane Coordinate System](https://en.wikipedia.org/wiki/State_Plane_Coordinate_System) projections as EPSG codes or PROJ.4 strings.
 
 This package can serve a number of purposes. The spatial data can be joined to any other kind of data in order to make thematic maps. Unlike other R packages, this package also contains historical data for use in analyses of the recent or more distant past. 
 
-### Installation
+## Citation
+
+If you use this package in your research, please cite it.
+
+```{r}
+citation("USAboundaries")
+```
+
+## Installation
 
 You can install this package from CRAN.
 
@@ -40,8 +51,7 @@ Or you can install the development versions from GitHub using [devtools](https:/
 devtools::install_github("ropensci/USAboundaries")
 devtools::install_github("ropensci/USAboundariesData")
 ```
-
-### Use
+## Use
 
 This package provides a set of functions, one for each of the types of boundaries that are available. These functions have a consistent interface. 
 
@@ -82,7 +92,7 @@ plot(st_geometry(congress))
 title("Congressional district boundaries in California")
 ```
 
-### State plane projections
+## State plane projections
 
 The `state_plane()` function returns EPSG codes and PROJ.4 strings for the State Plane Coordinate System. You can use these to use suitable projections for specific states.
 
@@ -95,13 +105,13 @@ va <- st_transform(va, va_projection)
 plot(st_geometry(va), graticule = TRUE)
 ```
 
-### Related packages
+## Related packages
 
 Each function returns an `sf` object from the [sf](http://cran.r-project.org/package=sf) package, which can be mapped using the [leaflet](http://cran.r-project.org/package=leaflet) or [ggplot2](http://cran.r-project.org/package=ggplot2) packages.
 
 If you need U.S. Census Bureau boundary files which are not provided by this package, consider using the [tigris](http://cran.r-project.org/package=tigris) package, which downloads those shapefiles.
 
-### Citation and license
+## License
 
 The historical boundary data provided in this package is available under the CC BY-NC-SA 2.5 license from John H. Long, et al., [Atlas of Historical County Boundaries](http://publications.newberry.org/ahcbp/), Dr. William M. Scholl Center for American History and Culture, The Newberry Library, Chicago (2010).  Please cite that project if you use this package in your research and abide by the terms of their license if you use the historical information.
 
@@ -110,12 +120,6 @@ The historical population data for cities is provided by U.S. Census Bureau and 
 The contemporary data is provided by the [U.S. Census Bureau](https://www.census.gov/geo/maps-data/) and is in the publication domain.
 
 All code in this package is copyright [Lincoln Mullen](http://lincolnmullen.com) and is released under the MIT license.
-
-If you use this package in your research, I would appreciate a citation.
-
-```{r}
-citation("USAboundaries")
-```
 
 ---
 [![rOpenSci footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)

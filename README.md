@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-## USAboundaries: Historical and Contemporary Boundaries of the United States of America
+# USAboundaries
 
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/USAboundaries)](http://cran.r-project.org/package=USAboundaries)
 [![Build
@@ -10,6 +10,8 @@ Status](https://travis-ci.org/ropensci/USAboundaries.png?branch=master)](https:/
 Status](https://ci.appveyor.com/api/projects/status/github/ropensci/USAboundaries?branch=master)](https://ci.appveyor.com/project/ropensci/USAboundaries)
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/ropensci/USAboundaries/master.svg)](https://codecov.io/github/ropensci/USAboundaries?branch=master)
+
+## Overview
 
 This R package includes contemporary state, county, and Congressional
 district boundaries, as well as zip code tabulation area centroids. It
@@ -30,7 +32,32 @@ joined to any other kind of data in order to make thematic maps. Unlike
 other R packages, this package also contains historical data for use in
 analyses of the recent or more distant past.
 
-### Installation
+## Citation
+
+If you use this package in your research, please cite it.
+
+``` r
+citation("USAboundaries")
+#> 
+#> To cite package 'USAboundaries' in publications use:
+#> 
+#>   Lincoln Mullen and Jordan Bratt (2017). USAboundaries:
+#>   Historical and Contemporary Boundaries of the United States of
+#>   America. R package version 0.3.0.
+#>   http://lincolnmullen.com/software/usaboundaries/
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Manual{,
+#>     title = {USAboundaries: Historical and Contemporary Boundaries of the United States of America},
+#>     author = {Lincoln Mullen and Jordan Bratt},
+#>     year = {2017},
+#>     note = {R package version 0.3.0},
+#>     url = {http://lincolnmullen.com/software/usaboundaries/},
+#>   }
+```
+
+## Installation
 
 You can install this package from CRAN.
 
@@ -49,7 +76,7 @@ Or you can install the development versions from GitHub using
     devtools::install_github("ropensci/USAboundaries")
     devtools::install_github("ropensci/USAboundariesData")
 
-### Use
+## Use
 
 This package provides a set of functions, one for each of the types of
 boundaries that are available. These functions have a consistent
@@ -81,7 +108,7 @@ plot(st_geometry(states_1840))
 title("U.S. state boundaries on March 3, 1840")
 ```
 
-![](tools/README-unnamed-chunk-2-1.png)<!-- -->
+![](tools/README-unnamed-chunk-3-1.png)<!-- -->
 
 ``` r
 
@@ -90,7 +117,7 @@ plot(st_geometry(states_contemporary))
 title("Contemporary U.S. state boundaries")
 ```
 
-![](tools/README-unnamed-chunk-2-2.png)<!-- -->
+![](tools/README-unnamed-chunk-3-2.png)<!-- -->
 
 ``` r
 
@@ -99,7 +126,7 @@ plot(st_geometry(counties_va_1787))
 title("County boundaries in Virginia in 1787")
 ```
 
-![](tools/README-unnamed-chunk-2-3.png)<!-- -->
+![](tools/README-unnamed-chunk-3-3.png)<!-- -->
 
 ``` r
 
@@ -108,7 +135,7 @@ plot(st_geometry(counties_va))
 title("Contemporary county boundaries in Virginia")
 ```
 
-![](tools/README-unnamed-chunk-2-4.png)<!-- -->
+![](tools/README-unnamed-chunk-3-4.png)<!-- -->
 
 ``` r
 
@@ -117,7 +144,7 @@ plot(st_geometry(counties_va_highres))
 title("Higher resolution contemporary county boundaries in Virginia")
 ```
 
-![](tools/README-unnamed-chunk-2-5.png)<!-- -->
+![](tools/README-unnamed-chunk-3-5.png)<!-- -->
 
 ``` r
 
@@ -126,9 +153,9 @@ plot(st_geometry(congress))
 title("Congressional district boundaries in California")
 ```
 
-![](tools/README-unnamed-chunk-2-6.png)<!-- -->
+![](tools/README-unnamed-chunk-3-6.png)<!-- -->
 
-### State plane projections
+## State plane projections
 
 The `state_plane()` function returns EPSG codes and PROJ.4 strings for
 the State Plane Coordinate System. You can use these to use suitable
@@ -139,7 +166,7 @@ va <- us_states(states = "VA", resolution = "high")
 plot(st_geometry(va), graticule = TRUE)
 ```
 
-![](tools/README-unnamed-chunk-3-1.png)<!-- -->
+![](tools/README-unnamed-chunk-4-1.png)<!-- -->
 
 ``` r
 
@@ -148,9 +175,9 @@ va <- st_transform(va, va_projection)
 plot(st_geometry(va), graticule = TRUE)
 ```
 
-![](tools/README-unnamed-chunk-3-2.png)<!-- -->
+![](tools/README-unnamed-chunk-4-2.png)<!-- -->
 
-### Related packages
+## Related packages
 
 Each function returns an `sf` object from the
 [sf](http://cran.r-project.org/package=sf) package, which can be mapped
@@ -162,7 +189,7 @@ this package, consider using the
 [tigris](http://cran.r-project.org/package=tigris) package, which
 downloads those shapefiles.
 
-### Citation and license
+## License
 
 The historical boundary data provided in this package is available under
 the CC BY-NC-SA 2.5 license from John H. Long, et al., [Atlas of
@@ -183,29 +210,6 @@ domain.
 
 All code in this package is copyright [Lincoln
 Mullen](http://lincolnmullen.com) and is released under the MIT license.
-
-If you use this package in your research, I would appreciate a citation.
-
-``` r
-citation("USAboundaries")
-#> 
-#> To cite package 'USAboundaries' in publications use:
-#> 
-#>   Lincoln Mullen and Jordan Bratt (2017). USAboundaries:
-#>   Historical and Contemporary Boundaries of the United States of
-#>   America. R package version 0.3.0.
-#>   https://github.com/ropensci/USAboundaries
-#> 
-#> A BibTeX entry for LaTeX users is
-#> 
-#>   @Manual{,
-#>     title = {USAboundaries: Historical and Contemporary Boundaries of the United States of America},
-#>     author = {Lincoln Mullen and Jordan Bratt},
-#>     year = {2017},
-#>     note = {R package version 0.3.0},
-#>     url = {https://github.com/ropensci/USAboundaries},
-#>   }
-```
 
 -----
 
