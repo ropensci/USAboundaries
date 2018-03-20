@@ -10,6 +10,7 @@ test_that("Cities function can take multiple kinds of input", {
   expect_message(us_cities())
 })
 
-test_that("Cities function returns a data frame", {
+test_that("Cities function returns an sf data.frame", {
   expect_is(us_cities(1876), "data.frame")
+  expect_is(us_cities(1976), "sf")
 })

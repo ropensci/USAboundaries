@@ -1,8 +1,8 @@
 #' City locations and populations (historical and contemporary)
 #'
-#' This function returns a data frame of cities (or populated places) with their
-#' populations and latitudes and longitudes. Population data is taken from the
-#' U.S. Census.
+#' This function returns an \code{sf} object of cities (or populated places)
+#' with their populations and latitudes and longitudes. Population data is taken
+#' from the U.S. Census.
 #'
 #' @references The data was compiled by Erik Steiner and Jason Heppler at the
 #'   Center for Spatial and Textual Analysis, Stanford University. See their

@@ -16,9 +16,9 @@ that year is returned. For example, \code{1805} or \code{"1805-07-04"}
 would return city populations from the 1800 census.}
 }
 \description{
-This function returns a data frame of cities (or populated places) with their
-populations and latitudes and longitudes. Population data is taken from the
-U.S. Census.
+This function returns an \code{sf} object of cities (or populated places)
+with their populations and latitudes and longitudes. Population data is taken
+from the U.S. Census.
 }
 \examples{
 if (require(USAboundariesData)) {
