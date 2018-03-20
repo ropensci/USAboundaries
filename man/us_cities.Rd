@@ -4,7 +4,7 @@
 \alias{us_cities}
 \title{City locations and populations (historical and contemporary)}
 \usage{
-us_cities(map_date = NULL)
+us_cities(map_date = NULL, states = NULL)
 }
 \arguments{
 \item{map_date}{If \code{NULL}, then city populations from the 2010 census
@@ -14,6 +14,10 @@ numeric values representing a year. If a year or date is used, then city
 populations from the decennial census from 1790 to 2010 \emph{prior} to
 that year is returned. For example, \code{1805} or \code{"1805-07-04"}
 would return city populations from the 1800 census.}
+
+\item{states}{A character vector of state or territory names or
+abbreviations. Only boundaries for those states/territories will be
+returned. If \code{NULL}, all boundaries will be returned.}
 }
 \description{
 This function returns an \code{sf} object of cities (or populated places)

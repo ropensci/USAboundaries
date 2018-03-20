@@ -16,6 +16,9 @@
 #'   populations from the decennial census from 1790 to 2010 \emph{prior} to
 #'   that year is returned. For example, \code{1805} or \code{"1805-07-04"}
 #'   would return city populations from the 1800 census.
+#' @param states A character vector of state or territory names or
+#'   abbreviations. Only boundaries for those states/territories will be
+#'   returned. If \code{NULL}, all boundaries will be returned.
 #'
 #' @examples
 #' if (require(USAboundariesData)) {
@@ -25,7 +28,7 @@
 #' }
 #'
 #' @export
-us_cities <- function(map_date = NULL) {
+us_cities <- function(map_date = NULL, states = NULL) {
   if (is.null(map_date)) {
     message("City populations for contemporary data come from the 2010 census.")
     map_date <- 2010
@@ -38,5 +41,6 @@ us_cities <- function(map_date = NULL) {
   map_date <- trunc(map_date / 10 ) * 10
   check_data_package()
   cities <- USAboundariesData::census_cities
+  cities <- filter_by_states(cities, states)
   cities[cities$year == map_date & cities$population > 0, ]
 }

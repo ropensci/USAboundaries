@@ -8,7 +8,7 @@ filter_by_states <- function(shp, states) {
   stopifnot(is.character(states))
   states <- tolower(states)
   # Use state_terr for historical, otherwise statename
-  if (!is.null(shp$state_terr)) {
+  if (suppressWarnings(!is.null(shp$state_terr))) {
     filter <- (tolower(shp$state_terr) %in% states) |
       (tolower(shp$state_abbr) %in% states)
   } else {

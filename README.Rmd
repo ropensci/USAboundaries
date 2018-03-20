@@ -57,7 +57,7 @@ This package provides a set of functions, one for each of the types of boundarie
 
 Passing a date to `us_states()`, `us_counties()`, and `us_cities()` returns the historical boundaries for that date. If no date argument is passed, then contemporary boundaries are returned. The functions `us_congressional()` and `us_zipcodes()` only offer contemporary boundaries.
 
-For any function, pass a character vector of state names or abbreviations to the `states =` argument to return only those states or territories.
+For almost all functions, pass a character vector of state names or abbreviations to the `states =` argument to return only those states or territories.
 
 For certain functions, more or less detailed boundary information is available by passing an argument to the `resolution =` argument.
 

@@ -43,7 +43,7 @@ citation("USAboundaries")
 #> 
 #>   Lincoln Mullen and Jordan Bratt (2017). USAboundaries:
 #>   Historical and Contemporary Boundaries of the United States of
-#>   America. R package version 0.3.0.
+#>   America. R package version 0.3.0.9000.
 #>   http://lincolnmullen.com/software/usaboundaries/
 #> 
 #> A BibTeX entry for LaTeX users is
@@ -52,7 +52,7 @@ citation("USAboundaries")
 #>     title = {USAboundaries: Historical and Contemporary Boundaries of the United States of America},
 #>     author = {Lincoln Mullen and Jordan Bratt},
 #>     year = {2017},
-#>     note = {R package version 0.3.0},
+#>     note = {R package version 0.3.0.9000},
 #>     url = {http://lincolnmullen.com/software/usaboundaries/},
 #>   }
 ```
@@ -88,7 +88,7 @@ passed, then contemporary boundaries are returned. The functions
 `us_congressional()` and `us_zipcodes()` only offer contemporary
 boundaries.
 
-For any function, pass a character vector of state names or
+For almost all functions, pass a character vector of state names or
 abbreviations to the `states =` argument to return only those states or
 territories.
 
