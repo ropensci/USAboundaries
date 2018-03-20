@@ -19,7 +19,7 @@ Description: The boundaries for geographical units in the United States of
     provided in the 'USAboundariesData' package; this package provides an
     interface to access that data.
 License: MIT + file LICENSE
-URL: https://github.com/ropensci/USAboundaries
+URL: http://lincolnmullen.com/software/usaboundaries/
 BugReports: https://github.com/ropensci/USAboundaries/issues
 Depends:
     R (>= 3.1.1)
