@@ -4,7 +4,9 @@
 # USAboundaries
 
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/USAboundaries)](http://cran.r-project.org/package=USAboundaries)
-[![Build
+[![JOSS
+Status](http://joss.theoj.org/papers/3458a33133aa6c069ab4dd8df0b5f3b5/status.svg)](http://joss.theoj.org/papers/3458a33133aa6c069ab4dd8df0b5f3b5)
+[![Travis
 Status](https://travis-ci.org/ropensci/USAboundaries.png?branch=master)](https://travis-ci.org/ropensci/USAboundaries)
 [![AppVeyor Build
 Status](https://ci.appveyor.com/api/projects/status/github/ropensci/USAboundaries?branch=master)](https://ci.appveyor.com/project/ropensci/USAboundaries)
