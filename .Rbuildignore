@@ -9,5 +9,6 @@
 ^codecov\.yml$
 ^docs$
 ^paper\.md$
+^paper\.bib$
 ^_pkgdown\.yml$
 ^Makefile$
