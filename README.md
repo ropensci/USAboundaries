@@ -30,11 +30,16 @@ projections as EPSG codes or PROJ.4 strings.
 This package can serve a number of purposes. The spatial data can be
 joined to any other kind of data in order to make thematic maps. Unlike
 other R packages, this package also contains historical data for use in
-analyses of the recent or more distant past.
+analyses of the recent or more distant past. See the [“A sample analysis
+using
+USAboundaries”](http://lincolnmullen.com/software/usaboundaries/articles/usaboundaries-sample-analysis.html)
+vignette for an example of how the package can be used for both
+historical and contemporary maps.
 
 ## Citation
 
-If you use this package in your research, please cite it.
+If you use this package in your research, we would appreciate a
+citation.
 
 ``` r
 citation("USAboundaries")

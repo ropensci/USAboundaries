@@ -29,8 +29,11 @@ Suggests:
     sf (>= 0.5.1),
     testthat (>= 0.9.1),
     USAboundariesData (>= 0.3.1),
-    covr
+    covr,
+    knitr,
+    rmarkdown
 RoxygenNote: 6.0.1
 Additional_repositories: http://packages.ropensci.org
 LazyData: true
 LazyDataCompression: xz
+VignetteBuilder: knitr

@@ -25,11 +25,11 @@ set.seed(87737)
 
 This R package includes contemporary state, county, and Congressional district boundaries, as well as zip code tabulation area centroids. It also includes historical boundaries from 1629 to 2000 for states and counties from the Newberry Library's [Atlas of Historical County Boundaries](http://publications.newberry.org/ahcbp/), as well as historical city population data from Erik Steiner's "[United States Historical City Populations, 1790-2010](https://github.com/cestastanford/historical-us-city-populations)." The package has some helper data, including a table of state names, abbreviations, and FIPS codes, and functions and data to get [State Plane Coordinate System](https://en.wikipedia.org/wiki/State_Plane_Coordinate_System) projections as EPSG codes or PROJ.4 strings.
 
-This package can serve a number of purposes. The spatial data can be joined to any other kind of data in order to make thematic maps. Unlike other R packages, this package also contains historical data for use in analyses of the recent or more distant past. 
+This package can serve a number of purposes. The spatial data can be joined to any other kind of data in order to make thematic maps. Unlike other R packages, this package also contains historical data for use in analyses of the recent or more distant past. See the ["A sample analysis using USAboundaries"](http://lincolnmullen.com/software/usaboundaries/articles/usaboundaries-sample-analysis.html) vignette for an example of how the package can be used for both historical and contemporary maps.
 
 ## Citation
 
-If you use this package in your research, please cite it.
+If you use this package in your research, we would appreciate a citation.
 
 ```{r}
 citation("USAboundaries")
