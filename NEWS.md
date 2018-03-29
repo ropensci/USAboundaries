@@ -4,6 +4,7 @@
 - Additions and clarifications to documentation following @AndySouth's suggestions for JOSS peer review (#38).
 - `us_cities()` now returns an `sf` object rather than a data frame (#36).
 - `us_cities()` gains a `states` argument to match other functions in the package (#35).
+- Citation to JOSS paper.
 
 # USAboundaries 0.3.0
 
