@@ -46,21 +46,27 @@ citation.
 ``` r
 citation("USAboundaries")
 #> 
-#> To cite package 'USAboundaries' in publications use:
+#> To cite the USAboundaries package in publications, please cite the
+#> paper in the Journal of Open Source Software:
 #> 
-#>   Lincoln Mullen and Jordan Bratt (2017). USAboundaries:
-#>   Historical and Contemporary Boundaries of the United States of
-#>   America. R package version 0.3.0.9000.
-#>   http://lincolnmullen.com/software/usaboundaries/
+#>   Lincoln A. Mullen and Jordan Bratt, "USAboundaries: Historical
+#>   and Contemporary Boundaries of the United States of America,"
+#>   Journal of Open Source Software 3, no. 23 (2018): 314,
+#>   https://doi.org/10.21105/joss.00314.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
-#>   @Manual{,
-#>     title = {USAboundaries: Historical and Contemporary Boundaries of the United States of America},
-#>     author = {Lincoln Mullen and Jordan Bratt},
-#>     year = {2017},
-#>     note = {R package version 0.3.0.9000},
-#>     url = {http://lincolnmullen.com/software/usaboundaries/},
+#>   @Article{,
+#>     title = {{USAboundaries}: Historical and Contemporary Boundaries
+#> of the United States of America},
+#>     author = {Lincoln A. Mullen and Jordan Bratt},
+#>     journal = {Journal of Open Source Software},
+#>     year = {2018},
+#>     volume = {3},
+#>     issue = {23},
+#>     pages = {314},
+#>     url = {https://doi.org/10.21105/joss.00314},
+#>     doi = {10.21105/joss.00314},
 #>   }
 ```
 

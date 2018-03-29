@@ -1,0 +1,25 @@
+citHeader(paste0(
+  "To cite the USAboundaries package in publications, please cite the ",
+  "paper in the Journal of Open Source Software:"
+))
+
+citEntry(
+  entry = "Article",
+  title = "{USAboundaries}: Historical and Contemporary Boundaries
+of the United States of America",
+  author = personList(as.person("Lincoln A. Mullen"),
+                      as.person("Jordan Bratt")),
+  journal = "Journal of Open Source Software",
+  year = "2018",
+  volume = "3",
+  issue = "23",
+  pages = "314",
+  url = "https://doi.org/10.21105/joss.00314",
+  doi = "10.21105/joss.00314",
+
+  textVersion = paste('Lincoln A. Mullen and Jordan Bratt,',
+                      '"USAboundaries: Historical and Contemporary',
+                      'Boundaries of the United States of America,"',
+                      'Journal of Open Source Software 3, no. 23',
+                      '(2018): 314, https://doi.org/10.21105/joss.00314.')
+)
