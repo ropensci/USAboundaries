@@ -5,7 +5,7 @@
 
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/USAboundaries)](http://cran.r-project.org/package=USAboundaries)
 [![JOSS
-Status](http://joss.theoj.org/papers/3458a33133aa6c069ab4dd8df0b5f3b5/status.svg)](http://joss.theoj.org/papers/3458a33133aa6c069ab4dd8df0b5f3b5)
+Status](http://joss.theoj.org/papers/3458a33133aa6c069ab4dd8df0b5f3b5/status.svg)](https://doi.org/10.21105/joss.00314)
 [![Travis
 Status](https://travis-ci.org/ropensci/USAboundaries.png?branch=master)](https://travis-ci.org/ropensci/USAboundaries)
 [![AppVeyor Build
@@ -114,7 +114,7 @@ documentation for each function for more details.
 ``` r
 library(USAboundaries) 
 library(sf) # for plotting and projection methods
-#> Linking to GEOS 3.6.2, GDAL 2.2.3, proj.4 5.0.0
+#> Linking to GEOS 3.6.2, GDAL 2.2.4, proj.4 5.0.0
 
 states_1840 <- us_states("1840-03-12")
 plot(st_geometry(states_1840))
