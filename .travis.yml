@@ -1,29 +1,26 @@
 language: r
-r:
-- oldrel
-- release
-- devel
-sudo: true
-dist: trusty
 cache: packages
 
-before_install:
-  - sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable --yes
-  - sudo apt-get --yes --force-yes update -qq
-  - sudo apt-get install --yes libudunits2-dev libproj-dev libgeos-dev libgdal-dev
-  - Rscript -e 'update.packages(ask = FALSE)'
+r:
+  - oldrel
+  - release
+  - devel
+
+addons:
+  apt:
+    sources:
+      - sourceline: 'ppa:ubuntugis/ppa'
+    packages:
+      - libudunits2-dev
+      - libproj-dev
+      - libgeos-dev
+      - libgdal-dev
 
 # Only report coverage for the release version
 after_success:
   - test $TRAVIS_R_VERSION_STRING = 'release' && Rscript -e 'covr::codecov()'
 
-r_packages:
-- devtools
-
-r_github_packages:
-- ropensci/USAboundariesData
-
-warnings_are_errors: true
+r_packages: covr
 
 notifications:
   slack:
