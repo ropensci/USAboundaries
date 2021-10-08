@@ -4,14 +4,16 @@
 \name{state_proj}
 \alias{state_proj}
 \title{Data for projections from the State Plane Coordinate System}
-\format{A data frame with 123 rows and 5 variables:
+\format{
+A data frame with 123 rows and 5 variables:
 \describe{
 \item{state}{The state or territory abbreviation.}
 \item{zone}{Name of the state plane zone.}
 \item{epsg}{The EPSG code for each state plane zone.}
 \item{proj4_string}{The PROJ4 string for the state plane projection.}
 \item{statewide_proj}{State plane zone for projecting the entire state.}
-}}
+}
+}
 \usage{
 state_proj
 }

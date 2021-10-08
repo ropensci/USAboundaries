@@ -3,7 +3,6 @@
 \docType{package}
 \name{USAboundaries}
 \alias{USAboundaries}
-\alias{USAboundaries-package}
 \title{USAboundaries: Historical and Contemporary Boundaries of the United States of
 America}
 \description{

@@ -4,13 +4,15 @@
 \name{state_codes}
 \alias{state_codes}
 \title{State codes and abbreviations for U.S. states and territories}
-\format{A data.frame with 69 rows and 4 variables:
+\format{
+A data.frame with 69 rows and 4 variables:
 \describe{
 \item{state_name}{The state or territory name}
 \item{state_abbr}{The two character abbreviation for the state or territory.}
 \item{state_code}{A three digit numeric FIPS code for the state or territory.}
 \item{jurisdiction_type}{One of \code{state}, \code{territory}, or \code{district}.}
-}}
+}
+}
 \usage{
 state_codes
 }

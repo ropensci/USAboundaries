@@ -4,8 +4,12 @@
 \alias{us_boundaries}
 \title{Get historical or contemporary boundaries of the United States}
 \usage{
-us_boundaries(map_date = NULL, type = c("state", "county", "congressional"),
-  resolution = c("low", "high"), states = NULL)
+us_boundaries(
+  map_date = NULL,
+  type = c("state", "county", "congressional"),
+  resolution = c("low", "high"),
+  states = NULL
+)
 }
 \arguments{
 \item{map_date}{The date of the boundaries as some object coercible to a date

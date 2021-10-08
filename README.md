@@ -3,13 +3,12 @@
 
 # USAboundaries
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/USAboundaries)](http://cran.r-project.org/package=USAboundaries)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/USAboundaries)](http://cran.r-project.org/package=USAboundaries)
 [![JOSS
 Status](http://joss.theoj.org/papers/3458a33133aa6c069ab4dd8df0b5f3b5/status.svg)](https://doi.org/10.21105/joss.00314)
+[![R-CMD-check](https://github.com/ropensci/USAboundaries/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/USAboundaries/actions)
 [![Travis
 Status](https://travis-ci.org/ropensci/USAboundaries.png?branch=master)](https://travis-ci.org/ropensci/USAboundaries)
-[![AppVeyor Build
-Status](https://ci.appveyor.com/api/projects/status/github/ropensci/USAboundaries?branch=master)](https://ci.appveyor.com/project/ropensci/USAboundaries)
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/ropensci/USAboundaries/master.svg)](https://codecov.io/github/ropensci/USAboundaries?branch=master)
 
@@ -21,8 +20,8 @@ also includes historical boundaries from 1629 to 2000 for states and
 counties from the Newberry Library’s [Atlas of Historical County
 Boundaries](http://publications.newberry.org/ahcbp/), as well as
 historical city population data from Erik Steiner’s “[United States
-Historical City
-Populations, 1790-2010](https://github.com/cestastanford/historical-us-city-populations).”
+Historical City Populations,
+1790-2010](https://github.com/cestastanford/historical-us-city-populations).”
 The package has some helper data, including a table of state names,
 abbreviations, and FIPS codes, and functions and data to get [State
 Plane Coordinate
@@ -49,9 +48,9 @@ citation("USAboundaries")
 #> To cite the USAboundaries package in publications, please cite the
 #> paper in the Journal of Open Source Software:
 #> 
-#>   Lincoln A. Mullen and Jordan Bratt, "USAboundaries: Historical
-#>   and Contemporary Boundaries of the United States of America,"
-#>   Journal of Open Source Software 3, no. 23 (2018): 314,
+#>   Lincoln A. Mullen and Jordan Bratt, "USAboundaries: Historical and
+#>   Contemporary Boundaries of the United States of America," Journal of
+#>   Open Source Software 3, no. 23 (2018): 314,
 #>   https://doi.org/10.21105/joss.00314.
 #> 
 #> A BibTeX entry for LaTeX users is
@@ -84,10 +83,11 @@ will be automatically installed (with your permission) from the
 time that you need it.
 
 Or you can install the development versions from GitHub using
-[devtools](https://github.com/hadley/devtools).
+[remotes](https://remotes.r-lib.org).
 
-    devtools::install_github("ropensci/USAboundaries")
-    devtools::install_github("ropensci/USAboundariesData")
+    # install.packages("remotes")
+    remotes::install_github("ropensci/USAboundaries")
+    remotes::install_github("ropensci/USAboundariesData")
 
 ## Use
 
@@ -114,9 +114,11 @@ documentation for each function for more details.
 ``` r
 library(USAboundaries) 
 library(sf) # for plotting and projection methods
-#> Linking to GEOS 3.6.2, GDAL 2.2.4, proj.4 5.0.0
+#> Linking to GEOS 3.9.1, GDAL 3.3.2, PROJ 8.1.1
 
 states_1840 <- us_states("1840-03-12")
+#> old-style crs object detected; please recreate object with a recent sf::st_crs()
+#> old-style crs object detected; please recreate object with a recent sf::st_crs()
 plot(st_geometry(states_1840))
 title("U.S. state boundaries on March 3, 1840")
 ```
@@ -124,17 +126,20 @@ title("U.S. state boundaries on March 3, 1840")
 ![](tools/README-unnamed-chunk-3-1.png)<!-- -->
 
 ``` r
-
 states_contemporary <- us_states()
 plot(st_geometry(states_contemporary))
+#> old-style crs object detected; please recreate object with a recent sf::st_crs()
+#> old-style crs object detected; please recreate object with a recent sf::st_crs()
+#> old-style crs object detected; please recreate object with a recent sf::st_crs()
 title("Contemporary U.S. state boundaries")
 ```
 
 ![](tools/README-unnamed-chunk-3-2.png)<!-- -->
 
 ``` r
-
 counties_va_1787 <- us_counties("1787-09-17", states = "Virginia")
+#> old-style crs object detected; please recreate object with a recent sf::st_crs()
+#> old-style crs object detected; please recreate object with a recent sf::st_crs()
 plot(st_geometry(counties_va_1787))
 title("County boundaries in Virginia in 1787")
 ```
@@ -142,7 +147,6 @@ title("County boundaries in Virginia in 1787")
 ![](tools/README-unnamed-chunk-3-3.png)<!-- -->
 
 ``` r
-
 counties_va <- us_counties(states = "Virginia")
 plot(st_geometry(counties_va))
 title("Contemporary county boundaries in Virginia")
@@ -151,7 +155,6 @@ title("Contemporary county boundaries in Virginia")
 ![](tools/README-unnamed-chunk-3-4.png)<!-- -->
 
 ``` r
-
 counties_va_highres <- us_counties(states = "Virginia", resolution = "high")
 plot(st_geometry(counties_va_highres))
 title("Higher resolution contemporary county boundaries in Virginia")
@@ -160,7 +163,6 @@ title("Higher resolution contemporary county boundaries in Virginia")
 ![](tools/README-unnamed-chunk-3-5.png)<!-- -->
 
 ``` r
-
 congress <- us_congressional(states = "California")
 plot(st_geometry(congress))
 title("Congressional district boundaries in California")
@@ -182,7 +184,6 @@ plot(st_geometry(va), graticule = TRUE)
 ![](tools/README-unnamed-chunk-4-1.png)<!-- -->
 
 ``` r
-
 va_projection <- state_plane("VA")
 va <- st_transform(va, va_projection)
 plot(st_geometry(va), graticule = TRUE)
@@ -224,7 +225,7 @@ domain.
 All code in this package is copyright [Lincoln
 Mullen](http://lincolnmullen.com) and is released under the MIT license.
 
------
+------------------------------------------------------------------------
 
 [![rOpenSci
 footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)

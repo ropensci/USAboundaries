@@ -4,7 +4,9 @@
 \name{states_contemporary_lores}
 \alias{states_contemporary_lores}
 \title{U.S. state boundaries}
-\format{An object of class \code{sf} (inherits from \code{data.frame}) with 52 rows and 13 columns.}
+\format{
+An object of class \code{sf} (inherits from \code{data.frame}) with 52 rows and 13 columns.
+}
 \usage{
 states_contemporary_lores
 }

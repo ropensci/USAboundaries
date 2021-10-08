@@ -34,8 +34,9 @@ Suggests:
     rmarkdown,
     dplyr,
     leaflet
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.2
 Additional_repositories: http://packages.ropensci.org
 LazyData: true
 LazyDataCompression: xz
 VignetteBuilder: knitr
+Encoding: UTF-8

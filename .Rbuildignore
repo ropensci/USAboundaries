@@ -12,3 +12,4 @@
 ^paper\.bib$
 ^_pkgdown\.yml$
 ^Makefile$
+^\.github$

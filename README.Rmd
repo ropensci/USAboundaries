@@ -18,8 +18,8 @@ set.seed(87737)
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/USAboundaries)](http://cran.r-project.org/package=USAboundaries)
 [![JOSS Status](http://joss.theoj.org/papers/3458a33133aa6c069ab4dd8df0b5f3b5/status.svg)](https://doi.org/10.21105/joss.00314)
+[![R-CMD-check](https://github.com/ropensci/USAboundaries/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/USAboundaries/actions)
 [![Travis Status](https://travis-ci.org/ropensci/USAboundaries.png?branch=master)](https://travis-ci.org/ropensci/USAboundaries)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/USAboundaries?branch=master)](https://ci.appveyor.com/project/ropensci/USAboundaries)
 [![Coverage Status](https://img.shields.io/codecov/c/github/ropensci/USAboundaries/master.svg)](https://codecov.io/github/ropensci/USAboundaries?branch=master)
 
 ## Overview
@@ -46,12 +46,14 @@ install.packages("USAboundaries")
 
 Almost all of the data for this package is provided by the [USAboundariesData package](https://github.com/ropensci/USAboundariesData). That package will be automatically installed (with your permission) from the [rOpenSci package repository](http://packages.ropensci.org/) the first time that you need it.
 
-Or you can install the development versions from GitHub using [devtools](https://github.com/hadley/devtools). 
+Or you can install the development versions from GitHub using [remotes](https://remotes.r-lib.org). 
 
 ```
-devtools::install_github("ropensci/USAboundaries")
-devtools::install_github("ropensci/USAboundariesData")
+# install.packages("remotes")
+remotes::install_github("ropensci/USAboundaries")
+remotes::install_github("ropensci/USAboundariesData")
 ```
+
 ## Use
 
 This package provides a set of functions, one for each of the types of boundaries that are available. These functions have a consistent interface. 
