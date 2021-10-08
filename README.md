@@ -7,8 +7,6 @@
 [![JOSS
 Status](http://joss.theoj.org/papers/3458a33133aa6c069ab4dd8df0b5f3b5/status.svg)](https://doi.org/10.21105/joss.00314)
 [![R-CMD-check](https://github.com/ropensci/USAboundaries/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/USAboundaries/actions)
-[![Travis
-Status](https://travis-ci.org/ropensci/USAboundaries.png?branch=master)](https://travis-ci.org/ropensci/USAboundaries)
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/ropensci/USAboundaries/master.svg)](https://codecov.io/github/ropensci/USAboundaries?branch=master)
 
@@ -117,8 +115,6 @@ library(sf) # for plotting and projection methods
 #> Linking to GEOS 3.9.1, GDAL 3.3.2, PROJ 8.1.1
 
 states_1840 <- us_states("1840-03-12")
-#> old-style crs object detected; please recreate object with a recent sf::st_crs()
-#> old-style crs object detected; please recreate object with a recent sf::st_crs()
 plot(st_geometry(states_1840))
 title("U.S. state boundaries on March 3, 1840")
 ```
@@ -128,9 +124,6 @@ title("U.S. state boundaries on March 3, 1840")
 ``` r
 states_contemporary <- us_states()
 plot(st_geometry(states_contemporary))
-#> old-style crs object detected; please recreate object with a recent sf::st_crs()
-#> old-style crs object detected; please recreate object with a recent sf::st_crs()
-#> old-style crs object detected; please recreate object with a recent sf::st_crs()
 title("Contemporary U.S. state boundaries")
 ```
 
@@ -138,8 +131,6 @@ title("Contemporary U.S. state boundaries")
 
 ``` r
 counties_va_1787 <- us_counties("1787-09-17", states = "Virginia")
-#> old-style crs object detected; please recreate object with a recent sf::st_crs()
-#> old-style crs object detected; please recreate object with a recent sf::st_crs()
 plot(st_geometry(counties_va_1787))
 title("County boundaries in Virginia in 1787")
 ```
