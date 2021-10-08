@@ -19,7 +19,6 @@ set.seed(87737)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/USAboundaries)](http://cran.r-project.org/package=USAboundaries)
 [![JOSS Status](http://joss.theoj.org/papers/3458a33133aa6c069ab4dd8df0b5f3b5/status.svg)](https://doi.org/10.21105/joss.00314)
 [![R-CMD-check](https://github.com/ropensci/USAboundaries/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/USAboundaries/actions)
-[![Travis Status](https://travis-ci.org/ropensci/USAboundaries.png?branch=master)](https://travis-ci.org/ropensci/USAboundaries)
 [![Coverage Status](https://img.shields.io/codecov/c/github/ropensci/USAboundaries/master.svg)](https://codecov.io/github/ropensci/USAboundaries?branch=master)
 
 ## Overview
