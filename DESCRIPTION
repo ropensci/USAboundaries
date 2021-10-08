@@ -35,7 +35,7 @@ Suggests:
     dplyr,
     leaflet
 RoxygenNote: 7.1.2
-Additional_repositories: http://packages.ropensci.org
+Additional_repositories: https://ropensci.r-universe.dev
 LazyData: true
 LazyDataCompression: xz
 VignetteBuilder: knitr
