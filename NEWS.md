@@ -6,6 +6,13 @@
 - `us_cities()` gains a `states` argument to match other functions in the package (#35).
 - Citation to JOSS paper.
 
+# USAboundaries 0.4.0
+
+- Update all data files to use current version of `sf` package.
+- Update Census Bureau data from 2016 to 2020.
+- Remove the `us_boundaries()` function was a needless wrapper around other functions.
+- Prompt user to install data package rather than installing it for them.
+
 # USAboundaries 0.3.0
 
 - Moved most data to USAboundariesData. This improves loading time and permits more frequent updates to the user-facing package.

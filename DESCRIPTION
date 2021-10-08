@@ -1,8 +1,8 @@
 Package: USAboundaries
 Type: Package
 Title: Historical and Contemporary Boundaries of the United States of America
-Version: 0.3.1
-Date: 2018-03-29
+Version: 0.4.0
+Date: 2020-10-08
 Authors@R: c(person("Lincoln", "Mullen",
     email = "lincoln@lincolnmullen.com",
     role = c("aut", "cre"),
@@ -26,9 +26,9 @@ BugReports: https://github.com/ropensci/USAboundaries/issues
 Depends:
     R (>= 3.1.1)
 Suggests:
-    sf (>= 0.5.1),
+    sf (>= 1.0.0),
     testthat (>= 0.9.1),
-    USAboundariesData (>= 0.3.1),
+    USAboundariesData (>= 0.4.0),
     covr,
     knitr,
     rmarkdown,
