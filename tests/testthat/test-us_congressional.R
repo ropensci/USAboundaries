@@ -1,4 +1,5 @@
 context("US Congressional Districts")
+require(sf)
 
 test_that("Returns current congressional districts", {
   expect_identical(us_congressional(), USAboundariesData::congress_contemporary_lores)

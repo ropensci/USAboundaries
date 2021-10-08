@@ -1,4 +1,5 @@
 context("US States")
+require(sf)
 
 test_that("No date returns current states", {
   expect_identical(us_states(), USAboundaries::states_contemporary_lores)

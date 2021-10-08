@@ -1,4 +1,5 @@
 context("State Plane Projection")
+require(sf)
 
 test_that("Incorrect state value throws an error message", {
   expect_error(state_plane())

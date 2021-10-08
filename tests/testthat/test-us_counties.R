@@ -1,4 +1,5 @@
 context("US Counties")
+require(sf)
 
 test_that("No date returns current counties", {
   expect_identical(us_counties(), USAboundariesData::counties_contemporary_lores)
