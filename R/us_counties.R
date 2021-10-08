@@ -1,6 +1,6 @@
 #' County boundaries (contemporary and historical)
 #'
-#' Get the current (2016) boundaries for U.S counties from the U.S. Census
+#' Get the current (2020) boundaries for U.S counties from the U.S. Census
 #' Bureau, or get historical county boundaries for dates between 30 December
 #' 1636 and 31 December 2000.
 #'

@@ -10,7 +10,7 @@ us_zipcodes()
 An \code{sf} object.
 }
 \description{
-Get the current (2016) centroids for U.S Zipcode Tabulation Areas from the
+Get the current (2019) centroids for U.S Zipcode Tabulation Areas from the
 U.S. Census Bureau. The centroids were calculated from the ZCTA boundary
 files available on the U.S. Census Bureau website.
 }

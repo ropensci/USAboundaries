@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-The USAboundaries package provides both historical and contemporary boundaries of the United States. This vignette gives an example of using the package to create maps of Maryland Congressional elections in 2016 (to the 115th Congress) and in 1792 (to the 3rd Congress). We will use the USAboundaries package data for the spatial data. See the documentation for the functions used for citations to the underlying datasets. For the 2016 Congressional votes, we will use [data available on the website](http://history.house.gov/Institution/Election-Statistics/Election-Statistics/) of the U.S. House of Representatives. For the 1792 elections we will use data from the [*Mapping Early American Elections*](http://earlyamericanelections.org/data/) project.
+The USAboundaries package provides both historical and contemporary boundaries of the United States. This vignette gives an example of using the package to create maps of Maryland Congressional elections (to the 115th Congress) and in 1792 (to the 3rd Congress). We will use the USAboundaries package data for the spatial data. See the documentation for the functions used for citations to the underlying datasets. For the 2016 Congressional votes, we will use [data available on the website](http://history.house.gov/Institution/Election-Statistics/Election-Statistics/) of the U.S. House of Representatives. For the 1792 elections we will use data from the [*Mapping Early American Elections*](http://earlyamericanelections.org/data/) project.
 
 We begin by loading the packages that we need.
 
@@ -48,7 +48,7 @@ In order to map the data, we have to join the voting data to the spatial data.
 ```{r}
 if (avail) {
   md_115 <- md_districts %>% 
-   left_join(md_votes, by = c("cd115fp" = "district")) 
+   left_join(md_votes, by = c("cd116fp" = "district")) 
 }
 ```
 
@@ -79,7 +79,7 @@ if (avail) {
                 weight = 1,
                 fillColor = ~palette(margin_percent),
                 fillOpacity = 1,
-                label = ~paste0("District: ", cd115fp))
+                label = ~paste0("District: ", cd116fp))
 }
 ```
 

@@ -17,7 +17,7 @@ boundaries will be returned.}
 An \code{sf} object.
 }
 \description{
-Get the current (2016) boundaries for U.S. Congressional districts.
+Get the current (2020) boundaries for U.S. Congressional districts.
 }
 \examples{
 if (require(USAboundariesData) && require(sf)) {

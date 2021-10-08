@@ -1,6 +1,6 @@
 #' Congressional district boundaries (contemporary)
 #'
-#' Get the current (2016) boundaries for U.S. Congressional districts.
+#' Get the current (2020) boundaries for U.S. Congressional districts.
 #'
 #' @param resolution The resolution of the boundaries.
 #' @param states A character vector of state or territory names. Only boundaries

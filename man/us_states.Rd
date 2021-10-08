@@ -22,7 +22,7 @@ returned. If \code{NULL}, all boundaries will be returned.}
 An \code{sf} object.
 }
 \description{
-Get the current (2016) boundaries for U.S states from the U.S. Census Bureau,
+Get the current (2020) boundaries for U.S states from the U.S. Census Bureau,
 or get historical state boundaries for dates between 3 September 1783 and 31
 December 2000.
 }

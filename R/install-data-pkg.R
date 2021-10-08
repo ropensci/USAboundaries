@@ -2,7 +2,7 @@
 # If the \code{USAboundariesData} package is not installed, install it from
 # the \href{http://packages.ropensci.org/}{rOpenSci repository}.
 check_data_package <- function() {
-  package_version <- "0.3.2"
+  package_version <- "0.4.0"
 
   instructions <- paste(" Please try installing the package",
                         "using the following command: \n",
