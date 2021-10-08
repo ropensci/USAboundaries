@@ -38,10 +38,10 @@ jobs:
           r-version: ${{ matrix.config.r }}
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
+          extra-repositories: https://ropensci.r-universe.dev
 
       - uses: r-lib/actions/setup-r-dependencies@v1
         with:
-          needs: ropensci/USAboundariesData
           extra-packages: rcmdcheck
 
       - uses: r-lib/actions/check-r-package@v1
