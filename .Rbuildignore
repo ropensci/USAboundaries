@@ -13,3 +13,4 @@
 ^_pkgdown\.yml$
 ^Makefile$
 ^\.github$
+^CRAN-RELEASE$
