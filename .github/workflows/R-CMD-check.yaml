@@ -41,9 +41,7 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v1
         with:
-          extra-packages: |
-          rcmdcheck
-          ropensci/USAboundariesData
+          extra-packages: rcmdcheck, ropensci/USAboundariesData
 
       - uses: r-lib/actions/check-r-package@v1
 
