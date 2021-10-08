@@ -123,7 +123,7 @@ plot(st_geometry(states_1840))
 title("U.S. state boundaries on March 3, 1840")
 ```
 
-![](tools/README-unnamed-chunk-3-1.png)<!-- -->
+![](man/figures/README-unnamed-chunk-3-1.png)<!-- -->
 
 ``` r
 states_contemporary <- us_states()
@@ -134,7 +134,7 @@ plot(st_geometry(states_contemporary))
 title("Contemporary U.S. state boundaries")
 ```
 
-![](tools/README-unnamed-chunk-3-2.png)<!-- -->
+![](man/figures/README-unnamed-chunk-3-2.png)<!-- -->
 
 ``` r
 counties_va_1787 <- us_counties("1787-09-17", states = "Virginia")
@@ -144,7 +144,7 @@ plot(st_geometry(counties_va_1787))
 title("County boundaries in Virginia in 1787")
 ```
 
-![](tools/README-unnamed-chunk-3-3.png)<!-- -->
+![](man/figures/README-unnamed-chunk-3-3.png)<!-- -->
 
 ``` r
 counties_va <- us_counties(states = "Virginia")
@@ -152,7 +152,7 @@ plot(st_geometry(counties_va))
 title("Contemporary county boundaries in Virginia")
 ```
 
-![](tools/README-unnamed-chunk-3-4.png)<!-- -->
+![](man/figures/README-unnamed-chunk-3-4.png)<!-- -->
 
 ``` r
 counties_va_highres <- us_counties(states = "Virginia", resolution = "high")
@@ -160,7 +160,7 @@ plot(st_geometry(counties_va_highres))
 title("Higher resolution contemporary county boundaries in Virginia")
 ```
 
-![](tools/README-unnamed-chunk-3-5.png)<!-- -->
+![](man/figures/README-unnamed-chunk-3-5.png)<!-- -->
 
 ``` r
 congress <- us_congressional(states = "California")
@@ -168,7 +168,7 @@ plot(st_geometry(congress))
 title("Congressional district boundaries in California")
 ```
 
-![](tools/README-unnamed-chunk-3-6.png)<!-- -->
+![](man/figures/README-unnamed-chunk-3-6.png)<!-- -->
 
 ## State plane projections
 
@@ -181,7 +181,7 @@ va <- us_states(states = "VA", resolution = "high")
 plot(st_geometry(va), graticule = TRUE)
 ```
 
-![](tools/README-unnamed-chunk-4-1.png)<!-- -->
+![](man/figures/README-unnamed-chunk-4-1.png)<!-- -->
 
 ``` r
 va_projection <- state_plane("VA")
@@ -189,7 +189,7 @@ va <- st_transform(va, va_projection)
 plot(st_geometry(va), graticule = TRUE)
 ```
 
-![](tools/README-unnamed-chunk-4-2.png)<!-- -->
+![](man/figures/README-unnamed-chunk-4-2.png)<!-- -->
 
 ## Related packages
 

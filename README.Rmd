@@ -9,7 +9,7 @@ pagetitle: Historical and Contemporary Boundaries of the United States of Americ
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "tools/README-"
+  fig.path = "man/figures/README-"
 )
 set.seed(87737)
 ```
