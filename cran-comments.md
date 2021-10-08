@@ -1,10 +1,10 @@
-This is a minor release of the 'USAboundaries' package. It makes all of the included data have a consistent output format.
+This is an update release of the 'USAboundaries' package, updating Census Bureau
+data. It also fixes problems brought about by a new version of the `sf` package.
 
 ## Test environments
 
 * local OS X install, R-release
-* Travis-CI, R-devel, R-release, R-oldrel 
-* ubuntu 14.04 (on travis-ci), R-devel, R-release, R-oldrel 
+* GitHub Actions, R-devel, R-release, R-oldrel 
 * win-builder (R-devel)
 
 ## R CMD check results
