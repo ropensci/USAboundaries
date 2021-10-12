@@ -3,9 +3,9 @@
 
 # USAboundaries
 
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/USAboundaries)](http://cran.r-project.org/package=USAboundaries)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/USAboundaries)](https://cran.r-project.org/package=USAboundaries)
 [![JOSS
-Status](http://joss.theoj.org/papers/3458a33133aa6c069ab4dd8df0b5f3b5/status.svg)](https://doi.org/10.21105/joss.00314)
+Status](https://joss.theoj.org/papers/3458a33133aa6c069ab4dd8df0b5f3b5/status.svg)](https://doi.org/10.21105/joss.00314)
 [![R-CMD-check](https://github.com/ropensci/USAboundaries/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/USAboundaries/actions)
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/ropensci/USAboundaries/master.svg)](https://codecov.io/github/ropensci/USAboundaries?branch=master)
@@ -16,7 +16,7 @@ This R package includes contemporary state, county, and Congressional
 district boundaries, as well as zip code tabulation area centroids. It
 also includes historical boundaries from 1629 to 2000 for states and
 counties from the Newberry Library’s [Atlas of Historical County
-Boundaries](http://publications.newberry.org/ahcbp/), as well as
+Boundaries](https://publications.newberry.org/ahcbp/), as well as
 historical city population data from Erik Steiner’s “[United States
 Historical City Populations,
 1790-2010](https://github.com/cestastanford/historical-us-city-populations).”
@@ -77,7 +77,7 @@ Almost all of the data for this package is provided by the
 [USAboundariesData
 package](https://github.com/ropensci/USAboundariesData). That package
 will be automatically installed (with your permission) from the
-[rOpenSci package repository](http://packages.ropensci.org/) the first
+[rOpenSci package repository](https://ropensci.r-universe.dev) the first
 time that you need it.
 
 Or you can install the development versions from GitHub using
@@ -185,20 +185,20 @@ plot(st_geometry(va), graticule = TRUE)
 ## Related packages
 
 Each function returns an `sf` object from the
-[sf](http://cran.r-project.org/package=sf) package, which can be mapped
-using the [leaflet](http://cran.r-project.org/package=leaflet) or
-[ggplot2](http://cran.r-project.org/package=ggplot2) packages.
+[sf](https://cran.r-project.org/package=sf) package, which can be mapped
+using the [leaflet](https://cran.r-project.org/package=leaflet) or
+[ggplot2](https://cran.r-project.org/package=ggplot2) packages.
 
 If you need U.S. Census Bureau boundary files which are not provided by
 this package, consider using the
-[tigris](http://cran.r-project.org/package=tigris) package, which
+[tigris](https://cran.r-project.org/package=tigris) package, which
 downloads those shapefiles.
 
 ## License
 
 The historical boundary data provided in this package is available under
 the CC BY-NC-SA 2.5 license from John H. Long, et al., [Atlas of
-Historical County Boundaries](http://publications.newberry.org/ahcbp/),
+Historical County Boundaries](https://publications.newberry.org/ahcbp/),
 Dr. William M. Scholl Center for American History and Culture, The
 Newberry Library, Chicago (2010). Please cite that project if you use
 this package in your research and abide by the terms of their license if
@@ -209,9 +209,8 @@ Bureau and Erik Steiner, Spatial History Project, Center for Spatial and
 Textual Analysis, Stanford University. See the data in [this
 repository](https://github.com/cestastanford/historical-us-city-populations).
 
-The contemporary data is provided by the [U.S. Census
-Bureau](https://www.census.gov/geo/maps-data/) and is in the publication
-domain.
+The contemporary data is provided by the U.S. Census Bureau and is in
+the public domain.
 
 All code in this package is copyright [Lincoln
 Mullen](http://lincolnmullen.com) and is released under the MIT license.
@@ -219,4 +218,4 @@ Mullen](http://lincolnmullen.com) and is released under the MIT license.
 ------------------------------------------------------------------------
 
 [![rOpenSci
-footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+footer](https://ropensci.org//public_images/github_footer.png)](https://ropensci.org/)

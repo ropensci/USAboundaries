@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-The USAboundaries package provides both historical and contemporary boundaries of the United States. This vignette gives an example of using the package to create maps of Maryland Congressional elections (to the 115th Congress) and in 1792 (to the 3rd Congress). We will use the USAboundaries package data for the spatial data. See the documentation for the functions used for citations to the underlying datasets. For the 2016 Congressional votes, we will use [data available on the website](http://history.house.gov/Institution/Election-Statistics/Election-Statistics/) of the U.S. House of Representatives. For the 1792 elections we will use data from the [*Mapping Early American Elections*](http://earlyamericanelections.org/data/) project.
+The USAboundaries package provides both historical and contemporary boundaries of the United States. This vignette gives an example of using the package to create maps of Maryland Congressional elections (to the 115th Congress) and in 1792 (to the 3rd Congress). We will use the USAboundaries package data for the spatial data. See the documentation for the functions used for citations to the underlying datasets. For the 2016 Congressional votes, we will use [data available on the website](http://history.house.gov/Institution/Election-Statistics/Election-Statistics/) of the U.S. House of Representatives. For the 1792 elections we will use data from the [*Mapping Early American Elections*](https://earlyamericanelections.org/data/) project.
 
 We begin by loading the packages that we need.
 

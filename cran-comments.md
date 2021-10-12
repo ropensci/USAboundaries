@@ -1,6 +1,8 @@
 This is an update release of the 'USAboundaries' package, updating Census Bureau
 data. It also fixes problems brought about by a new version of the `sf` package.
 
+This is a resubmission following CRAN guidance. It updates the date field and corrects changed URLs as requested.
+
 ## Test environments
 
 * local OS X install, R-release
