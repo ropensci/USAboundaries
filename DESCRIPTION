@@ -2,7 +2,6 @@ Package: USAboundaries
 Type: Package
 Title: Historical and Contemporary Boundaries of the United States of America
 Version: 0.4.0
-Date: 2020-10-08
 Authors@R: c(person("Lincoln", "Mullen",
     email = "lincoln@lincolnmullen.com",
     role = c("aut", "cre"),
