@@ -18,14 +18,14 @@ set.seed(87737)
 
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/USAboundaries)](https://cran.r-project.org/package=USAboundaries)
 [![JOSS Status](https://joss.theoj.org/papers/3458a33133aa6c069ab4dd8df0b5f3b5/status.svg)](https://doi.org/10.21105/joss.00314)
-[![R-CMD-check](https://github.com/ropensci/USAboundaries/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/USAboundaries/actions)
+[![R-CMD-check](https://github.com/ropensci/USAboundaries/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/USAboundaries/actions/workflows/R-CMD-check.yaml)
 [![Coverage Status](https://img.shields.io/codecov/c/github/ropensci/USAboundaries/master.svg)](https://codecov.io/github/ropensci/USAboundaries?branch=master)
 
 ## Overview
 
 This R package includes contemporary state, county, and Congressional district boundaries, as well as zip code tabulation area centroids. It also includes historical boundaries from 1629 to 2000 for states and counties from the Newberry Library's [Atlas of Historical County Boundaries](https://publications.newberry.org/ahcbp/), as well as historical city population data from Erik Steiner's "[United States Historical City Populations, 1790-2010](https://github.com/cestastanford/historical-us-city-populations)." The package has some helper data, including a table of state names, abbreviations, and FIPS codes, and functions and data to get [State Plane Coordinate System](https://en.wikipedia.org/wiki/State_Plane_Coordinate_System) projections as EPSG codes or PROJ.4 strings.
 
-This package can serve a number of purposes. The spatial data can be joined to any other kind of data in order to make thematic maps. Unlike other R packages, this package also contains historical data for use in analyses of the recent or more distant past. See the ["A sample analysis using USAboundaries"](http://lincolnmullen.com/software/usaboundaries/articles/usaboundaries-sample-analysis.html) vignette for an example of how the package can be used for both historical and contemporary maps.
+This package can serve a number of purposes. The spatial data can be joined to any other kind of data in order to make thematic maps. Unlike other R packages, this package also contains historical data for use in analyses of the recent or more distant past. See the ["A sample analysis using USAboundaries"](https://docs.ropensci.org/USAboundaries/articles/usaboundaries-sample-analysis.html) vignette for an example of how the package can be used for both historical and contemporary maps.
 
 ## Citation
 
@@ -40,17 +40,16 @@ citation("USAboundaries")
 You can install this package from CRAN.
 
 ```
-install.packages("USAboundaries")
+install.packages("USAboundaries", repos = c("https://ropensci.r-universe.dev"))
 ```
 
 Almost all of the data for this package is provided by the [USAboundariesData package](https://github.com/ropensci/USAboundariesData). That package will be automatically installed (with your permission) from the [rOpenSci package repository](https://ropensci.r-universe.dev) the first time that you need it.
 
-Or you can install the development versions from GitHub using [remotes](https://remotes.r-lib.org). 
+Or you can install the development versions from GitHub: 
 
 ```
-# install.packages("remotes")
-remotes::install_github("ropensci/USAboundaries")
-remotes::install_github("ropensci/USAboundariesData")
+install.packages("USAboundaries", repos = c("https://ropensci.r-universe.dev"))
+install.packages("USAboundariesData", repos = c("https://ropensci.r-universe.dev"))
 ```
 
 ## Use

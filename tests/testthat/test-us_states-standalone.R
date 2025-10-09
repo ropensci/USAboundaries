@@ -17,4 +17,3 @@ test_that("Current states can be filtered", {
 test_that("Error message if no matches are found", {
   expect_error(us_states(states = "No place"), "No matches found")
 })
-

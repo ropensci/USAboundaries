@@ -1,5 +1,5 @@
 context("US Cities")
-require(sf)
+# require(sf)
 
 test_that("Cities function can take multiple kinds of input", {
   expect_gt(nrow(us_cities()), 1)
@@ -17,6 +17,12 @@ test_that("Cities function returns an sf data.frame", {
 })
 
 test_that("Cities function can be filtered by state", {
-  expect_identical(unique(us_cities(2010, states = "NC")$state_name), "North Carolina")
-  expect_identical(unique(us_cities(1876, states = "South Carolina")$state_abbr), "SC")
+  expect_identical(
+    unique(us_cities(2010, states = "NC")$state_name),
+    "North Carolina"
+  )
+  expect_identical(
+    unique(us_cities(1876, states = "South Carolina")$state_abbr),
+    "SC"
+  )
 })

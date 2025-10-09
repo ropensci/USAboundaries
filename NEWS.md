@@ -1,10 +1,5 @@
-# USAboundaries 0.3.1
-
-- New vignette demonstrating the package's functionality (#40).
-- Additions and clarifications to documentation following @AndySouth's suggestions for JOSS peer review (#38).
-- `us_cities()` now returns an `sf` object rather than a data frame (#36).
-- `us_cities()` gains a `states` argument to match other functions in the package (#35).
-- Citation to JOSS paper.
+# USAboundaries 0.5.0
+- Update Census Bureau data from 2020 to 2024.
 
 # USAboundaries 0.4.0
 
@@ -12,6 +7,14 @@
 - Update Census Bureau data from 2016 to 2020.
 - Remove the `us_boundaries()` function was a needless wrapper around other functions.
 - Prompt user to install data package rather than installing it for them.
+
+# USAboundaries 0.3.1
+
+- New vignette demonstrating the package's functionality (#40).
+- Additions and clarifications to documentation following @AndySouth's suggestions for JOSS peer review (#38).
+- `us_cities()` now returns an `sf` object rather than a data frame (#36).
+- `us_cities()` gains a `states` argument to match other functions in the package (#35).
+- Citation to JOSS paper.
 
 # USAboundaries 0.3.0
 

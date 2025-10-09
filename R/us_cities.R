@@ -33,12 +33,14 @@ us_cities <- function(map_date = NULL, states = NULL) {
     message("City populations for contemporary data come from the 2010 census.")
     map_date <- 2010
   }
-  if (is.character(map_date)) { map_date <- as.Date(map_date) }
+  if (is.character(map_date)) {
+    map_date <- as.Date(map_date)
+  }
   if (identical(class(map_date), "Date")) {
     map_date <- as.numeric(format(map_date, "%Y"))
   }
   stopifnot(is.numeric(map_date) && 1790 <= map_date && map_date <= 2010)
-  map_date <- trunc(map_date / 10 ) * 10
+  map_date <- trunc(map_date / 10) * 10
   check_data_package()
   cities <- USAboundariesData::census_cities
   cities <- filter_by_states(cities, states)

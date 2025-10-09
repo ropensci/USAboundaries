@@ -19,7 +19,6 @@
 #' terms of the \href{https://opensource.org/licenses/MIT}{MIT License}.
 #'
 #' @name USAboundaries
-#' @docType package
 NULL
 
 if (getRversion() >= "2.15.1") {

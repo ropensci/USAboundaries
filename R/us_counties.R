@@ -42,8 +42,11 @@
 #' }
 #'
 #' @export
-us_counties <- function(map_date = NULL, resolution = c("low", "high"),
-                        states = NULL) {
+us_counties <- function(
+  map_date = NULL,
+  resolution = c("low", "high"),
+  states = NULL
+) {
   resolution <- match.arg(resolution)
   check_data_package()
   if (is.null(map_date)) {
@@ -55,8 +58,10 @@ us_counties <- function(map_date = NULL, resolution = c("low", "high"),
     shp <- filter_by_states(shp, states)
   } else {
     map_date <- as.Date(map_date)
-    stopifnot(as.Date("1636-12-30") <= map_date,
-              map_date <= as.Date("2000-12-31"))
+    stopifnot(
+      as.Date("1636-12-30") <= map_date,
+      map_date <= as.Date("2000-12-31")
+    )
     if (resolution == "low") {
       shp <- USAboundariesData::counties_historical_lores
     } else if (resolution == "high") {

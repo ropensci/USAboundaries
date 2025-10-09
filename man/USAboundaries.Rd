@@ -2,6 +2,7 @@
 % Please edit documentation in R/usboundaries-package.r
 \docType{package}
 \name{USAboundaries}
+\alias{USAboundaries-package}
 \alias{USAboundaries}
 \title{USAboundaries: Historical and Contemporary Boundaries of the United States of
 America}
@@ -23,4 +24,27 @@ Attribution-NonCommercial-ShareAlike 2.5 Generic} (CC BY-NC-SA 2.5) license.
 The code in this package is copyrighted by
 \href{https://lincolnmullen.com}{Lincoln Mullen}, and is released under the
 terms of the \href{https://opensource.org/licenses/MIT}{MIT License}.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{http://lincolnmullen.com/software/usaboundaries/}
+  \item \url{https://github.com/ropensci/USAboundaries}
+  \item Report bugs at \url{https://github.com/ropensci/USAboundaries/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Lincoln Mullen \email{lincoln@lincolnmullen.com} (\href{https://orcid.org/0000-0001-5103-6917}{ORCID})
+
+Authors:
+\itemize{
+  \item Jordan Bratt \email{jfbratt@gmail.com} (\href{https://orcid.org/0000-0001-9051-7203}{ORCID})
+}
+
+Other contributors:
+\itemize{
+  \item United States Census Bureau [copyright holder]
+}
+
 }

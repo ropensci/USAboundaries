@@ -42,15 +42,23 @@ state_plane <- function(state, plane_id = NULL, type = c("epsg", "proj4")) {
   }
   stopifnot(is.null(plane_id) || plane_id %in% unique(state_regions$zone))
   if (is.null(plane_id) && type == "epsg") {
-    item <- state_proj[["epsg"]][state_proj$state == state & state_proj$statewide_proj == TRUE]
+    item <- state_proj[["epsg"]][
+      state_proj$state == state & state_proj$statewide_proj == TRUE
+    ]
     item <- as.integer(item)
   } else if (is.null(plane_id) && type == "proj4") {
-    item <- state_proj[["proj4_string"]][state_proj$state == state & state_proj$statewide_proj == TRUE]
+    item <- state_proj[["proj4_string"]][
+      state_proj$state == state & state_proj$statewide_proj == TRUE
+    ]
   } else if (type == "epsg") {
-    item <- state_proj[["epsg"]][state_proj$state == state & state_proj$zone == plane_id]
+    item <- state_proj[["epsg"]][
+      state_proj$state == state & state_proj$zone == plane_id
+    ]
     item <- as.integer(item)
   } else if (type == "proj4") {
-    item <- state_proj[["proj4_string"]][state_proj$state == state & state_proj$zone == plane_id]
+    item <- state_proj[["proj4_string"]][
+      state_proj$state == state & state_proj$zone == plane_id
+    ]
   }
   item
 }

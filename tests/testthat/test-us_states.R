@@ -1,5 +1,5 @@
 context("US States")
-require(sf)
+# require(sf)
 
 test_that("No date returns current states", {
   expect_identical(us_states(), USAboundaries::states_contemporary_lores)
@@ -19,15 +19,20 @@ test_that("Error message if no matches are found", {
 })
 
 test_that("Historical states can be filtered", {
-  expect_equal(nrow(us_states("1875-01-02",
-                                states = c("Virginia", "Maryland"))),
-               2)
+  expect_equal(
+    nrow(us_states("1875-01-02", states = c("Virginia", "Maryland"))),
+    2
+  )
 })
 
 test_that("Correct resolution shapefiles are returned", {
   skip_if_not_installed("USAboundariesData")
-  expect_identical(us_states(resolution = "low"),
-                   USAboundaries::states_contemporary_lores)
-  expect_identical(us_states(resolution = "high"),
-                   USAboundariesData::states_contemporary_hires)
+  expect_identical(
+    us_states(resolution = "low"),
+    USAboundaries::states_contemporary_lores
+  )
+  expect_identical(
+    us_states(resolution = "high"),
+    USAboundariesData::states_contemporary_hires
+  )
 })

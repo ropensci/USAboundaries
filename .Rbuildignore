@@ -14,3 +14,5 @@
 ^Makefile$
 ^\.github$
 ^CRAN-RELEASE$
+^[.]?air[.]toml$
+^\.vscode$

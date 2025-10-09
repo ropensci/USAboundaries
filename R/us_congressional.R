@@ -22,8 +22,7 @@
 #' }
 #'
 #' @export
-us_congressional <- function(resolution = c("low", "high"),
-                             states = NULL) {
+us_congressional <- function(resolution = c("low", "high"), states = NULL) {
   resolution <- match.arg(resolution)
   check_data_package()
   if (resolution == "low") {
