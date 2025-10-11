@@ -7,7 +7,7 @@
 #' @references The data was compiled by Erik Steiner and Jason Heppler at the
 #'   Center for Spatial and Textual Analysis, Stanford University. See their
 #'   \href{https://github.com/cestastanford/historical-us-city-populations}{description
-#'    of the data} for a fuller accounting of how the data was gathered.
+#'   of the data} for a fuller accounting of how the data was gathered.
 #'
 #' @param map_date If \code{NULL}, then city populations from the 2010 census
 #'   (the most recent census) are returned. This parameter accepts a \code{Date}
@@ -44,5 +44,6 @@ us_cities <- function(map_date = NULL, states = NULL) {
   check_data_package()
   cities <- USAboundariesData::census_cities
   cities <- filter_by_states(cities, states)
-  cities[cities$year == map_date & cities$population > 0, ]
+  cities <- cities[cities$year == map_date & cities$population > 0, ]
+  return(cities)
 }

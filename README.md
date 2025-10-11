@@ -3,12 +3,14 @@
 
 # USAboundaries
 
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/USAboundaries)](https://cran.r-project.org/package=USAboundaries)
+<!-- [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/USAboundaries)](https://cran.r-project.org/package=USAboundaries) -->
+
 [![JOSS
 Status](https://joss.theoj.org/papers/3458a33133aa6c069ab4dd8df0b5f3b5/status.svg)](https://doi.org/10.21105/joss.00314)
 [![R-CMD-check](https://github.com/ropensci/USAboundaries/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/USAboundaries/actions/workflows/R-CMD-check.yaml)
-[![Coverage
-Status](https://img.shields.io/codecov/c/github/ropensci/USAboundaries/master.svg)](https://codecov.io/github/ropensci/USAboundaries?branch=master)
+[![Codecov test
+coverage](https://codecov.io/gh/ropensci/USAboundaries/graph/badge.svg)](https://app.codecov.io/gh/ropensci/USAboundaries)
+![r-universe](https://ropensci.r-universe.dev/USAboundaries/badges/version)
 
 ## Overview
 
@@ -24,13 +26,12 @@ The package has some helper data, including a table of state names,
 abbreviations, and FIPS codes, and functions and data to get [State
 Plane Coordinate
 System](https://en.wikipedia.org/wiki/State_Plane_Coordinate_System)
-projections as EPSG codes or PROJ.4 strings.
 
-This package can serve a number of purposes. The spatial data can be
-joined to any other kind of data in order to make thematic maps. Unlike
-other R packages, this package also contains historical data for use in
-analyses of the recent or more distant past. See the [“A sample analysis
-using
+projections as EPSG codes or PROJ.4 strings. This package can serve a
+number of purposes. The spatial data can be joined to any other kind of
+data in order to make thematic maps. Unlike other R packages, this
+package also contains historical data for use in analyses of the recent
+or more distant past. See the [“A sample analysis using
 USAboundaries”](https://docs.ropensci.org/USAboundaries/articles/usaboundaries-sample-analysis.html)
 vignette for an example of how the package can be used for both
 historical and contemporary maps.
@@ -112,7 +113,7 @@ library(sf) # for plotting and projection methods
 #> Linking to GEOS 3.13.1, GDAL 3.11.0, PROJ 9.6.0; sf_use_s2() is TRUE
 
 states_1840 <- us_states("1840-03-12")
-plot(st_geometry(states_1840))
+plot(st_geometry(states_1840), col = "grey50", border = "white")
 title("U.S. state boundaries on March 3, 1840")
 ```
 

@@ -1,6 +1,6 @@
 #' Congressional district boundaries (contemporary)
 #'
-#' Get the current (2020) boundaries for U.S. Congressional districts.
+#' Get the current (2024) boundaries for U.S. Congressional districts.
 #'
 #' @param resolution The resolution of the boundaries.
 #' @param states A character vector of state or territory names. Only boundaries
@@ -16,7 +16,8 @@
 #' @examples
 #' if (require(USAboundariesData) && require(sf)) {
 #'   us_congressional <- us_congressional()
-#'   va_congressional <- us_congressional(states = "Virginia", resolution = "high")
+#'   va_congressional <- us_congressional(
+#'     states = "Virginia", resolution = "high")
 #'   plot(st_geometry(us_congressional))
 #'   plot(st_geometry(va_congressional))
 #' }

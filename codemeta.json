@@ -1,0 +1,190 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "USAboundaries",
+  "description": "The boundaries for geographical units in the United States of America contained in this package include state, county, congressional district, and zip code tabulation area. Contemporary boundaries are provided by the U.S. Census Bureau (public domain). Historical boundaries for the years from 1629 to 2000 are provided form the Newberry Library's 'Atlas of Historical County Boundaries' (licensed CC BY-NC-SA). Additional data is provided in the 'USAboundariesData' package; this package provides an interface to access that data.",
+  "name": "USAboundaries: Historical and Contemporary Boundaries of the United States of America",
+  "relatedLink": "https://docs.ropensci.org/USAboundaries",
+  "codeRepository": "https://github.com/ropensci/USAboundaries",
+  "issueTracker": "https://github.com/ropensci/USAboundaries/issues",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "0.5.0",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 4.5.1 (2025-06-13 ucrt)",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Lincoln",
+      "familyName": "Mullen",
+      "email": "lincoln@lincolnmullen.com",
+      "@id": "https://orcid.org/0000-0001-5103-6917"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Jordan",
+      "familyName": "Bratt",
+      "email": "jfbratt@gmail.com",
+      "@id": "https://orcid.org/0000-0001-9051-7203"
+    }
+  ],
+  "copyrightHolder": [
+    {
+      "@type": "Organization",
+      "name": "United States Census Bureau"
+    }
+  ],
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Jacci",
+      "familyName": "Ziebert",
+      "email": "jacciziebert@gmail.com"
+    }
+  ],
+  "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "sf",
+      "name": "sf",
+      "version": ">= 1.0.0",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=sf"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "testthat",
+      "name": "testthat",
+      "version": ">= 0.9.1",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=testthat"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "covr",
+      "name": "covr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=covr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "knitr",
+      "name": "knitr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=knitr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "rmarkdown",
+      "name": "rmarkdown",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=rmarkdown"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "dplyr",
+      "name": "dplyr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=dplyr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "leaflet",
+      "name": "leaflet",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=leaflet"
+    }
+  ],
+  "softwareRequirements": {
+    "1": {
+      "@type": "SoftwareApplication",
+      "identifier": "R",
+      "name": "R",
+      "version": ">= 3.5"
+    },
+    "2": {
+      "@type": "SoftwareApplication",
+      "identifier": "USAboundariesData",
+      "name": "USAboundariesData",
+      "version": ">= 0.4.0",
+      "sameAs": "https://github.com/ropensci/USAboundariesData"
+    },
+    "SystemRequirements": null
+  },
+  "fileSize": "241.355KB",
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "datePublished": "2018",
+      "author": [
+        {
+          "@type": "Person",
+          "givenName": ["Lincoln", "A."],
+          "familyName": "Mullen"
+        },
+        {
+          "@type": "Person",
+          "givenName": "Jordan",
+          "familyName": "Bratt"
+        }
+      ],
+      "name": "{USAboundaries}: Historical and Contemporary Boundaries\nof the United States of America",
+      "identifier": "10.21105/joss.00314",
+      "url": "https://doi.org/10.21105/joss.00314",
+      "pagination": "314",
+      "@id": "https://doi.org/10.21105/joss.00314",
+      "sameAs": "https://doi.org/10.21105/joss.00314",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "datePublished": "2018",
+        "isPartOf": {
+          "@type": ["PublicationVolume", "Periodical"],
+          "volumeNumber": "3",
+          "name": "Journal of Open Source Software"
+        }
+      }
+    }
+  ],
+  "releaseNotes": "https://github.com/ropensci/USAboundaries/blob/main/NEWS.md",
+  "readme": "https://github.com/ropensci/USAboundaries/blob/main/README.md",
+  "contIntegration": ["https://github.com/ropensci/USAboundaries/actions/workflows/R-CMD-check.yaml", "https://app.codecov.io/gh/ropensci/USAboundaries"],
+  "keywords": ["spatial-data", "history", "digital-history", "r", "rstats", "r-package"]
+}

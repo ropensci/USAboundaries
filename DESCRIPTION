@@ -24,21 +24,23 @@ License: MIT + file LICENSE
 URL: https://docs.ropensci.org/USAboundaries, https://github.com/ropensci/USAboundaries
 BugReports: https://github.com/ropensci/USAboundaries/issues
 Depends:
-    R (>= 3.1.1)
+    R (>= 3.5)
 Imports:
     USAboundariesData (>= 0.4.0)
 Remotes:
     ropensci/USAboundariesData
 Suggests:
+    covr,
+    dplyr,
+    knitr,
+    leaflet,
+    rmarkdown,
     sf (>= 1.0.0),
     testthat (>= 0.9.1),
-    covr,
-    knitr,
-    rmarkdown,
-    dplyr,
-    leaflet
+    tibble
 RoxygenNote: 7.3.3
-Additional_repositories: https://ropensci.r-universe.dev
+Additional_repositories:
+    https://ropensci.r-universe.dev
 LazyData: true
 LazyDataCompression: xz
 VignetteBuilder: knitr

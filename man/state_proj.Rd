@@ -18,7 +18,8 @@ A data frame with 123 rows and 5 variables:
 state_proj
 }
 \description{
-This data frame includes state abbreviations, EPSG codes, and proj4 strings for projections from the State Plane Coordinate System.
+This data frame includes state abbreviations, EPSG codes, and proj4 strings
+for projections from the State Plane Coordinate System.
 }
 \references{
 \href{https://en.wikipedia.org/wiki/State_Plane_Coordinate_System}{State Plane Coordinate System}
