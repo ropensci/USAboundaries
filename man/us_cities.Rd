@@ -36,5 +36,5 @@ if (require(USAboundariesData)) {
 The data was compiled by Erik Steiner and Jason Heppler at the
   Center for Spatial and Textual Analysis, Stanford University. See their
   \href{https://github.com/cestastanford/historical-us-city-populations}{description
-   of the data} for a fuller accounting of how the data was gathered.
+  of the data} for a fuller accounting of how the data was gathered.
 }

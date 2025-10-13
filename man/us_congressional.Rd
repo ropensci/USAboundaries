@@ -17,12 +17,13 @@ boundaries will be returned.}
 An \code{sf} object.
 }
 \description{
-Get the current (2020) boundaries for U.S. Congressional districts.
+Get the current (2024) boundaries for U.S. Congressional districts.
 }
 \examples{
 if (require(USAboundariesData) && require(sf)) {
   us_congressional <- us_congressional()
-  va_congressional <- us_congressional(states = "Virginia", resolution = "high")
+  va_congressional <- us_congressional(
+    states = "Virginia", resolution = "high")
   plot(st_geometry(us_congressional))
   plot(st_geometry(va_congressional))
 }

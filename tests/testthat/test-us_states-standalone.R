@@ -1,6 +1,3 @@
-context("US States (standalone)")
-require(sf)
-
 test_that("No date returns current states", {
   expect_identical(us_states(), USAboundaries::states_contemporary_lores)
 })
@@ -17,4 +14,3 @@ test_that("Current states can be filtered", {
 test_that("Error message if no matches are found", {
   expect_error(us_states(states = "No place"), "No matches found")
 })
-

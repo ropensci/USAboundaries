@@ -14,3 +14,7 @@
 ^Makefile$
 ^\.github$
 ^CRAN-RELEASE$
+^[.]?air[.]toml$
+^codemeta.json$
+^doc$
+^Meta$

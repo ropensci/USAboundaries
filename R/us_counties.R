@@ -1,6 +1,6 @@
 #' County boundaries (contemporary and historical)
 #'
-#' Get the current (2020) boundaries for U.S counties from the U.S. Census
+#' Get the current (2024) boundaries for U.S counties from the U.S. Census
 #' Bureau, or get historical county boundaries for dates between 30 December
 #' 1636 and 31 December 2000.
 #'
@@ -24,16 +24,30 @@
 #'
 #' @examples
 #' if (require(USAboundariesData) && require(sf)) {
-#'   contemporary_us  <- us_counties()
-#'   historical_us    <- us_counties("1820-07-04")
-#'   contemporary_ne  <- us_counties(states = c("Massachusetts", "Vermont", "Maine",
-#'                                              "New Hampshire", "Rhode Island",
-#'                                              "Connecticut"))
-#'   historical_ne    <- us_counties("1803-04-28",
-#'                                   states = c("Massachusetts", "Vermont", "Maine",
-#'                                              "New Hampshire", "Rhode Island",
-#'                                              "Connecticut"),
-#'                                   resolution = "high")
+#'   contemporary_us <- us_counties()
+#'   historical_us <- us_counties("1820-07-04")
+#'   contemporary_ne <- us_counties(
+#'     states = c(
+#'       "Massachusetts",
+#'       "Vermont",
+#'       "Maine",
+#'       "New Hampshire",
+#'       "Rhode Island",
+#'       "Connecticut"
+#'     )
+#'   )
+#'   historical_ne <- us_counties(
+#'     "1803-04-28",
+#'     states = c(
+#'       "Massachusetts",
+#'       "Vermont",
+#'       "Maine",
+#'       "New Hampshire",
+#'       "Rhode Island",
+#'       "Connecticut"
+#'     ),
+#'     resolution = "high"
+#'   )
 #'
 #'   plot(st_geometry(contemporary_us))
 #'   plot(st_geometry(historical_us))
@@ -42,8 +56,11 @@
 #' }
 #'
 #' @export
-us_counties <- function(map_date = NULL, resolution = c("low", "high"),
-                        states = NULL) {
+us_counties <- function(
+  map_date = NULL,
+  resolution = c("low", "high"),
+  states = NULL
+) {
   resolution <- match.arg(resolution)
   check_data_package()
   if (is.null(map_date)) {
@@ -55,8 +72,11 @@ us_counties <- function(map_date = NULL, resolution = c("low", "high"),
     shp <- filter_by_states(shp, states)
   } else {
     map_date <- as.Date(map_date)
-    stopifnot(as.Date("1636-12-30") <= map_date,
-              map_date <= as.Date("2000-12-31"))
+    # TODO better error message?
+    stopifnot(
+      as.Date("1636-12-30") <= map_date,
+      map_date <= as.Date("2000-12-31")
+    )
     if (resolution == "low") {
       shp <- USAboundariesData::counties_historical_lores
     } else if (resolution == "high") {

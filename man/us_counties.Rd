@@ -22,22 +22,36 @@ returned. If \code{NULL}, all boundaries will be returned.}
 An \code{sf} object.
 }
 \description{
-Get the current (2020) boundaries for U.S counties from the U.S. Census
+Get the current (2024) boundaries for U.S counties from the U.S. Census
 Bureau, or get historical county boundaries for dates between 30 December
 1636 and 31 December 2000.
 }
 \examples{
 if (require(USAboundariesData) && require(sf)) {
-  contemporary_us  <- us_counties()
-  historical_us    <- us_counties("1820-07-04")
-  contemporary_ne  <- us_counties(states = c("Massachusetts", "Vermont", "Maine",
-                                             "New Hampshire", "Rhode Island",
-                                             "Connecticut"))
-  historical_ne    <- us_counties("1803-04-28",
-                                  states = c("Massachusetts", "Vermont", "Maine",
-                                             "New Hampshire", "Rhode Island",
-                                             "Connecticut"),
-                                  resolution = "high")
+  contemporary_us <- us_counties()
+  historical_us <- us_counties("1820-07-04")
+  contemporary_ne <- us_counties(
+    states = c(
+      "Massachusetts",
+      "Vermont",
+      "Maine",
+      "New Hampshire",
+      "Rhode Island",
+      "Connecticut"
+    )
+  )
+  historical_ne <- us_counties(
+    "1803-04-28",
+    states = c(
+      "Massachusetts",
+      "Vermont",
+      "Maine",
+      "New Hampshire",
+      "Rhode Island",
+      "Connecticut"
+    ),
+    resolution = "high"
+  )
 
   plot(st_geometry(contemporary_us))
   plot(st_geometry(historical_us))

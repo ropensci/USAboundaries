@@ -1,16 +1,17 @@
 Package: USAboundaries
 Type: Package
 Title: Historical and Contemporary Boundaries of the United States of America
-Version: 0.4.0
+Version: 0.5.0
 Authors@R: c(person("Lincoln", "Mullen",
     email = "lincoln@lincolnmullen.com",
-    role = c("aut", "cre"),
+    role = c("aut"),
     comment = c(ORCID = "0000-0001-5103-6917")),
     person("Jordan", "Bratt",
     email = "jfbratt@gmail.com",
     role = c("aut"),
     comment = c(ORCID = "0000-0001-9051-7203")),
-    person("United States Census Bureau", role = "cph"))
+    person("United States Census Bureau", role = "cph"),
+    person("Jacci", "Ziebert", email = "jacciziebert@gmail.com", role = "cre"))
 Description: The boundaries for geographical units in the United States of
     America contained in this package include state, county, congressional
     district, and zip code tabulation area. Contemporary boundaries are provided
@@ -20,21 +21,26 @@ Description: The boundaries for geographical units in the United States of
     provided in the 'USAboundariesData' package; this package provides an
     interface to access that data.
 License: MIT + file LICENSE
-URL: http://lincolnmullen.com/software/usaboundaries/, https://github.com/ropensci/USAboundaries
+URL: https://docs.ropensci.org/USAboundaries, https://github.com/ropensci/USAboundaries
 BugReports: https://github.com/ropensci/USAboundaries/issues
 Depends:
-    R (>= 3.1.1)
+    R (>= 3.5)
+Imports:
+    USAboundariesData (>= 0.4.0)
+Remotes:
+    ropensci/USAboundariesData
 Suggests:
+    covr,
+    dplyr,
+    knitr,
+    leaflet,
+    rmarkdown,
     sf (>= 1.0.0),
     testthat (>= 0.9.1),
-    USAboundariesData (>= 0.4.0),
-    covr,
-    knitr,
-    rmarkdown,
-    dplyr,
-    leaflet
-RoxygenNote: 7.1.2
-Additional_repositories: https://ropensci.r-universe.dev
+    tibble
+RoxygenNote: 7.3.3
+Additional_repositories:
+    https://ropensci.r-universe.dev
 LazyData: true
 LazyDataCompression: xz
 VignetteBuilder: knitr
