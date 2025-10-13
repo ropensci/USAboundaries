@@ -72,6 +72,7 @@ us_counties <- function(
     shp <- filter_by_states(shp, states)
   } else {
     map_date <- as.Date(map_date)
+    # TODO better error message?
     stopifnot(
       as.Date("1636-12-30") <= map_date,
       map_date <= as.Date("2000-12-31")

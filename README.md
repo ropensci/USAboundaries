@@ -14,24 +14,29 @@ coverage](https://codecov.io/gh/ropensci/USAboundaries/graph/badge.svg)](https:/
 
 ## Overview
 
+Note: Due to U.S. Government Shutdown, state boundaries are unable to be
+updated.
+
 This R package includes contemporary state, county, and Congressional
-district boundaries, as well as zip code tabulation area centroids. It
-also includes historical boundaries from 1629 to 2000 for states and
-counties from the Newberry Library’s [Atlas of Historical County
-Boundaries](https://publications.newberry.org/ahcbp/), as well as
-historical city population data from Erik Steiner’s “[United States
-Historical City Populations,
+district boundaries, and zip code tabulation area centroids. It also
+includes historical boundaries from 1629 to 2000 for states and counties
+from the Newberry Library’s [Atlas of Historical County
+Boundaries](https://publications.newberry.org/ahcbp/) and historical
+city population data from Erik Steiner’s “[United States Historical City
+Populations,
 1790-2010](https://github.com/cestastanford/historical-us-city-populations).”
+
 The package has some helper data, including a table of state names,
 abbreviations, and FIPS codes, and functions and data to get [State
 Plane Coordinate
 System](https://en.wikipedia.org/wiki/State_Plane_Coordinate_System)
+projections as EPSG codes or PROJ.4 strings.
 
-projections as EPSG codes or PROJ.4 strings. This package can serve a
-number of purposes. The spatial data can be joined to any other kind of
-data in order to make thematic maps. Unlike other R packages, this
-package also contains historical data for use in analyses of the recent
-or more distant past. See the [“A sample analysis using
+This package can serve a number of purposes. The spatial data can be
+joined to any other kind of data in order to make thematic maps. Unlike
+other R packages, this package also contains historical data for use in
+analyses of the recent or more distant past. See the [“A sample analysis
+using
 USAboundaries”](https://docs.ropensci.org/USAboundaries/articles/usaboundaries-sample-analysis.html)
 vignette for an example of how the package can be used for both
 historical and contemporary maps.
@@ -193,10 +198,22 @@ Each function returns an `sf` object from the
 using the [leaflet](https://cran.r-project.org/package=leaflet) or
 [ggplot2](https://cran.r-project.org/package=ggplot2) packages.
 
-If you need U.S. Census Bureau boundary files which are not provided by
-this package, consider using the
+If you need U.S. Census Bureau boundary files not provided by this
+package, consider using the
 [tigris](https://cran.r-project.org/package=tigris) package, which
 downloads those shapefiles.
+
+USAboundaries differs from tigris in a few ways:
+
+- Boundary files are contained within the data package while tigris
+  downloads the files from US Census.
+
+- USAboundaries uses Cartographic Boundary Files (CBFs) that are
+  simplified representations of TIGER/Line shapefiles. They are much
+  smaller in file size, making rendering much faster on the screen.
+
+- Data files contain historical boundary and population data dating as
+  far back as 1629.
 
 ## License
 

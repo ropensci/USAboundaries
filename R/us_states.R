@@ -1,6 +1,6 @@
 #' State boundaries (contemporary and historical)
 #'
-#' Get the current (2024) boundaries for U.S states from the U.S. Census Bureau,
+#' Get the current (2019) boundaries for U.S states from the U.S. Census Bureau,
 #' or get historical state boundaries for dates between 3 September 1783 and 31
 #' December 2000.
 #'

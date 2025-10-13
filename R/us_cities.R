@@ -29,6 +29,7 @@
 #'
 #' @export
 us_cities <- function(map_date = NULL, states = NULL) {
+  # TODO maybe return all the cities to see trend over time?
   if (is.null(map_date)) {
     message("City populations for contemporary data come from the 2010 census.")
     map_date <- 2010

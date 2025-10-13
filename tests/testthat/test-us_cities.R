@@ -1,4 +1,3 @@
-# require(sf)
 test_that("Cities function can take multiple kinds of input", {
   skip_if_not_installed("sf")
   expect_gt(nrow(us_cities()), 1)
