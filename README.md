@@ -14,7 +14,7 @@ coverage](https://codecov.io/gh/ropensci/USAboundaries/graph/badge.svg)](https:/
 
 ## Overview
 
-Note: Due to U.S. Government Shutdown, state boundaries are unable to be
+Note: Due to U.S. Government Shutdown, state boundaries were unable to be
 updated.
 
 This R package includes contemporary state, county, and Congressional
