@@ -1,7 +1,7 @@
 #' USAboundaries: Historical and Contemporary Boundaries of the United States of
 #' America
 #'
-#' This package provides contemporary (2014) boundaries for states, counties,
+#' This package provides contemporary (2024) boundaries for states, counties,
 #' zip code tabulation areas, and congressional districts in the United States
 #' of America. This data is provided by the U.S. Census Bureau.
 #'
