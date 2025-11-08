@@ -1,7 +1,7 @@
 #' USAboundaries: Historical and Contemporary Boundaries of the United States of
 #' America
 #'
-#' This package provides contemporary (2014) boundaries for states, counties,
+#' This package provides contemporary (2024) boundaries for states, counties,
 #' zip code tabulation areas, and congressional districts in the United States
 #' of America. This data is provided by the U.S. Census Bureau.
 #'
@@ -17,10 +17,11 @@
 #' The code in this package is copyrighted by
 #' \href{https://lincolnmullen.com}{Lincoln Mullen}, and is released under the
 #' terms of the \href{https://opensource.org/licenses/MIT}{MIT License}.
-#'
-#' @name USAboundaries
-NULL
+#' @keywords internal
+"_PACKAGE"
 
-if (getRversion() >= "2.15.1") {
-  utils::globalVariables(c("state_codes", "state_proj"))
-}
+utils::globalVariables(c("state_codes", "state_proj"))
+
+## usethis namespace: start
+## usethis namespace: end
+NULL

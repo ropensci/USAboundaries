@@ -13,5 +13,6 @@
 #' }
 #'
 #' @references
-#'   \href{https://en.wikipedia.org/wiki/State_Plane_Coordinate_System}{State Plane Coordinate System}
+#' \href{https://en.wikipedia.org/wiki/State_Plane_Coordinate_System}{State
+#' Plane Coordinate System}
 "state_proj"

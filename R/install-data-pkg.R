@@ -1,85 +1,52 @@
-#
-# If the \code{USAboundariesData} package is not installed, install it from
-# the \href{http://packages.ropensci.org/}{rOpenSci repository}.
+#' Check whether to install USAboundariesData and install if necessary
+#'
+#' If the \code{USAboundariesData} package is not installed, install it from the
+#\href{http://packages.ropensci.org/}{rOpenSci repository}.
+#' @export
 check_data_package <- function() {
-  package_version <- "0.5.0"
+  # TODO update version
+  USAboundariesData_version <- "0.5.1"
 
-  instructions <- paste(
-    " Please try installing the package",
-    "using the following command: \n",
-    "    install.packages(\"USAboundariesData\",",
-    "repos = \"https://ropensci.r-universe.dev\",",
-    "type = \"source\")"
-  )
   if (!requireNamespace("USAboundariesData", quietly = TRUE)) {
-    message("The USAboundariesData package needs to be installed.")
-    message(instructions)
+    cli::cli_inform(
+      "The {.pkg USAboundariesData} package needs to be installed."
+    )
+    install_USAboundariesData()
     # install_data_package()
-  } else if (utils::packageVersion("USAboundariesData") < package_version) {
-    message("The USAboundariesData package needs to be updated.")
-    message(instructions)
-    # install_data_package()
+  } else if (
+    utils::packageVersion("USAboundariesData") < USAboundariesData_version
+  ) {
+    cli::cli_inform(
+      "The {.pkg USAboundariesData} package needs to be updated."
+    )
+    install_USAboundariesData()
   }
 }
 
 #' Install the \code{USAboundariesData} package after checking with the user
-install_data_package <- function() {
-  instructions <- paste(
-    " Please try installing the package for yourself",
-    "using the following command: \n",
-    "    install.packages(\"USAboundariesData\",",
-    "repos = \"https://ropensci.r-universe.dev\",",
-    "type = \"source\")"
-  )
-
-  error_func <- function(e) {
-    message(e)
-    cat(paste(
-      "\nFailed to install the USAboundariesData package.\n",
-      instructions,
-      "\n"
-    ))
-  }
-  warning_func <- function(c) {
-    message(c)
-    cat(paste(
-      "\nFailed to install the USAboundariesData package.\n",
-      instructions,
-      "\n"
-    ))
-  }
+#' @export
+install_USAboundariesData <- function() {
+  input <- 1L
 
   if (interactive()) {
     input <- utils::menu(
       c("Yes", "No"),
       title = "Install the USAboundariesData package?"
     )
-    if (input == 1) {
-      message("Installing the USAboundariesData package.")
-      tryCatch(
-        utils::install.packages(
-          "USAboundariesData",
-          repos = "http://ropensci.r-universe.dev",
-          contriburl = "http://ropensci.r-universe.dev/src/contrib",
-          type = "source"
-        ),
-        error = error_func,
-        warning = warning_func
-      )
-    } else {
-      stop(paste(
-        "The USAboundariesData package provides the data you requested.\n",
-        instructions
-      ))
-    }
-  } else {
-    stop(paste(
-      "Failed to install the USAboundariesData package.\n",
-      instructions
-    ))
   }
-}
 
-.onAttach <- function(libname, pkgname) {
-  invisible(check_data_package())
+  if (input != 1L) {
+    cli::cli_abort(
+      "The {.pkg USAboundariesData} package is necessary for that method.\n Please try installing the package yourself with {.code pak::pkg_install(\"ropensci/USAboundariesData\")}"
+    )
+  }
+
+  cli::cli_inform("Installing the {.pkg USAboundariesData} package.")
+
+  tryCatch(
+    pak::pkg_install("ropensci/USAboundariesData"),
+    error = function(e) {
+      cli::cli_inform(conditionMessage(e))
+    }
+  )
 }

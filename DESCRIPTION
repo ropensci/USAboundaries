@@ -1,7 +1,7 @@
 Package: USAboundaries
 Type: Package
 Title: Historical and Contemporary Boundaries of the United States of America
-Version: 0.5.0
+Version: 0.5.1
 Authors@R: c(person("Lincoln", "Mullen",
     email = "lincoln@lincolnmullen.com",
     role = c("aut"),
@@ -26,7 +26,8 @@ BugReports: https://github.com/ropensci/USAboundaries/issues
 Depends:
     R (>= 3.5)
 Imports:
-    USAboundariesData (>= 0.4.0)
+    cli,
+    USAboundariesData
 Remotes:
     ropensci/USAboundariesData
 Suggests:
@@ -34,9 +35,10 @@ Suggests:
     dplyr,
     knitr,
     leaflet,
+    pak,
     rmarkdown,
     sf (>= 1.0.0),
-    testthat (>= 0.9.1),
+    testthat (>= 3.0.0),
     tibble
 RoxygenNote: 7.3.3
 Additional_repositories:
@@ -44,4 +46,6 @@ Additional_repositories:
 LazyData: true
 LazyDataCompression: xz
 VignetteBuilder: knitr
+Config/testthat/edition: 3
+Config/Needs/website: ropensci/USAboundaries
 Encoding: UTF-8
