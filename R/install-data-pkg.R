@@ -5,7 +5,7 @@
 #' @export
 check_data_package <- function() {
   # TODO update version
-  USAboundariesData_version <- "0.5.0"
+  USAboundariesData_version <- "0.5.1"
 
   if (!requireNamespace("USAboundariesData", quietly = TRUE)) {
     cli::cli_inform(

@@ -28,6 +28,8 @@ Depends:
 Imports:
     cli,
     USAboundariesData
+Remotes:
+    ropensci/USAboundariesData
 Suggests:
     covr,
     dplyr,
@@ -40,7 +42,7 @@ Suggests:
     tibble
 RoxygenNote: 7.3.3
 Additional_repositories:
-    http://packages.ropensci.org
+    https://ropensci.r-universe.dev
 LazyData: true
 LazyDataCompression: xz
 VignetteBuilder: knitr
