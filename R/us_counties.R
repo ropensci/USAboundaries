@@ -72,13 +72,13 @@ us_counties <- function(
     shp <- filter_by_states(shp, states)
   } else {
     map_date <- as.Date(map_date)
-    # TODO better error message?
-    # is there a unit test?
-    # cli::cli_abort()
-    stopifnot(
-      as.Date("1636-12-30") <= map_date,
-      map_date <= as.Date("2000-12-31")
-    )
+
+    if (map_date < as.Date("1636-12-30") || map_date > as.Date("2000-12-31")) {
+      cli::cli_abort(
+        "Year of the date must be between 1637 and 2000."
+      )
+    }
+
     if (resolution == "low") {
       shp <- USAboundariesData::counties_historical_lores
     } else if (resolution == "high") {

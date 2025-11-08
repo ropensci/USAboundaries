@@ -14,9 +14,6 @@ coverage](https://codecov.io/gh/ropensci/USAboundaries/graph/badge.svg)](https:/
 
 ## Overview
 
-Note: Due to U.S. Government Shutdown, state boundaries were unable to be
-updated.
-
 This R package includes contemporary state, county, and Congressional
 district boundaries, and zip code tabulation area centroids. It also
 includes historical boundaries from 1629 to 2000 for states and counties
@@ -74,9 +71,9 @@ citation("USAboundaries")
 
 ## Installation
 
-You can install this package from CRAN.
+You can install this package by:
 
-    install.packages("USAboundaries", repos = c("https://ropensci.r-universe.dev"))
+    pak::pkg_install("ropensci/USAboundaries")
 
 Almost all of the data for this package is provided by the
 [USAboundariesData
@@ -85,7 +82,7 @@ will be automatically installed (with your permission) from the
 [rOpenSci package repository](https://ropensci.r-universe.dev) the first
 time that you need it.
 
-Or you can install the development versions from GitHub:
+Or you can install from GitHub:
 
     install.packages("USAboundaries", repos = c("https://ropensci.r-universe.dev"))
     install.packages("USAboundariesData", repos = c("https://ropensci.r-universe.dev"))
@@ -118,7 +115,7 @@ library(sf) # for plotting and projection methods
 #> Linking to GEOS 3.13.1, GDAL 3.11.0, PROJ 9.6.0; sf_use_s2() is TRUE
 
 states_1840 <- us_states("1840-03-12")
-plot(st_geometry(states_1840), col = "grey50", border = "white")
+plot(st_geometry(states_1840))
 title("U.S. state boundaries on March 3, 1840")
 ```
 
