@@ -73,6 +73,8 @@ us_counties <- function(
   } else {
     map_date <- as.Date(map_date)
     # TODO better error message?
+    # is there a unit test?
+    # cli::cli_abort()
     stopifnot(
       as.Date("1636-12-30") <= map_date,
       map_date <= as.Date("2000-12-31")

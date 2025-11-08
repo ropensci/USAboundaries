@@ -1,3 +1,7 @@
+# USAboundaries 0.5.1
+- Update contemporary census data for States from 2020 to 2024.
+- Update package installation
+
 # USAboundaries 0.5.0
 - Update Census Bureau data from 2020 to 2024.
 

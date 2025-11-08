@@ -1,6 +1,7 @@
 library(dplyr)
 
-# Copied from PDF here: http://history.house.gov/Institution/Election-Statistics/Election-Statistics/
+# Copied from PDF here:
+# http://history.house.gov/Institution/Election-Statistics/Election-Statistics/
 from_pdf <- data.frame(
   election_type = "congressional",
   congress = 119,
