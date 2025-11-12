@@ -2,8 +2,3 @@
 
 docs :
 	Rscript -e "pkgdown::clean_site(); pkgdown::build_site(run_dont_run = TRUE)"
-
-deploy-docs :
-	cp -r tools docs/
-	rsync --checksum --delete -avz docs/* reclaim:~/www/lincolnmullen.com/software/usaboundaries/
-
