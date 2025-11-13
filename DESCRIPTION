@@ -27,7 +27,7 @@ Depends:
     R (>= 3.5)
 Imports:
     cli,
-    USAboundariesData
+    USAboundariesData (>= 0.5.0)
 Remotes:
     ropensci/USAboundariesData
 Suggests:
@@ -47,5 +47,4 @@ LazyData: true
 LazyDataCompression: xz
 VignetteBuilder: knitr
 Config/testthat/edition: 3
-Config/Needs/website: ropensci/USAboundaries
 Encoding: UTF-8
