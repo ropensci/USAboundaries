@@ -194,7 +194,7 @@ The contemporary data is provided by the U.S. Census Bureau and is in
 the public domain.
 
 All code in this package is copyright [Lincoln
-Mullen](http://lincolnmullen.com) and is released under the MIT license.
+Mullen](https://lincolnmullen.com) and is released under the MIT license.
 
 ------------------------------------------------------------------------
 

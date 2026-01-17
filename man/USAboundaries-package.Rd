@@ -28,7 +28,7 @@ terms of the \href{https://opensource.org/licenses/MIT}{MIT License}.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://docs.ropensci.org/USAboundaries}
+  \item \url{https://docs.ropensci.org/USAboundaries/}
   \item \url{https://github.com/ropensci/USAboundaries}
   \item Report bugs at \url{https://github.com/ropensci/USAboundaries/issues}
 }

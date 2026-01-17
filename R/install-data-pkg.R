@@ -37,7 +37,8 @@ install_USAboundariesData <- function() {
 
   if (input != 1L) {
     cli::cli_abort(
-      "The {.pkg USAboundariesData} package is necessary for that method.\n Please try installing the package yourself with {.code pak::pkg_install(\"ropensci/USAboundariesData\")}"
+      "The {.pkg USAboundariesData} package is required.
+   Install with {.code pak::pkg_install('ropensci/USAboundariesData')}"
     )
   }
 
