@@ -23,11 +23,8 @@ in the United States. It is intended as a lookup table.
 }
 \references{
 U.S. Census Bureau,
-  \href{https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.2024.html}{U.S.
-  Gazeteer Files} (2024).
-
-  \href{https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code}{Federal Information Processing Standard state code}
-  Wikipedia (accessed October
-  12, 2025).
+  \href{https://www.census.gov/library/reference/code-lists/ansi.html}{Ameri.
+  National Standards Institute (ANSI), Federal Information Processing Series
+  (FIPS), and Other Standardized Geographic Codes} U.S. Census Bureau (2025).
 }
 \keyword{datasets}

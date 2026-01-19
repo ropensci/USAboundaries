@@ -6,7 +6,8 @@ Authors@R: c(
   person(
     "Lincoln", "Mullen", 
     email = "lincoln@lincolnmullen.com",
-    role = c("aut"), comment = c(ORCID = "0000-0001-5103-6917")
+    role = c("aut"),
+    comment = c(ORCID = "0000-0001-5103-6917")
   ),
   person("Jordan", "Bratt",
     email = "jfbratt@gmail.com",
@@ -34,10 +35,7 @@ BugReports: https://github.com/ropensci/USAboundaries/issues
 Depends:
     R (>= 3.5)
 Imports:
-    cli,
-    USAboundariesData (>= 0.5.0)
-Remotes:
-    ropensci/USAboundariesData
+    cli
 Suggests:
     covr,
     dplyr,
@@ -47,7 +45,8 @@ Suggests:
     rmarkdown,
     sf (>= 1.0.0),
     testthat (>= 3.0.0),
-    tibble
+    tibble,
+    USAboundariesData (>= 0.5.0)
 RoxygenNote: 7.3.3
 Additional_repositories:
     https://ropensci.r-universe.dev
