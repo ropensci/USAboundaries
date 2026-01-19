@@ -50,7 +50,7 @@ jobs:
         if: runner.os == 'Windows'
         shell: pwsh
         run: |
-          install.packages("USAboundariesData",  repos = c("https://ropensci.r-universe.dev", "https://cloud.r-project.org"), type = "source")
+          install.packages("USAboundariesData", repos = c("https://ropensci.r-universe.dev", "https://cloud.r-project.org"), type = "source")
           
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
