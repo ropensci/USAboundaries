@@ -50,7 +50,7 @@ jobs:
         if: runner.os == 'Windows'
         shell: bash
         run: |
-          echo 'options(repos = c(ropensci = "https://ropensci.r-universe.dev", CRAN = "https://cloud.r-project.org"))' >> "$USERPROFILE/.Rprofile"
+          echo 'options(repos = c(ropensci = "https://ropensci.r-universe.dev", CRAN = "https://cloud.r-project.org"))' >> "~/.Rprofile"
         
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
