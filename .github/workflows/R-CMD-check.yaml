@@ -49,13 +49,7 @@ jobs:
       - name: Configure R repositories on Windows
         if: runner.os == 'Windows'
         shell: pwsh
-        run: |
-          install.packages(
-            "USAboundariesData",
-            repos = c("https://ropensci.r-universe.dev", "https://cloud.r-project.org"),
-            type = "source"
-          )
-          
+        run: Rscript -e "install.packages('USAboundariesData', repos=c('https://ropensci.r-universe.dev','https://cloud.r-project.org'), type='source')"
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: any::rcmdcheck
