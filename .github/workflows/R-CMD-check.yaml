@@ -41,9 +41,22 @@ jobs:
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
 
-      - name: Configure R repositories
+      # Configure R repositories (works on all OSes)
+      - name: Configure R repositories on Linux/macOS
+        if: runner.os != 'Windows'
         run: |
-          R -e 'cat("options(repos = c(ropensci = \"https://ropensci.r-universe.dev\", CRAN = \"https://cloud.r-project.org\"))\n",
+          R -e 'cat(
+            "options(repos = c(ropensci = \"https://ropensci.r-universe.dev\", CRAN = \"https://cloud.r-project.org\"))\n",
+            file = "~/.Rprofile",
+            append = TRUE
+          )'
+
+      - name: Configure R repositories on Windows
+        if: runner.os == 'Windows'
+        shell: bash   # <- force Git Bash on Windows
+        run: |
+          R -e 'cat(
+            "options(repos = c(ropensci = \"https://ropensci.r-universe.dev\", CRAN = \"https://cloud.r-project.org\"))\n",
             file = "~/.Rprofile",
             append = TRUE
           )'
