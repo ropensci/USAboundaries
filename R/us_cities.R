@@ -22,7 +22,7 @@
 #'   returned. If \code{NULL}, all boundaries will be returned.
 #'
 #' @examples
-#' if (require(USAboundariesData)) {
+#' if (require(USAboundariesData, quietly = TRUE)) {
 #'   us_cities(1805)
 #'   us_cities("1828-05-08")
 #'   us_cities()

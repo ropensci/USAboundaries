@@ -25,7 +25,7 @@ with their populations and latitudes and longitudes. Population data is taken
 from the U.S. Census.
 }
 \examples{
-if (require(USAboundariesData)) {
+if (require(USAboundariesData, quietly = TRUE)) {
   us_cities(1805)
   us_cities("1828-05-08")
   us_cities()

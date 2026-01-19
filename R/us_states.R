@@ -24,7 +24,7 @@
 #'
 #' @examples
 #' contemporary_us <- us_states()
-#' if (require(USAboundariesData) && require(sf)) {
+#' if (require(USAboundariesData, quietly = TRUE) && require(sf, quietly = TRUE)) {
 #'   historical_us <- us_states("1820-07-04")
 #'   contemporary_ne <- us_states(
 #'     states = c(

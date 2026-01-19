@@ -1,5 +1,6 @@
 test_that("Cities function can take multiple kinds of input", {
   skip_if_not_installed("sf")
+  skip_if_not_installed("USAboundariesData")
   expect_gt(nrow(us_cities()), 1)
   expect_gt(nrow(us_cities("1806-12-30")), 1)
   expect_gt(nrow(us_cities(as.Date("1806-12-30"))), 1)
@@ -10,11 +11,13 @@ test_that("Cities function can take multiple kinds of input", {
 })
 
 test_that("Cities function returns an sf data.frame", {
+  skip_if_not_installed("USAboundariesData")
   expect_s3_class(us_cities(1876), "data.frame")
   expect_s3_class(us_cities(1976), "sf")
 })
 
 test_that("Cities function can be filtered by state", {
+  skip_if_not_installed("USAboundariesData")
   expect_identical(
     unique(us_cities(2010, states = "NC")$state_name),
     "North Carolina"

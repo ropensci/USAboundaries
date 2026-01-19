@@ -11,7 +11,7 @@
 #'   \code{census_boundaries} documentation in the USAboundariesData package.
 #'
 #' @examples
-#' if (require(USAboundariesData)) {
+#' if (require(USAboundariesData, quietly = TRUE)) {
 #'   us_zipcodes()
 #' }
 #'

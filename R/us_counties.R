@@ -23,7 +23,7 @@
 #'   \code{ahcb_boundaries} help file in the USAboundariesData package.
 #'
 #' @examples
-#' if (require(USAboundariesData) && require(sf)) {
+#' if (require(USAboundariesData, quietly = TRUE) && require(sf, quietly = TRUE)) {
 #'   contemporary_us <- us_counties()
 #'   historical_us <- us_counties("1820-07-04")
 #'   contemporary_ne <- us_counties(

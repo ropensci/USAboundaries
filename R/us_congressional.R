@@ -14,7 +14,7 @@
 #'   \code{census_boundaries} help file in the USAboundariesData package.
 #'
 #' @examples
-#' if (require(USAboundariesData) && require(sf)) {
+#' if (require(USAboundariesData, quietly = TRUE) && require(sf, quietly = TRUE)) {
 #'   us_congressional <- us_congressional()
 #'   va_congressional <- us_congressional(
 #'     states = "Virginia", resolution = "high")

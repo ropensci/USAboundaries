@@ -1,4 +1,5 @@
 test_that("Returns current congressional districts", {
+  skip_if_not_installed("USAboundariesData")
   expect_identical(
     us_congressional(),
     USAboundariesData::congress_contemporary_lores

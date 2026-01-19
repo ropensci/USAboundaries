@@ -27,7 +27,7 @@ Bureau, or get historical county boundaries for dates between 30 December
 1636 and 31 December 2000.
 }
 \examples{
-if (require(USAboundariesData) && require(sf)) {
+if (require(USAboundariesData, quietly = TRUE) && require(sf, quietly = TRUE)) {
   contemporary_us <- us_counties()
   historical_us <- us_counties("1820-07-04")
   contemporary_ne <- us_counties(

@@ -15,7 +15,7 @@ U.S. Census Bureau. The centroids were calculated from the ZCTA boundary
 files available on the U.S. Census Bureau website.
 }
 \examples{
-if (require(USAboundariesData)) {
+if (require(USAboundariesData, quietly = TRUE)) {
   us_zipcodes()
 }
 

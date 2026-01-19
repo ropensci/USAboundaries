@@ -25,14 +25,14 @@ Get EPSG codes or PROJ.4 codes for projections from the
 Plane Coordinate System}.
 }
 \examples{
-if (require(USAboundariesData)) {
+if (require(USAboundariesData, quietly = TRUE)) {
   state_plane(state = "MA", type = "epsg")
   state_plane(state = "MA", type = "proj4")
   state_plane(state = "MA", plane_id = "island", type = "epsg")
   state_plane(state = "MA", plane_id = "island", type = "proj4")
 
   # Show the difference made by a state plane projection
-  if (require(sf)) {
+  if (require(sf, quietly = TRUE)) {
     va <- us_states(states = "VA", resolution = "high")
     plot(st_geometry(va), graticule = TRUE)
     va <- st_transform(va, state_plane("VA"))
