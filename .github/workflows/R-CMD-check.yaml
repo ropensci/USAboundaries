@@ -30,9 +30,6 @@ jobs:
       R_KEEP_PKG_SOURCE: yes
 
     steps:
-      - name: Install USAboundariesData (temporary, non-CRAN)
-    run: |
-      R -e 'install.packages("USAboundariesData", repos = c("https://ropensci.r-universe.dev"))'
       
       - uses: actions/checkout@v4
 
@@ -44,6 +41,14 @@ jobs:
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
 
+      - name: Configure R repositories
+        run: |
+          R -e 'cat(
+            "options(repos = c(ropensci = \"https://ropensci.r-universe.dev\"))\n",
+            file = "~/.Rprofile",
+            append = TRUE
+          )'
+          
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: any::rcmdcheck
