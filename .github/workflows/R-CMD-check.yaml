@@ -42,12 +42,14 @@ jobs:
           use-public-rspm: true
 
       - name: Configure R repositories
+        if: runner.os == 'Windows'
+        shell: bash
         run: |
-          R -e "cat(
-            'options(repos = c(ropensci = \"https://ropensci.r-universe.dev\"))\n',
-            file = '~/.Rprofile',
+          R -e 'cat(
+            "options(repos = c(ropensci = \"https://ropensci.r-universe.dev\", CRAN = \"https://cloud.r-project.org\"))\n",
+            file = "~/.Rprofile",
             append = TRUE
-          )"
+          )'
           
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
