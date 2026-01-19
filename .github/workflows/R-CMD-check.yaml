@@ -30,6 +30,10 @@ jobs:
       R_KEEP_PKG_SOURCE: yes
 
     steps:
+      - name: Install USAboundariesData (temporary, non-CRAN)
+    run: |
+      R -e 'install.packages("USAboundariesData", repos = c("https://ropensci.r-universe.dev"))'
+      
       - uses: actions/checkout@v4
 
       - uses: r-lib/actions/setup-pandoc@v2
@@ -49,9 +53,3 @@ jobs:
         with:
           upload-snapshots: true
           build_args: 'c("--no-manual","--compact-vignettes=gs+qpdf")'
-      - name: Install USAboundariesData (temporary, non-CRAN)
-        run: |
-          R -e 'install.packages(
-            "USAboundariesData",
-            repos = c("https://ropensci.r-universe.dev", "https://cloud.r-project.org")
-          )'
