@@ -24,10 +24,11 @@ jobs:
 
       - name: Configure R repositories
         run: |
-          cat('options(repos = c(
-            ropensci = "https://ropensci.r-universe.dev",
-            CRAN = "https://cloud.r-project.org"
-          ))\n', file = "~/.Rprofile", append = TRUE)
+          R -e 'cat(
+            "options(repos = c(ropensci = \"https://ropensci.r-universe.dev\", CRAN = \"https://cloud.r-project.org\"))\n",
+            file = "~/.Rprofile",
+            append = TRUE
+          )'
           
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
