@@ -50,8 +50,10 @@ jobs:
         if: runner.os == 'Windows'
         shell: pwsh
         run: Rscript -e "install.packages('USAboundariesData', repos=c('https://ropensci.r-universe.dev','https://cloud.r-project.org'), type='source')"
+        
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
+          dependencies: 'Imports,Depends'
           extra-packages: any::rcmdcheck
           needs: check
 
