@@ -40,22 +40,13 @@ jobs:
           r-version: ${{ matrix.config.r }}
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
-
-      # Configure R repositories (works on all OSes)
-      - name: Configure R repositories on Linux/macOS
-        if: runner.os != 'Windows'
-        run: echo 'options(repos = c(ropensci = "https://ropensci.r-universe.dev", CRAN = "https://cloud.r-project.org"))' >> ~/.Rprofile
-
-      - name: Configure R repositories on Windows
-        if: runner.os == 'Windows'
-        #shell: pwsh
-        run: echo 'options(repos = c(ropensci = "https://ropensci.r-universe.dev", CRAN = "https://cloud.r-project.org"))' >> ~/.Rprofile
-        
+          extra-repositories: http://packages.ropensci.org
+  
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::rcmdcheck
+          extra-packages: any::rcmdcheck, any::XML
           needs: check
-
+  
       - uses: r-lib/actions/check-r-package@v2
         with:
           upload-snapshots: true
