@@ -77,11 +77,11 @@ us_states(resolution = "low", states = "WI")
 
 # Returns a PROJ4
 state_plane(state = "WI", type = "proj4")
-
 ```
 
 ```{r}
 if (avail) {
+  library(sf)
   states_1840 <- us_states("1840-03-12")
   plot(st_geometry(states_1840))
   title("U.S. state boundaries on March 3, 1840")
