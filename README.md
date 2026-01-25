@@ -23,7 +23,7 @@ city population data from Erik Steiner’s “[United States Historical City
 Populations,
 1790-2010](https://github.com/cestastanford/historical-us-city-populations).”
 
-The package has some helper data, including a table of state names,
+The package has helper data, including a table of state names,
 abbreviations, and FIPS codes, and functions and data to get [State
 Plane Coordinate
 System](https://en.wikipedia.org/wiki/State_Plane_Coordinate_System)
@@ -50,22 +50,21 @@ citation("USAboundaries")
 #> 
 #>   Lincoln A. Mullen and Jordan Bratt, "USAboundaries: Historical and
 #>   Contemporary Boundaries of the United States of America," Journal of
-#>   Open Source Software 3, no. 23 (2018): 314,
+#>   Open Source Software 3, no. 23 (2018): 314.
 #>   https://doi.org/10.21105/joss.00314.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Article{,
-#>     title = {{USAboundaries}: Historical and Contemporary Boundaries
-#> of the United States of America},
-#>     author = {Lincoln A. Mullen and Jordan Bratt},
+#>     title = {{USAboundaries}: Historical and Contemporary Boundaries of the United States of America},
+#>     author = {Lincoln Mullen and Jordan Bratt},
 #>     journal = {Journal of Open Source Software},
 #>     year = {2018},
 #>     volume = {3},
-#>     issue = {23},
+#>     number = {23},
 #>     pages = {314},
-#>     url = {https://doi.org/10.21105/joss.00314},
 #>     doi = {10.21105/joss.00314},
+#>     url = {https://doi.org/10.21105/joss.00314},
 #>   }
 ```
 
@@ -112,9 +111,26 @@ documentation for each function for more details.
 ``` r
 library(USAboundaries) 
 library(sf) # for plotting and projection methods
-#> Linking to GEOS 3.13.1, GDAL 3.11.0, PROJ 9.6.0; sf_use_s2() is TRUE
+#> Linking to GEOS 3.13.1, GDAL 3.11.4, PROJ 9.7.0; sf_use_s2() is TRUE
 
 states_1840 <- us_states("1840-03-12")
+#> The USAboundariesData package needs to be installed.
+#> Installing the USAboundariesData package.
+#>  
+#> 
+#> → Will install 1 package.
+#> 
+#> → Will download 1 package with unknown size.
+#> 
+#> + USAboundariesData   0.5.1 [bld][cmp][dl] (GitHub: 724169e)
+#> 
+#> ℹ Getting 1 pkg with unknown size
+#> 
+#> ✔ Cached copy of USAboundariesData 0.5.1 (source) is the latest build
+#> 
+#> ✔ Installed USAboundariesData 0.5.1 (github::ropensci/USAboundariesData@724169e) (202ms)
+#> 
+#> ✔ 1 pkg: added 1 [3.1s]
 plot(st_geometry(states_1840))
 title("U.S. state boundaries on March 3, 1840")
 ```
@@ -231,7 +247,8 @@ The contemporary data is provided by the U.S. Census Bureau and is in
 the public domain.
 
 All code in this package is copyright [Lincoln
-Mullen](https://lincolnmullen.com) and is released under the MIT license.
+Mullen](https://lincolnmullen.com) and is released under the MIT
+license.
 
 ------------------------------------------------------------------------
 

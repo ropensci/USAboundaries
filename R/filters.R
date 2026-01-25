@@ -1,8 +1,10 @@
+#' @keywords internal
 filter_by_date <- function(shp, map_date) {
   filter <- shp$start_date <= map_date & shp$end_date >= as.Date(map_date)
   shp[filter, ]
 }
 
+#' @keywords internal
 filter_by_states <- function(shp, states) {
   if (is.null(states)) {
     return(shp)

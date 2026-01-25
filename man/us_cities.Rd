@@ -19,6 +19,9 @@ would return city populations from the 1800 census.}
 abbreviations. Only boundaries for those states/territories will be
 returned. If \code{NULL}, all boundaries will be returned.}
 }
+\value{
+An \code{sf} object.
+}
 \description{
 This function returns an \code{sf} object of cities (or populated places)
 with their populations and latitudes and longitudes. Population data is taken

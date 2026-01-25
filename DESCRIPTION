@@ -55,3 +55,4 @@ LazyDataCompression: xz
 VignetteBuilder: knitr
 Config/testthat/edition: 3
 Encoding: UTF-8
+Config/Needs/website: rmarkdown

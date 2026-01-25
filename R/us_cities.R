@@ -29,6 +29,7 @@
 #' }
 #'
 #' @export
+#' @returns An \code{sf} object.
 us_cities <- function(map_date = NULL, states = NULL) {
   # TODO maybe return all the cities to see trend over time?
   if (is.null(map_date)) {

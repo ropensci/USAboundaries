@@ -6,6 +6,11 @@
 \usage{
 install_USAboundariesData()
 }
+\value{
+No return value: if USAboundariesData is not installed, it will ask
+  the user if they want to install it. If user selects "yes" then it will be
+  installed. If no, abort.
+}
 \description{
 Install the \code{USAboundariesData} package after checking with the user
 }

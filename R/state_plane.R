@@ -10,7 +10,7 @@
 #' @param type The type of output to return: either an EPSG code or PROJ4
 #'   string.
 #'
-#' @return Either a PROJ4 string as a character vector or an EPSG code as an
+#' @returns Either a PROJ4 string as a character vector or an EPSG code as an
 #'   integer.
 #'
 #' @seealso For documentation of the underlying State Plane Coordinate System

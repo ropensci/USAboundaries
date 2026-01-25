@@ -39,7 +39,7 @@ city population data from Erik Steiner's "[United States Historical City
 Populations,
 1790-2010](https://github.com/cestastanford/historical-us-city-populations)."
 
-The package has some helper data, including a table of state names,
+The package has helper data, including a table of state names,
 abbreviations, and FIPS codes, and functions and data to get [State
 Plane Coordinate
 System](https://en.wikipedia.org/wiki/State_Plane_Coordinate_System)

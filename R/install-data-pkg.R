@@ -3,6 +3,9 @@
 #' If the \code{USAboundariesData} package is not installed, install it from the
 #\href{http://packages.ropensci.org/}{rOpenSci repository}.
 #' @export
+#' @returns No return value: if USAboundariesData is not installed or a newer
+#'   version is required, a console message will appear asking to install
+#'   USAboundariesData. Else nothing will return.
 check_data_package <- function() {
   # TODO update version
   USAboundariesData_version <- "0.5.1"
@@ -25,6 +28,9 @@ check_data_package <- function() {
 
 #' Install the \code{USAboundariesData} package after checking with the user
 #' @export
+#' @return No return value: if USAboundariesData is not installed, it will ask
+#'   the user if they want to install it. If user selects "yes" then it will be
+#'   installed. If no, abort.
 install_USAboundariesData <- function() {
   input <- 1L
 
