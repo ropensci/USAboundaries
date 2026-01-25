@@ -40,20 +40,13 @@ jobs:
           r-version: ${{ matrix.config.r }}
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
-
-      - name: Configure R repositories
-        run: |
-          R -e 'cat(
-            "options(repos = c(ropensci = \"https://ropensci.r-universe.dev\"))\n",
-            file = "~/.Rprofile",
-            append = TRUE
-          )'
-          
+          extra-repositories: http://packages.ropensci.org
+  
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::rcmdcheck
+          extra-packages: any::rcmdcheck, any::XML
           needs: check
-
+  
       - uses: r-lib/actions/check-r-package@v2
         with:
           upload-snapshots: true
