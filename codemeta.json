@@ -2,7 +2,7 @@
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "USAboundaries",
-  "description": "The boundaries for geographical units in the United States of America contained in this package include state, county, congressional district, and zip code tabulation area. Contemporary boundaries are provided by the U.S. Census Bureau (public domain). Historical boundaries for the years from 1629 to 2000 are provided form the Newberry Library's 'Atlas of Historical County Boundaries' (licensed CC BY-NC-SA). Additional data is provided in the 'USAboundariesData' package; this package provides an interface to access that data.",
+  "description": "The boundaries for geographical units in the United States of America contained in this package include state, county, congressional district, and zip code tabulation area. Contemporary boundaries are provided by the U.S. Census Bureau (public domain). Historical boundaries for the years from 1629 to 2000 are provided form the Newberry Library's Atlas of Historical County Boundaries (licensed CC BY-NC-SA). Additional data is provided in the USAboundariesData package; this package provides an interface to access that data.",
   "name": "USAboundaries: Historical and Contemporary Boundaries of the United States of America",
   "relatedLink": "https://docs.ropensci.org/USAboundaries/",
   "codeRepository": "https://github.com/ropensci/USAboundaries",
@@ -184,7 +184,7 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "238.173KB",
+  "fileSize": "238.724KB",
   "citation": [
     {
       "@type": "ScholarlyArticle",
